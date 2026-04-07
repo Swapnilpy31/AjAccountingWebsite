@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,9 +8,9 @@ import {
   ArrowRight, ChevronLeft, ChevronRight, Star
 } from 'lucide-react';
 
-/* ────────────────────────────────────────
+/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
    CARD DATA
-───────────────────────────────────────── */
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 const cards = [
   {
     id: 'ra-licence',
@@ -77,7 +77,7 @@ const cards = [
     title: 'GST Registration',
     heading: 'GST Registration & Filing',
     description:
-      'Complete GST solutions — registration, return filing, GSTR-9, LUT, and notice replies. Stay compliant with India\'s GST regulations.',
+      'Complete GST solutions ΓÇö registration, return filing, GSTR-9, LUT, and notice replies. Stay compliant with India\'s GST regulations.',
     features: ['GST registration online', 'Monthly return filing', 'GST notice reply'],
     cta: 'Get Started',
     href: '/services/gst-registration',
@@ -95,9 +95,9 @@ const slideVariants = {
   exit: (dir: number) => ({ x: dir > 0 ? -60 : 60, opacity: 0, transition: { duration: 0.35, ease: 'easeIn' as const } }),
 };
 
-/* ────────────────────────────────────────
+/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
    PRIMARY CARD (RA Licence)
-───────────────────────────────────────── */
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 function PrimaryCard({ card }: { card: typeof cards[0] }) {
   const { Icon, accent } = card;
   return (
@@ -189,9 +189,9 @@ function PrimaryCard({ card }: { card: typeof cards[0] }) {
   );
 }
 
-/* ────────────────────────────────────────
+/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
    REGULAR CARD
-───────────────────────────────────────── */
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 function ServiceCard({ card }: { card: typeof cards[number] }) {
   const { Icon, accent } = card;
   return (
@@ -257,9 +257,9 @@ function ServiceCard({ card }: { card: typeof cards[number] }) {
   );
 }
 
-/* ────────────────────────────────────────
+/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
    MAIN COMPONENT
-───────────────────────────────────────── */
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 export default function ServicesCarouselSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -304,7 +304,7 @@ export default function ServicesCarouselSection() {
             Expert Services for <span className="text-green-400">Every Business Need</span>
           </h2>
           <p className="mt-2 text-white/45 text-[14px] max-w-lg mx-auto">
-            From <strong className="text-white/70">RA Licence</strong> to <strong className="text-white/70">GST Registration</strong>, <strong className="text-white/70">ITR Filing</strong> to <strong className="text-white/70">Company Registration India</strong> — CA-backed, pan-India.
+            From <strong className="text-white/70">RA Licence</strong> to <strong className="text-white/70">GST Registration</strong>, <strong className="text-white/70">ITR Filing</strong> to <strong className="text-white/70">Company Registration India</strong> ΓÇö CA-backed, pan-India.
           </p>
         </header> */}
 

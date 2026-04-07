@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -24,7 +24,7 @@ const contactDetails = [
     icon: Phone,
     label: 'Call Us Directly',
     value: '01204280165',
-    sub: 'Mon – Sat, 10:00 AM – 6:00 PM',
+    sub: 'Mon ΓÇô Sat, 10:00 AM ΓÇô 6:00 PM',
     href: 'tel:+919643862867',
     color: 'text-[#1E4E8C]',
     bg: 'bg-[#1E4E8C]/8',
@@ -50,8 +50,8 @@ const contactDetails = [
   {
     icon: Clock,
     label: 'Office Hours',
-    value: 'Mon – Sat',
-    sub: '10:00 AM – 6:00 PM IST',
+    value: 'Mon ΓÇô Sat',
+    sub: '10:00 AM ΓÇô 6:00 PM IST',
     href: null,
     color: 'text-[#4CAF50]',
     bg: 'bg-[#4CAF50]/8',
@@ -59,7 +59,7 @@ const contactDetails = [
 ];
 
 const trustPoints = [
-  'Response within 24 hours — guaranteed',
+  'Response within 24 hours ΓÇö guaranteed',
   'Dedicated CA & CS assigned to your case',
   'Free initial consultation, no hidden charges',
   'Served 1,000+ businesses across India',
@@ -84,11 +84,11 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* ─────────────────────────────────────────────
-          PAGE HEAD — SEO meta is handled in layout
-      ───────────────────────────────────────────── */}
+      {/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+          PAGE HEAD ΓÇö SEO meta is handled in layout
+      ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */}
 
-      {/* ── 1. Hero Banner ── */}
+      {/* ΓöÇΓöÇ 1. Hero Banner ΓöÇΓöÇ */}
       <section className="relative bg-[#1E4E8C] pt-28 pb-20 overflow-hidden">
         {/* Grid overlay */}
         <div
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
           <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             Reach our team of qualified CAs and CSs for company registration, GST filing,
-            ROC compliance, and all corporate legal services — pan-India.
+            ROC compliance, and all corporate legal services ΓÇö pan-India.
           </p>
 
           {/* Quick trust badges */}
@@ -142,12 +142,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── 2. Main Content: Form + Side Info ── */}
+      {/* ΓöÇΓöÇ 2. Main Content: Form + Side Info ΓöÇΓöÇ */}
       <section className="bg-slate-50 py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-14 items-start">
 
-            {/* ── LEFT: Contact Form ── */}
+            {/* ΓöÇΓöÇ LEFT: Contact Form ΓöÇΓöÇ */}
             <div className="bg-white rounded-3xl shadow-[0_4px_30px_rgba(0,0,0,0.07)] border border-slate-100 overflow-hidden">
 
               {/* Form header */}
@@ -167,7 +167,7 @@ export default function ContactPage() {
 
               <div className="px-8 py-8">
                 {submitted ? (
-                  /* ── Success State ── */
+                  /* ΓöÇΓöÇ Success State ΓöÇΓöÇ */
                   <div className="py-14 text-center">
                     <div className="w-20 h-20 bg-[#4CAF50]/10 border border-[#4CAF50]/20 rounded-full flex items-center justify-center mx-auto mb-5">
                       <CheckCircle2 className="w-9 h-9 text-[#4CAF50]" />
@@ -240,7 +240,7 @@ export default function ContactPage() {
                         onChange={set('service')}
                         className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all appearance-none"
                       >
-                        <option value="">Select a service…</option>
+                        <option value="">Select a serviceΓÇª</option>
                         {services.map((s) => (
                           <option key={s} value={s}>{s}</option>
                         ))}
@@ -254,7 +254,7 @@ export default function ContactPage() {
                       </label>
                       <textarea
                         rows={4}
-                        placeholder="Tell us briefly about your requirement…"
+                        placeholder="Tell us briefly about your requirementΓÇª"
                         value={form.message}
                         onChange={set('message')}
                         className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all resize-none"
@@ -270,7 +270,7 @@ export default function ContactPage() {
                       {loading ? (
                         <>
                           <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
-                          Submitting…
+                          SubmittingΓÇª
                         </>
                       ) : (
                         <>
@@ -290,7 +290,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* ── RIGHT: Contact Info + Trust + Map ── */}
+            {/* ΓöÇΓöÇ RIGHT: Contact Info + Trust + Map ΓöÇΓöÇ */}
             <div className="space-y-6">
 
               {/* Contact Details Cards */}
@@ -361,7 +361,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── 3. Alternative Contact Methods ── */}
+      {/* ΓöÇΓöÇ 3. Alternative Contact Methods ΓöÇΓöÇ */}
       <section className="bg-white py-16 border-b border-slate-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3">Prefer a different way?</p>
@@ -432,7 +432,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── 4. SEO Schema-friendly bottom block ── */}
+      {/* ΓöÇΓöÇ 4. SEO Schema-friendly bottom block ΓöÇΓöÇ */}
       <section className="bg-slate-50 py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-slate-500 text-[13px] leading-relaxed">

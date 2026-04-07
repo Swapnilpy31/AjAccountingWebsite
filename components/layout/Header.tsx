@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
@@ -9,9 +9,9 @@ import {
   Star, ShieldCheck, Zap, TrendingUp, ChevronRight
 } from "lucide-react";
 
-/* ─────────────────────────────────────────
+/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
    MEGA MENU DATA
-───────────────────────────────────────── */
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 const megaMenuData = [
   {
     name: "Startup",
@@ -380,16 +380,16 @@ const megaMenuData = [
   //       title: "Quality & Environment",
   //       icon: <Award className="w-4 h-4" />,
   //       links: [
-  //         { title: "ISO 9001 – Quality Management", url: "/services/iso-9001" },
-  //         { title: "ISO 14001 – Environment", url: "/services/iso-14001" },
-  //         { title: "ISO 45001 – Safety", url: "/services/iso-45001" },
+  //         { title: "ISO 9001 ΓÇô Quality Management", url: "/services/iso-9001" },
+  //         { title: "ISO 14001 ΓÇô Environment", url: "/services/iso-14001" },
+  //         { title: "ISO 45001 ΓÇô Safety", url: "/services/iso-45001" },
   //       ],
   //     },
   //     {
   //       title: "Food Safety",
   //       icon: <ShieldCheck className="w-4 h-4" />,
   //       links: [
-  //         { title: "ISO 22000 – Food Safety", url: "/services/iso-22000" },
+  //         { title: "ISO 22000 ΓÇô Food Safety", url: "/services/iso-22000" },
   //         { title: "HACCP Certification", url: "/services/haccp" },
   //         { title: "FSSC 22000", url: "/services/fssc-22000" },
   //       ],
@@ -398,7 +398,7 @@ const megaMenuData = [
   //       title: "Information Security",
   //       icon: <ShieldCheck className="w-4 h-4" />,
   //       links: [
-  //         { title: "ISO 27001 – InfoSec", url: "/services/iso-27001" },
+  //         { title: "ISO 27001 ΓÇô InfoSec", url: "/services/iso-27001" },
   //       ],
   //     },
   //     {
@@ -542,9 +542,9 @@ const megaMenuData = [
   // },
 ];
 
-/* ─────────────────────────────────────────
+/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
    MEGA MENU DROPDOWN
-───────────────────────────────────────── */
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; closeMenu: () => void }) {
   const [popularServices, setPopularServices] = useState<string[]>(menu.popular);
 
@@ -636,9 +636,9 @@ function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; c
   );
 }
 
-/* ─────────────────────────────────────────
+/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
    MAIN HEADER
-───────────────────────────────────────── */
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 export default function Header({ isCompact = false }: { isCompact?: boolean }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);

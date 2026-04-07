@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import ServiceFAQSection from '@/components/sections/ServiceFAQSection';
 import LeadForm from '@/components/forms/LeadForm';
 import {
@@ -10,13 +10,13 @@ import type { Metadata } from 'next';
 import { constructMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = constructMetadata({
-  title: 'RA Licence Registration in India – BCAS Approved',
+  title: 'RA Licence Registration in India ΓÇô BCAS Approved',
   description:
     'Get your Regulated Agent (RA) Licence from BCAS with expert CA support. Fast, transparent, and 100% government-compliant RA licence registration across India.',
   url: '/services/ra-license',
 });
 
-/* ── Why Choose Us ── */
+/* ΓöÇΓöÇ Why Choose Us ΓöÇΓöÇ */
 const whyUs = [
   {
     icon: ShieldCheck,
@@ -26,12 +26,12 @@ const whyUs = [
   {
     icon: Clock,
     title: 'Fast Turnaround',
-    desc: 'We file your RA Licence application promptly and follow up proactively with BCAS — keeping you informed at every step.',
+    desc: 'We file your RA Licence application promptly and follow up proactively with BCAS ΓÇö keeping you informed at every step.',
   },
   {
     icon: FileText,
     title: 'End-to-End Documentation',
-    desc: 'We handle all paperwork, security programs, personnel records, and BCAS forms — you just share the documents.',
+    desc: 'We handle all paperwork, security programs, personnel records, and BCAS forms ΓÇö you just share the documents.',
   },
   {
     icon: TrendingUp,
@@ -41,7 +41,7 @@ const whyUs = [
   {
     icon: Headphones,
     title: 'Dedicated Support',
-    desc: 'A dedicated compliance manager is assigned from start to finish — reachable by phone, WhatsApp, or email at any time.',
+    desc: 'A dedicated compliance manager is assigned from start to finish ΓÇö reachable by phone, WhatsApp, or email at any time.',
   },
   {
     icon: Award,
@@ -50,7 +50,7 @@ const whyUs = [
   },
 ];
 
-/* ── FAQs ── */
+/* ΓöÇΓöÇ FAQs ΓöÇΓöÇ */
 const faqs = [
   {
     question: 'What is an RA Licence (Regulated Agent Licence) in India?',
@@ -70,7 +70,7 @@ const faqs = [
   {
     question: 'How long does RA Licence registration take?',
     answer:
-      'The BCAS RA Licence process typically takes 30–60 days, depending on the authority\'s processing speed and inspection scheduling. AJ Accounting Group ensures zero delays from our end — we file on Day 1 and pursue follow-ups with BCAS proactively.',
+      'The BCAS RA Licence process typically takes 30ΓÇô60 days, depending on the authority\'s processing speed and inspection scheduling. AJ Accounting Group ensures zero delays from our end ΓÇö we file on Day 1 and pursue follow-ups with BCAS proactively.',
   },
   {
     question: 'What is the validity of an RA Licence?',
@@ -80,7 +80,7 @@ const faqs = [
   {
     question: 'Can AJ Accounting help with RA Licence renewal and amendments?',
     answer:
-      'Yes. We provide complete RA Licence lifecycle services — new registration, renewal, amendment (change of premises, directors, personnel), and compliance audits. Our team ensures your licence remains active and compliant at all times.',
+      'Yes. We provide complete RA Licence lifecycle services ΓÇö new registration, renewal, amendment (change of premises, directors, personnel), and compliance audits. Our team ensures your licence remains active and compliant at all times.',
   },
 ];
 
@@ -88,7 +88,7 @@ export default function RALicencePage() {
   return (
     <div className="bg-slate-50 min-h-screen">
 
-      {/* ── 1. Hero ── */}
+      {/* ΓöÇΓöÇ 1. Hero ΓöÇΓöÇ */}
       <section className="relative bg-[#1E4E8C] pt-28 pb-16 overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.04]"
@@ -109,7 +109,7 @@ export default function RALicencePage() {
               {/* Priority badge */}
               <div className="inline-flex items-center gap-2 bg-[#4CAF50]/20 border border-[#4CAF50]/40 rounded-full px-4 py-1.5 mb-6">
                 <span className="w-2 h-2 rounded-full bg-[#4CAF50] animate-pulse" />
-                <span className="text-xs font-bold text-[#4CAF50] uppercase tracking-widest">#1 Priority Service · BCAS Approved</span>
+                <span className="text-xs font-bold text-[#4CAF50] uppercase tracking-widest">#1 Priority Service ┬╖ BCAS Approved</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-extrabold leading-[1.12] tracking-tight mb-5">
@@ -140,7 +140,7 @@ export default function RALicencePage() {
         </div>
       </section>
 
-      {/* ── 2. Client Video Section ── */}
+      {/* ΓöÇΓöÇ 2. Client Video Section ΓöÇΓöÇ */}
       <section
         className="py-16 bg-white border-b border-slate-100"
         aria-labelledby="video-heading"
@@ -149,14 +149,14 @@ export default function RALicencePage() {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-[#1E4E8C]/8 border border-[#1E4E8C]/15 rounded-full px-4 py-1.5 mb-5">
               <Play className="w-3.5 h-3.5 text-[#1E4E8C]" />
-              <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-widest">How We Work – RA Licence</span>
+              <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-widest">How We Work ΓÇô RA Licence</span>
             </div>
             <h2 id="video-heading" className="text-3xl sm:text-4xl font-extrabold text-[#1E4E8C] tracking-tight leading-[1.15] mb-3">
               Customer{' '}
               <span className="text-[#4CAF50]">Feedback</span>
             </h2>
             <p className="text-slate-500 text-[16px] max-w-lg mx-auto">
-              See our step-by-step RA Licence registration process — from documentation to BCAS approval — handled end-to-end by AJ Accounting Group experts.
+              See our step-by-step RA Licence registration process ΓÇö from documentation to BCAS approval ΓÇö handled end-to-end by AJ Accounting Group experts.
             </p>
           </div>
 
@@ -167,7 +167,7 @@ export default function RALicencePage() {
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src="https://www.youtube.com/embed/-wXqCqzHy0Y?rel=0&modestbranding=1"
-                title="RA Licence Client Success Story – AJ Accounting Group"
+                title="RA Licence Client Success Story ΓÇô AJ Accounting Group"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 loading="lazy"
@@ -195,7 +195,7 @@ export default function RALicencePage() {
         </div>
       </section>
 
-      {/* ── 3. Overview + FAQ ── */}
+      {/* ΓöÇΓöÇ 3. Overview + FAQ ΓöÇΓöÇ */}
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
@@ -236,7 +236,7 @@ export default function RALicencePage() {
         </div>
       </section>
 
-      {/* ── 4. Why Choose Us ── */}
+      {/* ΓöÇΓöÇ 4. Why Choose Us ΓöÇΓöÇ */}
       <section className="bg-white py-20 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
@@ -249,7 +249,7 @@ export default function RALicencePage() {
               <span className="text-[#4CAF50]">RA Licence</span> Services
             </h2>
             <p className="text-slate-500 text-[16px] leading-relaxed">
-              Over 500 businesses across India trust us for RA Licence registration, renewal, and compliance — because we deliver results, not just promises.
+              Over 500 businesses across India trust us for RA Licence registration, renewal, and compliance ΓÇö because we deliver results, not just promises.
             </p>
           </div>
 
@@ -276,7 +276,7 @@ export default function RALicencePage() {
               Get Free RA Licence Consultation
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
             </Link>
-            <p className="text-slate-400 text-[12px] mt-3">No commitment · 100% Confidential · Response in 15 minutes</p>
+            <p className="text-slate-400 text-[12px] mt-3">No commitment ┬╖ 100% Confidential ┬╖ Response in 15 minutes</p>
           </div>
         </div>
       </section>

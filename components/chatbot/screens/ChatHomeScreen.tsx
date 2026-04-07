@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Mic, Calendar, MessageCircle, ChevronRight, Send, X } from 'lucide-react';
+import { ChevronRight, Send, X } from 'lucide-react';
 
 interface ChatHomeScreenProps {
   onStartChat: () => void;

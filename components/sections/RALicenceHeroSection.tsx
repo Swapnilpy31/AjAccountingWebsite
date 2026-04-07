@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -47,9 +47,9 @@ export default function RALicenceHeroSection() {
         }}
       />
 
-      {/* Gold ambient glow — top left */}
+      {/* Gold ambient glow ΓÇö top left */}
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full blur-[140px] opacity-20 pointer-events-none bg-[#4CAF50]" />
-      {/* Blue ambient glow — bottom right */}
+      {/* Blue ambient glow ΓÇö bottom right */}
       <div className="absolute -bottom-32 -right-32 w-[420px] h-[420px] rounded-full blur-[120px] opacity-15 pointer-events-none bg-[#0a1e3d]" />
 
       {/* Gold top border accent */}
@@ -58,7 +58,7 @@ export default function RALicenceHeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 md:pt-24 md:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* ── LEFT: Main copy ── */}
+          {/* ΓöÇΓöÇ LEFT: Main copy ΓöÇΓöÇ */}
           <div>
             {/* Priority badge */}
             <motion.div
@@ -69,7 +69,7 @@ export default function RALicenceHeroSection() {
             >
               <Zap className="w-3.5 h-3.5 text-[#4CAF50]" />
               <span className="text-xs font-bold text-[#4CAF50] uppercase tracking-widest">
-                #1 Priority Service · Government Approved
+                #1 Priority Service ┬╖ Government Approved
               </span>
             </motion.div>
 
@@ -93,7 +93,7 @@ export default function RALicenceHeroSection() {
               className="text-white/65 text-[17px] leading-relaxed max-w-lg mb-8"
             >
               Government-approved process with expert CA support. We handle every step of your 
-              <strong className="text-white"> RA Licence in India</strong> — from documentation to BCAS inspection.
+              <strong className="text-white"> RA Licence in India</strong> ΓÇö from documentation to BCAS inspection.
             </motion.p>
 
             {/* Highlights row */}
@@ -138,7 +138,7 @@ export default function RALicenceHeroSection() {
             </motion.div>
           </div>
 
-          {/* ── RIGHT: Process steps + mini form ── */}
+          {/* ΓöÇΓöÇ RIGHT: Process steps + mini form ΓöÇΓöÇ */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
