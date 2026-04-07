@@ -718,10 +718,6 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
               </div>
             )}
           </div>
-
-
-
-
           {/* Mobile: hamburger */}
           <div className="xl:hidden flex items-center gap-2">
             <button
