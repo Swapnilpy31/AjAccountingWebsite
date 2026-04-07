@@ -5,33 +5,46 @@ import { FaFire, FaGift, FaHeart, FaStar } from "react-icons/fa";
 const Content = () => (
   <span className="inline-flex items-center gap-0 whitespace-nowrap">
 
-    <span className="inline-flex items-center gap-2 px-6">
+    {/* <span className="inline-flex items-center gap-2 px-6">
       <FaFire className="text-red-200" />
       <span>Celebrating India&apos;s Win!</span>
-    </span>
+    </span> */}
 
     <span className="text-white/40">•</span>
 
     <span className="inline-flex items-center gap-2 px-6">
+      <FaFire className="text-red-200" />
+      <span>RA Licence </span>
+    </span>
+    <span className="text-white/40">•</span>
+
+    <span className="inline-flex items-center gap-2 px-6">
+      <FaFire className="text-red-200" />
+      <span>Contact </span>
+    </span>
+
+    <span className="text-white/40">•</span>
+
+    {/* <span className="inline-flex items-center gap-2 px-6">
       <FaGift className="text-orange-200" />
       <span>Get 15% Off</span>
-    </span>
+    </span> */}
 
-    <span className="text-white/40">•</span>
+    {/* <span className="text-white/40">•</span> */}
 
-    <span className="inline-flex items-center gap-2 px-6">
+    {/* <span className="inline-flex items-center gap-2 px-6">
       <span>Use Code:</span>
       <strong className="font-extrabold tracking-widest bg-white/20 px-2 py-0.5 rounded text-white">
         INDT20
       </strong>
-    </span>
+    </span> */}
 
-    <span className="text-white/40">•</span>
+    {/* <span className="text-white/40">•</span>
 
     <span className="inline-flex items-center gap-2 px-6">
       <FaHeart className="text-red-200" />
       <span>Limited Time Offer</span>
-    </span>
+    </span> */}
 
     <span className="text-white/40">•</span>
 
