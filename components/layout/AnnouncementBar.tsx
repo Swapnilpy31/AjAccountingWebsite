@@ -1,6 +1,6 @@
 "use client";
 
-import { FaFire, FaGift, FaHeart, FaStar } from "react-icons/fa";
+import { FaFire, FaStar } from "react-icons/fa";
 
 const Content = () => (
   <span className="inline-flex items-center gap-0 whitespace-nowrap">

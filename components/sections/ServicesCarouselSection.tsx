@@ -1,10 +1,10 @@
-﻿'use client';
+'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import {
-  ShieldCheck, FileText, Calculator, Building2, TrendingUp,
+  ShieldCheck, FileText, Calculator, Building2,
   ArrowRight, ChevronLeft, ChevronRight, Star
 } from 'lucide-react';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+
 import { Mail, MapPin, Phone, Star, Linkedin, Instagram, Facebook, MessageCircle, Youtube, CheckCircle2, ChevronRight } from 'lucide-react';
 
 export default function Footer() {

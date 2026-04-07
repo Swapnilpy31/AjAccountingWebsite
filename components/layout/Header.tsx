@@ -4,8 +4,8 @@ import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  ChevronDown, Menu, X, Building2, Landmark, Globe,
-  FileText, Receipt, Users, Award, Briefcase, Banknote, Building,
+  ChevronDown, Menu, X, Building2, Landmark,
+  FileText, Receipt, Users, Award, Briefcase, Banknote,
   Star, ShieldCheck, Zap, TrendingUp, ChevronRight
 } from "lucide-react";
 import { Outfit } from "next/font/google";
@@ -566,7 +566,7 @@ function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; c
       if (sorted.length > 0) {
         setPopularServices(sorted.slice(0, 2).map(l => l.title));
       }
-    } catch (e) {
+    } catch {
       // ignore
     }
   }, [menu]);
@@ -577,7 +577,7 @@ function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; c
       const clicks = JSON.parse(localStorage.getItem(trackingKey) || '{}');
       clicks[title] = (clicks[title] || 0) + 1;
       localStorage.setItem(trackingKey, JSON.stringify(clicks));
-    } catch (e) { }
+    } catch { }
     closeMenu();
   };
 
@@ -681,11 +681,7 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
 
           {/* Desktop Mega Nav */}
           <nav className="hidden xl:flex items-center h-full relative">
-            {megaMenuData.map((menu, index) => {
-              let alignment: "left" | "center" | "right" = "center";
-              if (index < 4) alignment = "left";
-              else if (index > 6) alignment = "right";
-
+            {megaMenuData.map((menu) => {
               return (
                 <div
                   key={menu.name}

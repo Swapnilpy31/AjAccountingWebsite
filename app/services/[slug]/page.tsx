@@ -8,7 +8,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { constructMetadata } from '@/lib/seo';
 import { getServiceData } from '@/config/serviceData';
-import type { LucideIcon } from 'lucide-react';
+
 
 export const dynamic = 'force-dynamic';
 

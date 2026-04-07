@@ -180,7 +180,7 @@ export default function RALicenceHeroSection() {
               {submitted ? (
                 <div className="flex items-center gap-2 py-3">
                   <CheckCircle2 className="w-5 h-5 text-yellow-400" />
-                  <span className="text-yellow-300 font-semibold text-[14px]">Request received! We'll call you shortly.</span>
+                  <span className="text-yellow-300 font-semibold text-[14px]">Request received! We&apos;ll call you shortly.</span>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex gap-2" aria-label="RA Licence callback request">
