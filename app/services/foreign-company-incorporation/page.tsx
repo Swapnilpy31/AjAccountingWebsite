@@ -187,54 +187,6 @@ export default function ForeignCompanyIncorporation() {
                     </div>
                   </div>
 
-                  {/* 7. Pricing Section */}
-                  <div>
-                    <h2 className="text-2xl font-bold text-slate-900 mb-8 px-2 flex items-center gap-3">
-                      <span className="w-2 h-6 rounded-full bg-primary-500"></span>
-                      Transparent Pricing
-                    </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-end">
-                      {/* Basic */}
-                      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-lg transition-shadow">
-                        <h3 className="text-lg font-bold text-slate-900 mb-2">Basic Plan</h3>
-                        <p className="text-2xl font-bold text-primary-600 mb-6">Ask us</p>
-                        <ul className="space-y-4 mb-8 flex-1">
-                          {['Documentation', 'Filing', 'Basic Support'].map(item => (
-                            <li key={item} className="flex items-center gap-2.5 text-[15px] text-slate-600"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> {item}</li>
-                          ))}
-                        </ul>
-                        <button className="w-full py-3 rounded-xl border-2 border-primary-600 text-primary-600 font-bold hover:bg-primary-50 transition-colors">Select Plan</button>
-                      </div>
-
-                      {/* Standard */}
-                      <div className="bg-primary-600 rounded-3xl p-6 sm:p-8 shadow-xl border border-primary-500 flex flex-col relative transform sm:-translate-y-4 h-[calc(100%+16px)]">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#4CAF50] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-1.5 shadow-sm whitespace-nowrap">
-                          <Star className="w-3 h-3 fill-white" /> Most Popular
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2 mt-2">Standard Plan</h3>
-                        <p className="text-2xl font-bold text-white mb-6">Ask us</p>
-                        <ul className="space-y-4 mb-8 flex-1">
-                          {['RBI Approval', 'Compliance Setup', 'Dedicated Manager'].map(item => (
-                            <li key={item} className="flex items-center gap-2.5 text-[15px] text-primary-50"><CheckCircle2 className="w-4 h-4 text-[#4CAF50] shrink-0" /> {item}</li>
-                          ))}
-                        </ul>
-                        <button className="w-full py-3 rounded-xl bg-[#4CAF50] hover:bg-[#43A047] text-white font-bold transition-colors shadow-lg shadow-[#4CAF50]/30 hover:-translate-y-0.5">Select Plan</button>
-                      </div>
-
-                      {/* Premium */}
-                      <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100 flex flex-col h-full hover:shadow-lg transition-shadow">
-                        <h3 className="text-lg font-bold text-slate-900 mb-2">Premium Plan</h3>
-                        <p className="text-2xl font-bold text-primary-600 mb-6">₹39,999</p>
-                        <ul className="space-y-4 mb-8 flex-1">
-                          {['End-to-end handling', 'Priority support', 'Legal advisory'].map(item => (
-                            <li key={item} className="flex items-center gap-2.5 text-[15px] text-slate-600"><CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" /> {item}</li>
-                          ))}
-                        </ul>
-                        <button className="w-full py-3 rounded-xl border-2 border-primary-600 text-primary-600 font-bold hover:bg-primary-50 transition-colors">Select Plan</button>
-                      </div>
-                    </div>
-                  </div>
-
                   {/* 8. Final CTA */}
                   <div className="bg-gradient-to-br from-[#020617] to-primary-900 rounded-3xl p-8 sm:p-14 shadow-xl border border-primary-800 text-center relative overflow-hidden mt-12">
                      <div className="absolute -top-24 -right-24 w-64 h-64 bg-secondary-500 rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
@@ -294,11 +246,11 @@ export default function ForeignCompanyIncorporation() {
                         <h3 className="text-[15px] font-bold mb-6 uppercase tracking-widest text-primary-400">Direct Contact</h3>
                         <ul className="space-y-5 relative z-10">
                           <li>
-                            <a href="tel:+919643862867" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
+                            <a href="tel:01204280165" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
                                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-primary-600 transition-colors border border-white/5 shadow-sm">
                                  <Phone className="w-4 h-4" />
                                </div>
-                               <span className="font-semibold text-[15px] tracking-wide">+91 9643862867</span>
+                               <span className="font-semibold text-[15px] tracking-wide">01204280165</span>
                             </a>
                           </li>
                           <li>
@@ -310,7 +262,7 @@ export default function ForeignCompanyIncorporation() {
                             </a>
                           </li>
                           <li>
-                            <a href="https://wa.me/919643862867" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
+                            <a href="https://wa.me/9110204280165" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
                                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-[#25D366] transition-colors border border-white/5 shadow-sm">
                                  <MessageCircle className="w-4 h-4" />
                                </div>

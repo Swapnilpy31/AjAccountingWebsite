@@ -70,9 +70,8 @@ export default function ChatbotWidget() {
           <div>
             <p className="mb-2">We offer complete Private Limited Company incorporation packages. Here is our most popular plan:</p>
             <ServiceCard 
-              title="Private Limited Company" 
+              title="Private Limited Registration" 
               description="Complete compliance, DSC, DIN, and incorporation certificates in days." 
-              price="₹7,999 + Govt Fees" 
               onSelect={() => handleSendMessage('Get Started with Company Registration')}
             />
           </div>
@@ -84,7 +83,6 @@ export default function ChatbotWidget() {
             <ServiceCard 
               title="Express GST Registration" 
               description="Fast-track your GSTIN allocation with expert documentation support." 
-              price="₹1,499" 
               onSelect={() => handleSendMessage('Apply for GST')}
             />
           </div>

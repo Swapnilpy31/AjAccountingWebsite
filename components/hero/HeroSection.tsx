@@ -121,7 +121,7 @@ export default function HeroSection() {
               </div>
               <div>
                 <p className="text-[11px] text-white/50 uppercase tracking-widest font-semibold">Call us directly</p>
-                <a href="tel:+919643862867" className="text-white font-bold text-[15px] hover:text-[#4CAF50] transition-colors">
+                <a href="tel:01204280165" className="text-white font-bold text-[15px] hover:text-[#4CAF50] transition-colors">
                   01204280165
                 </a>
               </div>

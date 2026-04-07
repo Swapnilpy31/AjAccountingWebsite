@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -129,7 +129,7 @@ export default function RALicenceHeroSection() {
                 <ArrowRight className="w-4 h-4 group-hover/cta:translate-x-0.5 transition-transform" />
               </Link>
               <a
-                href="tel:+919643862867"
+                href="tel:01204280165"
                 className="inline-flex items-center gap-2 border border-white/20 text-white/80 hover:text-white hover:border-white/40 hover:bg-white/8 font-semibold text-[14px] px-6 py-3.5 rounded-xl transition-all duration-300"
               >
                 <Phone className="w-4 h-4" />

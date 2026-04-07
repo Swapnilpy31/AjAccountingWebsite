@@ -9,7 +9,7 @@ export default function ConnectExpertCard() {
       
       <div className="flex flex-col gap-2">
         <a 
-          href="https://wa.me/911234567890" 
+          href="https://wa.me/9110204280165" 
           target="_blank" 
           rel="noreferrer"
           className="w-full text-center text-xs font-semibold bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-lg py-2.5 transition-colors flex items-center justify-center gap-1.5 shadow-sm"
@@ -17,7 +17,7 @@ export default function ConnectExpertCard() {
           <MessageCircle className="w-3.5 h-3.5" /> WhatsApp Us
         </a>
         <a 
-          href="tel:+911234567890" 
+          href="tel:01204280165" 
           className="w-full text-center text-xs font-semibold bg-white hover:bg-slate-50 text-primary-700 border border-primary-200 rounded-lg py-2.5 transition-colors flex items-center justify-center gap-1.5 shadow-sm"
         >
           <PhoneCall className="w-3.5 h-3.5" /> Call Now

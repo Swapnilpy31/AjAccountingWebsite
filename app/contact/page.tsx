@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -25,7 +25,7 @@ const contactDetails = [
     label: 'Call Us Directly',
     value: '01204280165',
     sub: 'Mon ΓÇô Sat, 10:00 AM ΓÇô 6:00 PM',
-    href: 'tel:+919643862867',
+    href: 'tel:01204280165',
     color: 'text-[#1E4E8C]',
     bg: 'bg-[#1E4E8C]/8',
   },
@@ -373,7 +373,7 @@ export default function ContactPage() {
                 value: '01204280165',
                 desc: 'Speak directly with a compliance expert',
                 icon: Phone,
-                href: 'tel:+919643862867',
+                href: 'tel:01204280165',
                 cta: 'Call Now',
                 primary: false,
               },
@@ -382,7 +382,7 @@ export default function ContactPage() {
                 value: 'Chat on WhatsApp',
                 desc: 'Message us on WhatsApp for quick replies',
                 icon: MessageSquare,
-                href: 'https://wa.me/919643862867',
+                href: 'https://wa.me/9110204280165',
                 cta: 'Open WhatsApp',
                 primary: true,
               },

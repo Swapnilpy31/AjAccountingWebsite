@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
@@ -8,6 +8,9 @@ import {
   FileText, Receipt, Users, Award, Briefcase, Banknote, Building,
   Star, ShieldCheck, Zap, TrendingUp, ChevronRight
 } from "lucide-react";
+import { Outfit } from "next/font/google";
+
+const headerFont = Outfit({ subsets: ["latin"], weight: ["600", "700", "800"] });
 
 /* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
    MEGA MENU DATA
@@ -546,7 +549,9 @@ const megaMenuData = [
    MEGA MENU DROPDOWN
 ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; closeMenu: () => void }) {
-  const [popularServices, setPopularServices] = useState<string[]>(menu.popular);
+  // Initialize with the first two items as a dynamic default, ignoring the hardcoded 'popular' array
+  const defaultPopular = menu.columns.flatMap(c => c.links).slice(0, 2).map(l => l.title);
+  const [popularServices, setPopularServices] = useState<string[]>(defaultPopular);
 
   useEffect(() => {
     try {
@@ -560,8 +565,6 @@ function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; c
 
       if (sorted.length > 0) {
         setPopularServices(sorted.slice(0, 2).map(l => l.title));
-      } else {
-        setPopularServices(menu.popular);
       }
     } catch (e) {
       // ignore
@@ -690,10 +693,10 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
                   onMouseEnter={() => handleMouseEnter(menu.name)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <button className={`flex items-center gap-0.5 px-3 py-2 rounded-lg text-[13px] font-bold whitespace-nowrap transition-colors ${activeMenu === menu.name ? "text-[#1E4E8C] bg-blue-50" : "text-[#1E4E8C] hover:text-[#4CAF50] hover:bg-slate-50"}`}>
-                    {menu.name}
-                    <ChevronDown className={`w-3.5 h-3.5 mt-0.5 transition-transform duration-200 ${activeMenu === menu.name ? "rotate-180" : ""}`} />
-                  </button>
+                  <button className={`${headerFont.className} flex items-center gap-0.5 px-3 py-2 rounded-lg text-[15px] font-bold whitespace-nowrap transition-colors ${activeMenu === menu.name ? "text-[#1E4E8C] bg-blue-50" : "text-[#1E4E8C] hover:text-[#4CAF50] hover:bg-slate-50"}`}>
+                {menu.name}
+                <ChevronDown className={`w-3.5 h-3.5 mt-0.5 transition-transform duration-200 ${activeMenu === menu.name ? "rotate-180" : ""}`} />
+              </button>
 
                   {/* Active indicator bar */}
                   {activeMenu === menu.name && (

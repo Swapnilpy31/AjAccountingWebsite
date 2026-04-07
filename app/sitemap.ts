@@ -1,47 +1,86 @@
 import { MetadataRoute } from 'next'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://legalserve.com'
+const BASE_URL = 'https://www.ajaccountinggroup.com'
 
-  // Normally fetch dynamic routes from prisma here
-  const services = [
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date()
+
+  // ── Static service pages (dedicated pages) ──
+  const dedicatedServicePages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/services/ra-license`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/services/foreign-company-incorporation`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+  ]
+
+  // ── Dynamic [slug] service pages ──
+  const slugServices = [
     'private-limited-company',
+    'company-compliance',
+    'gst-registration',
+    'itr-filing',
+    'business-compliance',
     'llp-registration',
     'one-person-company',
     'section-8-company',
     'startup-india',
-    'gst-registration',
     'trademark',
-    'fssai'
-  ];
+    'fssai',
+    'roc-filing',
+    'income-tax-return',
+    'msme-registration',
+  ]
 
-  const serviceSitemaps = services.map((slug) => ({
-    url: `${baseUrl}/services/${slug}`,
-    lastModified: new Date(),
+  const slugServicePages: MetadataRoute.Sitemap = slugServices.map((slug) => ({
+    url: `${BASE_URL}/services/${slug}`,
+    lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
-  }));
+  }))
 
   return [
+    // ── Core pages ──
     {
-      url: baseUrl,
-      lastModified: new Date(),
+      url: BASE_URL,
+      lastModified: now,
       changeFrequency: 'daily',
-      priority: 1,
+      priority: 1.0,
     },
     {
-      url: `${baseUrl}/startup-services`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/contact`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/about`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/startup-services`,
+      lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/privacy-policy`,
+      lastModified: now,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
 
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    ...serviceSitemaps,
+    // ── Dedicated & dynamic service pages ──
+    ...dedicatedServicePages,
+    ...slugServicePages,
   ]
 }

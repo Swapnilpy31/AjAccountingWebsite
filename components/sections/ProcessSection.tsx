@@ -11,7 +11,7 @@ const steps = [
     icon: Phone,
     title: 'Free Consultation Call',
     keyword: 'Expert CA Guidance',
-    desc: 'Speak with a qualified CA or CS about your compliance requirement — company registration, GST, ROC filing, or tax returns. We assess your exact needs and recommend the right service at transparent pricing.',
+    desc: 'Speak with a qualified professional about your compliance requirement — company registration, GST, ROC filing, or tax returns. We assess your exact needs and recommend the right service at transparent pricing.',
     tags: ['No commitment required', 'Same-day callback available'],
   },
   {
