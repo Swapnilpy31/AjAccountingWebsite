@@ -725,7 +725,8 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
           {/* Mobile: hamburger */}
           <div className="xl:hidden flex items-center gap-2">
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              onClick={() => 
+                setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
