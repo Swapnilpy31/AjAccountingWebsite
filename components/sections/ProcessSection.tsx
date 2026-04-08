@@ -10,7 +10,7 @@ const steps = [
     number: '01',
     icon: Phone,
     title: 'Free Consultation Call',
-    keyword: 'Expert CA Guidance',
+    keyword: 'Expert Professional Guidance',
     desc: 'Speak with a qualified professional about your compliance requirement — company registration, GST, ROC filing, or tax returns. We assess your exact needs and recommend the right service at transparent pricing.',
     tags: ['No commitment required', 'Same-day callback available'],
   },
@@ -58,11 +58,11 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section id="how-it-works" className="bg-slate-50 py-24 border-t border-slate-200">
+    <section id="how-it-works" className="bg-slate-50 py-8 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Section Header ── */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-4">
           <div className="inline-flex items-center gap-2 bg-[#1E4E8C]/6 border border-[#1E4E8C]/15 rounded-full px-4 py-1.5 mb-5">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#1E4E8C]" />
             <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-widest">How It Works</span>
@@ -79,7 +79,7 @@ export default function ProcessSection() {
         </div>
 
         {/* ── Steps Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {steps.map((step, idx) => {
             const isLast = idx === steps.length - 1;
             return (
@@ -151,7 +151,7 @@ export default function ProcessSection() {
         </div>
 
         {/* ── Bottom CTA ── */}
-        <div className="mt-14 text-center">
+        <div className="mt-5 text-center">
           <p className="text-slate-500 text-[15px] mb-5">
             Ready to start your compliance journey?{' '}
             <span className="font-semibold text-[#1E4E8C]">Get expert help today.</span>

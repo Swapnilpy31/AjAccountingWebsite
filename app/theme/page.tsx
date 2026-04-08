@@ -24,7 +24,7 @@ const servicesData = [
     description: "Launch your business with complete compliance, DSC, DIN, and incorporation certificates in days.",
     icon: <Building />,
     badge: "Most Popular",
-    benefits: ["Fast Registration (24-48 hrs)", "Govt Approved Process", "Dedicated CA Support"]
+    benefits: ["Fast Registration (24-48 hrs)", "Govt Approved Process", "Dedicated Professional Support"]
   },
   {
     id: "gst",
@@ -68,10 +68,10 @@ export default function ThemePage() {
          <div className="absolute top-0 right-0 w-1/2 h-full bg-primary-900/5 blur-[120px] pointer-events-none rounded-bl-full"></div>
          <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-secondary-500/10 blur-[100px] pointer-events-none rounded-full"></div>
 
-         <Container className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
+         <Container className="grid lg:grid-cols-12 gap-12 lg:gap-5 items-center relative z-10">
             
             {/* Left Content Column */}
-            <div className="lg:col-span-7 flex flex-col space-y-6 md:space-y-8 animate-in slide-in-from-left-4 fade-in duration-700">
+            <div className="lg:col-span-7 flex flex-col space-y-3 md:space-y-4 animate-in slide-in-from-left-4 fade-in duration-700">
                <div>
                  <Badge variant="primary">Legal Solutions Interface</Badge>
                </div>
@@ -81,7 +81,7 @@ export default function ThemePage() {
                  <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
                    {activeService.heroTitle}
                  </h1>
-                 <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl mb-8">
+                 <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl mb-4">
                    {activeService.heroDesc}
                  </p>
                  
@@ -102,7 +102,7 @@ export default function ThemePage() {
             </div>
 
             {/* Right Form Component */}
-            <div className="lg:col-span-5 relative mt-8 lg:mt-0 lg:ml-6">
+            <div className="lg:col-span-5 relative mt-4 lg:mt-0 lg:ml-6">
                <FormCard selectedServiceTitle={activeService.title} />
             </div>
 
@@ -117,7 +117,7 @@ export default function ThemePage() {
              title="Comprehensive Business Solutions"
              subtitle="Click any service component physically below. Watch as the internal React state instantly updates both the Hero Content and Lead Form directly above."
            />
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-5">
              {servicesData.map((svc) => (
                <ServiceCard 
                  key={svc.id}
@@ -166,7 +166,7 @@ export default function ThemePage() {
                 <div className="text-2xl font-bold tracking-widest uppercase">Paytm</div>
             </div>
             
-            <div className="mt-12 inline-flex items-center gap-2 bg-white/10 px-6 py-3 rounded-2xl backdrop-blur-md border border-white/20">
+            <div className="mt-5 inline-flex items-center gap-2 bg-white/10 px-6 py-3 rounded-2xl backdrop-blur-md border border-white/20">
                <div className="flex gap-1">
                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-secondary-500 text-secondary-500" />)}
                </div>

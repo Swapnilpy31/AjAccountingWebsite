@@ -73,12 +73,12 @@ export default async function ServicePage({ params }: { params: { slug: string }
                 {serviceName}{' '}
                 <span className="text-[#4CAF50]">Services</span> in India
               </h1>
-              <p className="text-white/75 text-lg leading-relaxed mb-8">
+              <p className="text-white/75 text-lg leading-relaxed mb-4">
                 {data?.description ?? `Expert-led ${serviceName.toLowerCase()} services handled by qualified professionals. Fast turnaround, transparent pricing, and 100% government-compliant filings.`}
               </p>
 
               {/* Quick stats */}
-              <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex flex-wrap gap-4 mb-4">
                 {data?.timeline && (
                   <div className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-xl px-4 py-2.5">
                     <Timer className="w-4 h-4 text-[#4CAF50]" />
@@ -106,11 +106,11 @@ export default async function ServicePage({ params }: { params: { slug: string }
       </section>
 
       {/* ── 2. Content Grid ── */}
-      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <section className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
 
           {/* Left: Main Content */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-4">
 
             {/* Overview */}
             <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
@@ -150,7 +150,7 @@ export default async function ServicePage({ params }: { params: { slug: string }
           </div>
 
           {/* Right: Sidebar */}
-          <div className="space-y-6">
+          <div className="space-y-3">
             {/* CTA Card */}
             <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden sticky top-28">
               <div className="bg-[#1E4E8C] px-6 py-5">
@@ -192,9 +192,9 @@ export default async function ServicePage({ params }: { params: { slug: string }
       </section>
 
       {/* ── 3. Why Choose Us ── */}
-      <section className="bg-white py-20 border-t border-slate-100">
+      <section className="bg-white py-8 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-5">
             <div className="inline-flex items-center gap-2 bg-[#1E4E8C]/6 border border-[#1E4E8C]/15 rounded-full px-4 py-1.5 mb-5">
               <Users className="w-3.5 h-3.5 text-[#1E4E8C]" />
               <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-widest">The Smart Choice</span>
@@ -208,7 +208,7 @@ export default async function ServicePage({ params }: { params: { slug: string }
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5">
             {whyUs.map((item) => (
               <div key={item.title} className="group bg-white border border-slate-200 rounded-2xl p-7 shadow-sm hover:shadow-xl hover:shadow-[#1E4E8C]/8 hover:-translate-y-1.5 hover:border-[#1E4E8C]/25 transition-all duration-300">
                 <div className="w-14 h-14 bg-[#1E4E8C]/6 rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#1E4E8C] transition-colors duration-300">

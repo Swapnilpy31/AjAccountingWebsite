@@ -30,41 +30,41 @@ const sectors = [
 ];
 
 /* ── Client logo cards (icon-based placeholders) ── */
-const clients = [
-  { name: 'NovaTech',   icon: Cpu,           sector: 'IT & Software' },
-  { name: 'BuildCorp',  icon: Building2,      sector: 'Real Estate' },
-  { name: 'MediCare',   icon: HeartHandshake, sector: 'Healthcare' },
-  { name: 'AgriGrow',   icon: Leaf,           sector: 'Agriculture' },
-  { name: 'SwiftLog',   icon: Package,        sector: 'Logistics' },
-  { name: 'FinEdge',    icon: Landmark,       sector: 'Finance' },
-  { name: 'DataPeak',   icon: Database,       sector: 'IT & SaaS' },
-  { name: 'LayerX',     icon: Layers,         sector: 'Manufacturing' },
-  { name: 'GlobMart',   icon: Globe,          sector: 'E-commerce' },
-  { name: 'ViraZap',    icon: Zap,            sector: 'Startup' },
-  { name: 'ConsultPro', icon: Briefcase,      sector: 'Consulting' },
-  { name: 'TrendRise',  icon: TrendingUp,     sector: 'Retail' },
-];
+// const clients = [
+//   { name: 'NovaTech', icon: Cpu, sector: 'IT & Software' },
+//   { name: 'BuildCorp', icon: Building2, sector: 'Real Estate' },
+//   { name: 'MediCare', icon: HeartHandshake, sector: 'Healthcare' },
+//   { name: 'AgriGrow', icon: Leaf, sector: 'Agriculture' },
+//   { name: 'SwiftLog', icon: Package, sector: 'Logistics' },
+//   { name: 'FinEdge', icon: Landmark, sector: 'Finance' },
+//   { name: 'DataPeak', icon: Database, sector: 'IT & SaaS' },
+//   { name: 'LayerX', icon: Layers, sector: 'Manufacturing' },
+//   { name: 'GlobMart', icon: Globe, sector: 'E-commerce' },
+//   { name: 'ViraZap', icon: Zap, sector: 'Startup' },
+//   { name: 'ConsultPro', icon: Briefcase, sector: 'Consulting' },
+//   { name: 'TrendRise', icon: TrendingUp, sector: 'Retail' },
+// ];
 
 /* ── Services used by clients (keyword-rich pill chips) ── */
 const usedServices = [
   { icon: Building2, label: 'Company Registration' },
-  { icon: Receipt,   label: 'GST Filing' },
-  { icon: FileText,  label: 'ROC / MCA Filing' },
-  { icon: Scale,     label: 'Legal Compliance' },
-  { icon: Award,     label: 'Trademark & IP' },
+  { icon: Receipt, label: 'GST Filing' },
+  { icon: FileText, label: 'ROC / MCA Filing' },
+  { icon: Scale, label: 'Legal Compliance' },
+  { icon: Award, label: 'Trademark & IP' },
 ];
 
 export default function ClientsAndPartnersSection() {
   return (
     <section
       id="clients"
-      className="bg-white py-24 border-t border-slate-100"
+      className="bg-white py-8 border-t border-slate-100"
       aria-label="Trusted clients and partners"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Section Header ── */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <div className="inline-flex items-center gap-2 bg-[#1E4E8C]/6 border border-[#1E4E8C]/15 rounded-full px-4 py-1.5 mb-5">
             <Users className="w-3.5 h-3.5 text-[#1E4E8C]" />
             <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-widest">
@@ -89,7 +89,7 @@ export default function ClientsAndPartnersSection() {
         </div>
 
         {/* ── Stats Bar ── */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-14">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-6">
           {stats.map((stat) => (
             <div
               key={stat.label}
@@ -107,7 +107,7 @@ export default function ClientsAndPartnersSection() {
         </div>
 
         {/* ── Service Pills (keyword chips) ── */}
-        <div className="flex flex-wrap justify-center gap-2.5 mb-12">
+        <div className="flex flex-wrap justify-center gap-2.5 mb-5">
           {usedServices.map((svc) => (
             <span
               key={svc.label}
@@ -119,14 +119,13 @@ export default function ClientsAndPartnersSection() {
           ))}
         </div>
 
-        {/* ── Logo Grid ── */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-14">
+        {/* -- Logo Grid (commented out along with clients data) -- */}
+        {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-6">
           {clients.map((client) => (
             <div
               key={client.name}
               className="group flex flex-col items-center justify-center text-center bg-white border border-slate-200 rounded-2xl px-4 py-5 cursor-default hover:border-[#1E4E8C]/30 hover:shadow-lg hover:shadow-[#1E4E8C]/6 hover:-translate-y-1.5 transition-all duration-250"
             >
-              {/* Icon as logo placeholder */}
               <div className="w-12 h-12 rounded-xl bg-[#1E4E8C]/6 flex items-center justify-center mb-3 group-hover:bg-[#1E4E8C] transition-colors duration-250">
                 <client.icon className="w-6 h-6 text-[#1E4E8C] group-hover:text-white transition-colors duration-250" />
               </div>
@@ -138,7 +137,7 @@ export default function ClientsAndPartnersSection() {
               </span>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* ── Sector Coverage ── */}
         <div className="border-t border-slate-100 pt-10">

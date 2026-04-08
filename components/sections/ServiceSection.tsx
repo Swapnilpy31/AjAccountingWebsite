@@ -11,7 +11,7 @@ const services = [
     keyword: 'Company Registration Services',
     title: 'Company Registration',
     seoDesc:
-      'Register your Private Limited, LLP, or OPC with expert CA guidance, DSC, DIN, and government-approved incorporation certificates — delivered in days.',
+      'Register your Private Limited, LLP, or OPC with expert professional guidance, DSC, DIN, and government-approved incorporation certificates — delivered in days.',
     highlights: ['Pvt Ltd / LLP / OPC', 'DSC & DIN Included', '7–10 Day Delivery'],
     icon: Building2,
     href: '/services/private-limited-company',
@@ -70,11 +70,11 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section id="services" className="bg-white py-24 border-t border-slate-100">
+    <section id="services" className="bg-white py-8 border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Section Header ── */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-4">
           <div className="inline-flex items-center gap-2 bg-[#1E4E8C]/6 border border-[#1E4E8C]/15 rounded-full px-4 py-1.5 mb-5">
             <TrendingUp className="w-3.5 h-3.5 text-[#1E4E8C]" />
             <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-widest">Our Services</span>
@@ -89,7 +89,7 @@ export default function ServiceSection() {
 
         {/* ── Services Grid ── */}
         {/* Top row: featured card full-width on md+, plus 2 cards */}
-        <div className="space-y-6">
+        <div className="space-y-3">
 
           {/* Row 1: Featured + 2 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -136,7 +136,7 @@ export default function ServiceSection() {
         </div>
 
         {/* ── Bottom Trust Strip ── */}
-        <div className="mt-14 pt-10 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+        <div className="mt-6 pt-10 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           {[
             { value: '1,000+', label: 'Companies Registered' },
             { value: 'Expert CAs', label: 'Dedicated Professionals' },

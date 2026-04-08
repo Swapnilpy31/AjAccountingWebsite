@@ -11,7 +11,7 @@ const serviceData: Record<string, { title: string; description: string; benefits
     benefits: [
       "Fast Registration (24-48 hrs)",
       "Govt Approved Process",
-      "Dedicated CA Support"
+      "Dedicated Professional Support"
     ]
   },
   "GST Registration": {
@@ -150,12 +150,12 @@ export default function GlobalConsultationModal() {
         </button>
 
         {/* --- LEFT DESKTOP / TOP MOBILE COMPONENT --- */}
-        <div className="w-full md:w-5/12 bg-white p-8 md:p-12 border-r border-slate-100 flex flex-col pt-16 md:pt-12 overflow-y-auto shrink-0 z-10">
+        <div className="w-full md:w-5/12 bg-white p-8 md:p-12 border-r border-slate-100 flex flex-col pt-16 md:pt-6 overflow-y-auto shrink-0 z-10">
           <div className="flex-1">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 tracking-tight leading-tight">
               {content.title}
             </h2>
-            <p className="text-slate-600 text-[15px] leading-relaxed mb-8">
+            <p className="text-slate-600 text-[15px] leading-relaxed mb-4">
               {content.description}
             </p>
 
@@ -210,7 +210,7 @@ export default function GlobalConsultationModal() {
                     <CheckCircle2 className="w-10 h-10 text-green-500" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">Request Sent!</h3>
-                  <p className="text-slate-600 mb-8 max-w-[250px] mx-auto">
+                  <p className="text-slate-600 mb-4 max-w-[250px] mx-auto">
                     Our expert will contact you shortly 🚀
                   </p>
                   <button 

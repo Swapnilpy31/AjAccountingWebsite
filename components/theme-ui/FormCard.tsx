@@ -35,7 +35,7 @@ export function FormCard({ selectedServiceTitle }: { selectedServiceTitle: strin
             <CheckCircle2 className="w-10 h-10 text-green-500" />
           </div>
           <h3 className="text-2xl font-bold text-slate-900 mb-2">Request Received!</h3>
-          <p className="text-slate-600 mb-8 mx-auto text-[15px] leading-relaxed">
+          <p className="text-slate-600 mb-4 mx-auto text-[15px] leading-relaxed">
             Our expert for <span className="font-bold text-primary-600">{selectedServiceTitle}</span> will contact you shortly 🚀
           </p>
           <Button variant="outline" fullWidth onClick={() => setIsSuccess(false)}>
@@ -45,7 +45,7 @@ export function FormCard({ selectedServiceTitle }: { selectedServiceTitle: strin
       ) : (
         <div className="relative z-10 w-full animate-in fade-in duration-500">
           <h3 className="text-2xl font-bold text-slate-900 mb-2 tracking-tight">Request Consultation</h3>
-          <p className="text-sm text-slate-500 mb-8">Fill the form below and we will call you.</p>
+          <p className="text-sm text-slate-500 mb-4">Fill the form below and we will call you.</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>

@@ -19,10 +19,10 @@ export default function StartupServicesPage() {
   ];
 
   return (
-    <div className="bg-slate-50 min-h-screen py-16">
+    <div className="bg-slate-50 min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <h1 className="text-4xl font-extrabold text-slate-900 mb-4">Startup Services</h1>
           <p className="text-xl text-slate-600">
             Everything your startup needs to launch, protect, and grow. From incorporation to intellectual property, we&apos;ve got you covered.

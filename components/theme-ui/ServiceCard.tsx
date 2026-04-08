@@ -36,7 +36,7 @@ export function ServiceCard({ icon, title, description, isActive = false, onClic
         {title}
       </h3>
       
-      <p className="text-[13px] text-slate-500 leading-relaxed flex-grow mb-8 line-clamp-2">
+      <p className="text-[13px] text-slate-500 leading-relaxed flex-grow mb-4 line-clamp-2">
         {description}
       </p>
       

@@ -12,9 +12,9 @@ import { Outfit } from "next/font/google";
 
 const headerFont = Outfit({ subsets: ["latin"], weight: ["600", "700", "800"] });
 
-/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+/* -----------------------------------------
    MEGA MENU DATA
-ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+----------------------------------------- */
 const megaMenuData = [
   {
     name: "Startup",
@@ -383,16 +383,16 @@ const megaMenuData = [
   //       title: "Quality & Environment",
   //       icon: <Award className="w-4 h-4" />,
   //       links: [
-  //         { title: "ISO 9001 ΓÇô Quality Management", url: "/services/iso-9001" },
-  //         { title: "ISO 14001 ΓÇô Environment", url: "/services/iso-14001" },
-  //         { title: "ISO 45001 ΓÇô Safety", url: "/services/iso-45001" },
+  //         { title: "ISO 9001 - Quality Management", url: "/services/iso-9001" },
+  //         { title: "ISO 14001 - Environment", url: "/services/iso-14001" },
+  //         { title: "ISO 45001 - Safety", url: "/services/iso-45001" },
   //       ],
   //     },
   //     {
   //       title: "Food Safety",
   //       icon: <ShieldCheck className="w-4 h-4" />,
   //       links: [
-  //         { title: "ISO 22000 ΓÇô Food Safety", url: "/services/iso-22000" },
+  //         { title: "ISO 22000 - Food Safety", url: "/services/iso-22000" },
   //         { title: "HACCP Certification", url: "/services/haccp" },
   //         { title: "FSSC 22000", url: "/services/fssc-22000" },
   //       ],
@@ -401,7 +401,7 @@ const megaMenuData = [
   //       title: "Information Security",
   //       icon: <ShieldCheck className="w-4 h-4" />,
   //       links: [
-  //         { title: "ISO 27001 ΓÇô InfoSec", url: "/services/iso-27001" },
+  //         { title: "ISO 27001 - InfoSec", url: "/services/iso-27001" },
   //       ],
   //     },
   //     {
@@ -424,7 +424,7 @@ const megaMenuData = [
         links: [
           { title: "Accounting Services", url: "/services/accounting" },
           { title: "Bookkeeping", url: "/services/bookkeeping" },
-          { title: "CA Support", url: "/services/ca-support" },
+          { title: "Professional Support", url: "/services/ca-support" },
           { title: "Tax Planning", url: "/services/tax-planning" },
         ],
       },
@@ -545,9 +545,9 @@ const megaMenuData = [
   // },
 ];
 
-/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+/* -----------------------------------------
    MEGA MENU DROPDOWN
-ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+----------------------------------------- */
 function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; closeMenu: () => void }) {
   // Initialize with the first two items as a dynamic default, ignoring the hardcoded 'popular' array
   const defaultPopular = menu.columns.flatMap(c => c.links).slice(0, 2).map(l => l.title);
@@ -639,9 +639,9 @@ function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; c
   );
 }
 
-/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+/* -----------------------------------------
    MAIN HEADER
-ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+----------------------------------------- */
 export default function Header({ isCompact = false }: { isCompact?: boolean }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -659,8 +659,19 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
 
   useEffect(() => () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
-    <header className={`w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] z-40 border-b ${isCompact ? 'bg-white/90 backdrop-blur-md shadow-md border-slate-200/50' : 'bg-white border-transparent'}`}>
+    <header className={`w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] z-40 border-b ${isCompact ? 'bg-white shadow-md border-slate-200/50' : 'bg-white border-transparent'}`}>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className={`flex justify-between items-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isCompact ? 'h-[60px]' : 'h-[72px]'}`}>
 
@@ -734,28 +745,34 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-white border-t border-gray-100 absolute w-full max-h-[80vh] overflow-y-auto z-40 shadow-xl">
+        <div className="xl:hidden bg-white border-t border-gray-100 absolute left-0 w-full h-[100dvh] pb-32 overflow-y-auto z-40 shadow-xl">
           <div className="px-4 py-2 flex flex-col">
-            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border-b border-gray-50 text-sm font-semibold text-gray-900">Home</Link>
-            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border-b border-gray-50 text-sm font-semibold text-gray-900">About</Link>
+            <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border-b border-gray-50 text-sm font-semibold text-[#1E4E8C]">Home</Link>
+            <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border-b border-gray-50 text-sm font-semibold text-[#1E4E8C]">About</Link>
 
             {megaMenuData.map((menu) => (
               <div key={menu.name} className="border-b border-gray-50">
                 <button
                   onClick={() => setMobileCategoryOpen(mobileCategoryOpen === menu.name ? null : menu.name)}
-                  className="w-full flex items-center justify-between px-3 py-3 text-sm font-semibold text-gray-900"
+                  className="w-full flex items-center justify-between px-3 py-3 text-sm font-semibold text-[#1E4E8C]"
                 >
                   {menu.name}
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileCategoryOpen === menu.name ? "rotate-180 text-primary-500" : "text-gray-400"}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileCategoryOpen === menu.name ? "rotate-180 text-[#4CAF50]" : "text-slate-400"}`} />
                 </button>
                 {mobileCategoryOpen === menu.name && (
-                  <div className="pl-4 pb-3">
+                  <div className="pl-2 pb-3">
                     {menu.columns.map((col, idx) => (
-                      <div key={idx} className="mb-3">
-                        <p className="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 mb-1">{col.title}</p>
+                      <div key={idx} className="mb-4">
+                        <div className="flex items-center gap-2 px-3 mb-2 mt-2">
+                          <div className="w-7 h-7 rounded bg-blue-50 text-[#1E4E8C] flex items-center justify-center shadow-sm border border-blue-100/50 shrink-0">
+                            {React.cloneElement(col.icon as React.ReactElement, { className: 'w-3.5 h-3.5' })}
+                          </div>
+                          <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-wider">{col.title}</span>
+                        </div>
                         {col.links.map((link, lidx) => (
-                          <Link key={lidx} href={link.url} onClick={() => setMobileMenuOpen(false)} className="block px-3 py-1.5 text-[13px] text-gray-700 hover:text-primary-500">
-                            {link.title}
+                          <Link key={lidx} href={link.url} onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 mx-2 mb-1 text-[13px] font-medium text-slate-600 hover:text-[#4CAF50] hover:bg-green-50/60 rounded-lg transition-all flex items-center justify-between group">
+                            <span>{link.title}</span>
+                            <ChevronRight className="w-3.5 h-3.5 opacity-0 -mr-2 group-hover:opacity-100 group-hover:mr-0 transition-all text-[#4CAF50]" />
                           </Link>
                         ))}
                       </div>

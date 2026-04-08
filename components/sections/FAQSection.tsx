@@ -64,7 +64,7 @@ const faqs: FAQEntry[] = [
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="bg-white py-24 border-t border-slate-100">
+    <section id="faq" className="bg-white py-8 border-t border-slate-100">
       {/* JSON-LD FAQ Schema for Google rich results */}
       <script
         type="application/ld+json"
@@ -87,7 +87,7 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
 
         {/* ── Section Header ── */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 bg-[#1E4E8C]/6 border border-[#1E4E8C]/15 rounded-full px-4 py-1.5 mb-5">
             <HelpCircle className="w-3.5 h-3.5 text-[#1E4E8C]" />
             <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-widest">
@@ -114,7 +114,7 @@ export default function FAQSection() {
         </div>
 
         {/* ── Bottom CTA ── */}
-        <div className="mt-14 bg-[#1E4E8C] rounded-2xl p-8 sm:p-10 text-center relative overflow-hidden">
+        <div className="mt-6 bg-[#1E4E8C] rounded-2xl p-8 sm:p-10 text-center relative overflow-hidden">
           <div
             className="absolute inset-0 opacity-[0.04]"
             style={{

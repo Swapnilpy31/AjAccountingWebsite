@@ -7,13 +7,13 @@ export default function ConnectedSections() {
   return (
     <section className="relative w-full flex flex-col">
       {/* --- Section 1: Dark Background --- */}
-      <div className="relative w-full bg-slate-950 text-white pt-24 pb-32 overflow-hidden">
+      <div className="relative w-full bg-slate-950 text-white pt-10 pb-32 overflow-hidden">
         {/* Soft Background Glows */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/20 rounded-full blur-3xl -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl translate-y-1/2"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-6">
             <h2 className="text-sm font-semibold text-secondary-400 uppercase tracking-wider mb-2">Premium Experience</h2>
             <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
               Built for high-performance teams
@@ -23,7 +23,7 @@ export default function ConnectedSections() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Dark Card 1 */}
             <div className="group bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-8 hover:border-secondary-500/50 transition-all duration-300 hover:-translate-y-1">
               <div className="w-12 h-12 bg-secondary-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -77,7 +77,7 @@ export default function ConnectedSections() {
       </div>
 
       {/* --- Section 2: Light Background --- */}
-      <div className="relative w-full bg-slate-50 text-slate-900 pt-16 pb-24 border-b border-gray-200">
+      <div className="relative w-full bg-slate-50 text-slate-900 pt-16 pb-10 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -85,7 +85,7 @@ export default function ConnectedSections() {
             <div className="order-2 lg:order-1 relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary-200 to-secondary-200 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
               <div className="relative bg-white border border-gray-100 rounded-3xl p-8 shadow-xl shadow-slate-200/50 flex flex-col items-center">
-                <div className="w-full space-y-6">
+                <div className="w-full space-y-3">
                   {/* Mock UI Rows */}
                   {[1, 2, 3].map((i) => (
                     <div key={i} className="flex items-center p-4 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
@@ -112,7 +112,7 @@ export default function ConnectedSections() {
               <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-slate-900">
                 A workflow that feels like magic
               </h3>
-              <p className="text-lg text-slate-600 mb-8">
+              <p className="text-lg text-slate-600 mb-4">
                 Connect your favorite tools and automate processes in minutes. Our platform brings everything together in one unified workspace, saving your team hours every week.
               </p>
 

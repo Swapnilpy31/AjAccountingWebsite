@@ -137,7 +137,7 @@ export default function ServiceFAQSection({ faqs, serviceName }: Props) {
 
       {/* FAQ accordion */}
       <div
-        className="space-y-3 mb-8"
+        className="space-y-3 mb-4"
         itemScope
         itemType="https://schema.org/FAQPage"
       >

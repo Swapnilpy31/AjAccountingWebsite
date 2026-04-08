@@ -306,7 +306,7 @@ const serviceData: Record<string, ServiceData> = {
     benefits: [
       { title: 'Penalty Avoidance', desc: 'Timely Form 11 and Form 8 filing avoids ₹100/day late fee compounding quickly.' },
       { title: 'Complete Package', desc: 'We handle both MCA ROC filings and income tax return (ITR-5) for the LLP.' },
-      { title: 'Expert CA Support', desc: 'Dedicated CA assigned for your LLP throughout the year.' },
+      { title: 'Expert Professional Support', desc: 'Dedicated professional assigned for your LLP throughout the year.' },
     ],
   },
 
@@ -324,7 +324,7 @@ const serviceData: Record<string, ServiceData> = {
     benefits: [
       { title: 'Fast Filing', desc: 'DIR-12 filed within 30 days of board resolution — we ensure zero delays.' },
       { title: 'Legal Documentation', desc: 'Properly drafted board resolutions and consent letters to ensure legal validity.' },
-      { title: 'Expert Guidance', desc: 'CA guidance on process, due dates, and implications for existing directors.' },
+      { title: 'Expert Guidance', desc: 'Professional guidance on process, due dates, and implications for existing directors.' },
     ],
   },
 
@@ -477,7 +477,7 @@ const serviceData: Record<string, ServiceData> = {
   'tax-planning': {
     title: 'Tax Planning & Advisory',
     tagline: 'Strategic tax planning to legally minimize your tax liability',
-    description: 'Our CA team analyses your income structure and business operations to recommend legal tax-saving strategies — HUF creation, salary structuring, presumptive taxation, capital gains planning, and more.',
+    description: 'Our professional team analyses your income structure and business operations to recommend legal tax-saving strategies — HUF creation, salary structuring, presumptive taxation, capital gains planning, and more.',
     highlights: ['Corporate Tax Planning', 'Individual Tax Optimization', 'Salary Structuring', 'HUF Tax Planning', 'Capital Gains Management', 'Advance Tax Computation'],
     documents: ['Income Tax Returns (last 3 years)', 'Balance Sheet & P&L (for business)', 'Salary Slips', 'Investment Portfolio Details', 'Property Details (if any)'],
     timeline: '3–5 working days (initial advisory)',

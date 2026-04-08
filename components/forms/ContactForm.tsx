@@ -42,7 +42,7 @@ export default function ContactForm() {
 
   return (
     <div className="bg-white p-8 sm:p-10 rounded-3xl shadow-2xl border border-gray-100">
-      <div className="mb-8">
+      <div className="mb-4">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">Book a Free Consultation</h2>
         <p className="text-gray-500">Tell us what you need help with, and we&apos;ll get back to you within 2 hours.</p>
       </div>

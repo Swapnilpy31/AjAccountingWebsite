@@ -16,12 +16,12 @@ import {
 
 export default function ForeignCompanyIncorporation() {
   return (
-      <div className="bg-slate-50 min-h-screen pt-32 pb-24">
+      <div className="bg-slate-50 min-h-screen pt-32 pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-12">
                
                {/* LEFT COLUMN: Content */}
-               <div className="lg:col-span-8 space-y-8 md:space-y-10">
+               <div className="lg:col-span-8 space-y-4 md:space-y-10">
                   
                   {/* 1. Hero Section */}
                   <div className="bg-white rounded-3xl p-8 sm:p-12 shadow-[0_2px_20px_rgba(0,0,0,0.04)] border border-slate-100 relative overflow-hidden">
@@ -119,11 +119,11 @@ export default function ForeignCompanyIncorporation() {
 
                   {/* 5. Documents Required */}
                   <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-100">
-                    <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
                       <span className="w-2 h-6 rounded-full bg-primary-500"></span>
                       Documents Required
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12">
                       {/* Company Docs */}
                       <div className="space-y-4">
                         <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
@@ -163,7 +163,7 @@ export default function ForeignCompanyIncorporation() {
 
                   {/* 6. Process Section */}
                   <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-sm border border-slate-100">
-                    <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                    <h2 className="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
                       <span className="w-2 h-6 rounded-full bg-accent-500"></span>
                       Step-by-Step Process
                     </h2>
@@ -188,9 +188,9 @@ export default function ForeignCompanyIncorporation() {
                   </div>
 
                   {/* 8. Final CTA */}
-                  <div className="bg-gradient-to-br from-[#020617] to-primary-900 rounded-3xl p-8 sm:p-14 shadow-xl border border-primary-800 text-center relative overflow-hidden mt-12">
+                  <div className="bg-gradient-to-br from-[#020617] to-primary-900 rounded-3xl p-8 sm:p-14 shadow-xl border border-primary-800 text-center relative overflow-hidden mt-5">
                      <div className="absolute -top-24 -right-24 w-64 h-64 bg-secondary-500 rounded-full blur-[100px] opacity-20 pointer-events-none"></div>
-                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-8 relative z-10 tracking-tight">Need Help Setting Up Your Business in India?</h2>
+                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 relative z-10 tracking-tight">Need Help Setting Up Your Business in India?</h2>
                      <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
                          <button className="px-8 py-3.5 bg-[#4CAF50] hover:bg-[#43A047] text-white rounded-xl font-bold flex items-center justify-center transition-all shadow-lg hover:shadow-[#4CAF50]/25 hover:-translate-y-0.5">
                            Get Free Consultation
@@ -204,13 +204,13 @@ export default function ForeignCompanyIncorporation() {
                </div>
                
                {/* RIGHT COLUMN: Sticky Sidebar */}
-               <div className="lg:col-span-4 mt-8 lg:mt-0">
-                  <div className="sticky top-28 space-y-6">
+               <div className="lg:col-span-4 mt-4 lg:mt-0">
+                  <div className="sticky top-28 space-y-3">
                      
                      {/* Lead Capture Form Card */}
                      <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-slate-100 p-6 sm:p-8">
                         <h3 className="text-xl font-bold text-slate-900 mb-1 tracking-tight">Start Your Registration</h3>
-                        <p className="text-sm text-slate-500 mb-8">Fill the form below and our expert will call you shortly.</p>
+                        <p className="text-sm text-slate-500 mb-4">Fill the form below and our expert will call you shortly.</p>
                         
                         <form className="space-y-4">
                           <div>

@@ -8,21 +8,21 @@ export default function Footer() {
     <footer className="relative mt-2">
 
       {/* Main Footer Background — Deep Brand Blue */}
-      <div className="bg-[#1E4E8C] pt-16 md:pt-20 pb-8">
+      <div className="bg-[#1E4E8C] pt-16 md:pt-10 pb-8">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
           {/* Main Footer Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-6">
 
             {/* Column 1: Brand Info */}
             <div className="flex flex-col">
-              <Link href="/" className="mb-8 inline-block">
+              <Link href="/" className="mb-4 inline-block">
                 {/* <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-4 shadow-sm relative overflow-hidden">
                   <Image src="/logo.png" alt="AJ Logo" fill className="object-contain p-1.5" />
                 </div> */}
                 {/* <span className="text-2xl font-bold text-white tracking-tight">AJ Accounting</span> */}
               </Link>
-              <p className="text-white/60 text-sm leading-relaxed mb-8 pr-4">
+              <p className="text-white/60 text-sm leading-relaxed mb-4 pr-4">
                 ISO 9001:2015 Certified accounting and finance firm. We simplify compliance, registration, and tax filings for modern businesses.
               </p>
               <div className="flex flex-col gap-2.5">
@@ -40,7 +40,7 @@ export default function Footer() {
 
             {/* Column 2: Popular Services */}
             <div>
-              <h4 className="text-[13px] font-bold mb-8 text-white tracking-widest uppercase">Popular Services</h4>
+              <h4 className="text-[13px] font-bold mb-4 text-white tracking-widest uppercase">Popular Services</h4>
               <ul className="space-y-4">
                 {['Company Registration', 'GST Services', 'Trademark Filing', 'FSSAI License', 'Income Tax Filing'].map((item) => (
                   <li key={item}>
@@ -55,7 +55,7 @@ export default function Footer() {
 
             {/* Column 3: Resources */}
             <div>
-              <h4 className="text-[13px] font-bold mb-8 text-white tracking-widest uppercase">Resources</h4>
+              <h4 className="text-[13px] font-bold mb-4 text-white tracking-widest uppercase">Resources</h4>
               <ul className="space-y-4">
                 {['About Us', 'Blog', 'Contact Us', 'FAQ', 'Privacy Policy', 'Terms & Conditions'].map((item) => (
                   <li key={item}>
@@ -70,8 +70,8 @@ export default function Footer() {
 
             {/* Column 4: Contact */}
             <div>
-              <h4 className="text-[13px] font-bold mb-8 text-white tracking-widest uppercase">Contact Us</h4>
-              <ul className="space-y-6">
+              <h4 className="text-[13px] font-bold mb-4 text-white tracking-widest uppercase">Contact Us</h4>
+              <ul className="space-y-3">
                 <li className="flex items-start gap-4 text-white/80 text-[15px]">
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
                     <MapPin className="w-4 h-4 text-white" />
@@ -101,7 +101,7 @@ export default function Footer() {
                 </li>
               </ul>
 
-              <div className="mt-8 p-5 rounded-2xl bg-white/[0.07] border border-white/15 border-l-2 border-l-[#4CAF50]">
+              <div className="mt-4 p-5 rounded-2xl bg-white/[0.07] border border-white/15 border-l-2 border-l-[#4CAF50]">
                 <p className="text-[11px] font-bold text-white uppercase tracking-widest mb-1.5 opacity-80">Support Hours</p>
                 <p className="text-sm font-medium text-white/70">Mon - Sat, 10:00 AM - 7:00 PM</p>
               </div>
@@ -110,7 +110,7 @@ export default function Footer() {
           </div>
 
           {/* Social Proof & Social Media Row */}
-          <div className="flex flex-col lg:flex-row items-center justify-between py-10 border-t border-white/15 gap-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between py-10 border-t border-white/15 gap-5">
 
             {/* Social Proof */}
             <div className="flex flex-col sm:flex-row items-center gap-5">

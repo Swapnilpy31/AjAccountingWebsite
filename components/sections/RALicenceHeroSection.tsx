@@ -18,7 +18,7 @@ const highlights = [
 const steps = [
   { label: 'Document Submission',  desc: 'Share required docs with our team' },
   { label: 'BCAS Application',    desc: 'We file with the aviation authority' },
-  { label: 'Inspection Support',   desc: 'CA guidance throughout audit' },
+  { label: 'Inspection Support',   desc: 'Professional guidance throughout audit' },
   { label: 'Licence Granted',      desc: 'Receive your RA certification' },
 ];
 
@@ -47,25 +47,25 @@ export default function RALicenceHeroSection() {
         }}
       />
 
-      {/* Gold ambient glow ΓÇö top left */}
+      {/* Gold ambient glow  -  top left */}
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full blur-[140px] opacity-20 pointer-events-none bg-[#4CAF50]" />
-      {/* Blue ambient glow ΓÇö bottom right */}
+      {/* Blue ambient glow  -  bottom right */}
       <div className="absolute -bottom-32 -right-32 w-[420px] h-[420px] rounded-full blur-[120px] opacity-15 pointer-events-none bg-[#0a1e3d]" />
 
       {/* Gold top border accent */}
       <div className="absolute top-0 inset-x-0 h-[3px] bg-gradient-to-r from-transparent via-[#4CAF50] to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 md:pt-24 md:pb-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 md:pt-10 md:pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* ΓöÇΓöÇ LEFT: Main copy ΓöÇΓöÇ */}
+          {/* -- LEFT: Main copy -- */}
           <div>
             {/* Priority badge */}
             <motion.div
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-[#4CAF50]/15 border border-[#4CAF50]/35 rounded-full px-4 py-1.5 mb-8"
+              className="inline-flex items-center gap-2 bg-[#4CAF50]/15 border border-[#4CAF50]/35 rounded-full px-4 py-1.5 mb-4"
             >
               <Zap className="w-3.5 h-3.5 text-[#4CAF50]" />
               <span className="text-xs font-bold text-[#4CAF50] uppercase tracking-widest">
@@ -90,10 +90,10 @@ export default function RALicenceHeroSection() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.15 }}
-              className="text-white/65 text-[17px] leading-relaxed max-w-lg mb-8"
+              className="text-white/65 text-[17px] leading-relaxed max-w-lg mb-4"
             >
-              Government-approved process with expert CA support. We handle every step of your 
-              <strong className="text-white"> RA Licence in India</strong> ΓÇö from documentation to BCAS inspection.
+              Government-approved process with expert professional support. We handle every step of your 
+              <strong className="text-white"> RA Licence in India</strong>  -  from documentation to BCAS inspection.
             </motion.p>
 
             {/* Highlights row */}
@@ -138,7 +138,7 @@ export default function RALicenceHeroSection() {
             </motion.div>
           </div>
 
-          {/* ΓöÇΓöÇ RIGHT: Process steps + mini form ΓöÇΓöÇ */}
+          {/* -- RIGHT: Process steps + mini form -- */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
@@ -206,7 +206,7 @@ export default function RALicenceHeroSection() {
         </div>
 
         {/* Bottom keyword strip (SEO) */}
-        <div className="mt-12 pt-8 border-t border-white/8 flex flex-wrap justify-center gap-x-6 gap-y-2">
+        <div className="mt-5 pt-8 border-t border-white/8 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {[
             'RA Licence India', 'Regulated Agent Registration', 'BCAS Licence',
             'Aviation Security Compliance', 'RA Licence Renewal',

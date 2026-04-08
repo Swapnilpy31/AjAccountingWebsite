@@ -5,7 +5,7 @@ import { ArrowRight, ShieldCheck, Clock, Users, CheckCircle2, Lock, Phone, Star 
 
 const trustBadges = [
   { icon: Users, value: '1,000+', label: 'Companies Served' },
-  { icon: ShieldCheck, value: 'Expert', label: 'CA & CS Support' },
+  { icon: ShieldCheck, value: 'Expert', label: 'Professional Support' },
   { icon: Clock, value: '15 Min', label: 'Response Time' },
   { icon: Star, value: '4.9/5', label: 'Client Rating' },
 ];
@@ -49,8 +49,8 @@ export default function HeroSection() {
       <div className="absolute -top-32 -left-48 w-[520px] h-[520px] bg-[#112a50] rounded-full blur-[140px] opacity-60 pointer-events-none" />
       <div className="absolute -bottom-32 -right-48 w-[460px] h-[460px] bg-[#163665] rounded-full blur-[130px] opacity-50 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 lg:pt-32 lg:pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-6 lg:pt-24 lg:pb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
           {/* ──────────────────────────────────────
               LEFT: SEO Content + Trust Signals
@@ -58,7 +58,7 @@ export default function HeroSection() {
           <div className="text-white">
 
             {/* Keyword pill */}
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-7 animate-fade-in-up-d1">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-3 animate-fade-in-up-d1">
               <span className="w-2 h-2 rounded-full bg-[#4CAF50] animate-pulse" />
               <span className="text-xs font-semibold text-white/90 uppercase tracking-widest">
                 RA Licensed Professional · ISO Certified · Pan-India
@@ -66,7 +66,7 @@ export default function HeroSection() {
             </div>
 
             {/* =========== SEO H1 =========== */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold leading-[1.12] tracking-tight text-white mb-5 animate-fade-in-up-d1">
+            <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-extrabold leading-[1.12] tracking-tight text-white mb-3 animate-fade-in-up-d1">
               Corporate{' '}
               <span className="text-[#4CAF50]">Compliance</span>
               <br className="hidden sm:block" />
@@ -74,14 +74,14 @@ export default function HeroSection() {
             </h1>
 
             {/* Subheading with keywords */}
-            <p className="text-[17px] sm:text-lg text-white/80 leading-relaxed max-w-lg mb-6 animate-fade-in-up-d2">
+            <p className="text-[16px] sm:text-base text-white/80 leading-relaxed max-w-lg mb-3 animate-fade-in-up-d2">
               End-to-end compliance management — <strong className="text-white font-semibold">ROC / MCA filing</strong>,{' '}
               <strong className="text-white font-semibold">GST registration &amp; returns</strong>, company incorporation, and{' '}
               <strong className="text-white font-semibold">legal compliance</strong> — handled by expert CAs and CSs.
             </p>
 
             {/* SEO keyword paragraph (hidden visually but crawlable) */}
-            <p className="text-sm text-white/55 leading-relaxed max-w-lg mb-8 animate-fade-in-up-d2">
+            <p className="text-sm text-white/55 leading-relaxed max-w-lg mb-3 animate-fade-in-up-d2">
               AJ Accounting Group offers comprehensive corporate compliance services across India including
               Private Limited company registration, LLP formation, GST filing, ROC annual compliance,
               trademark registration, FSSAI license, income tax return filing, and MCA secretarial services
@@ -89,7 +89,7 @@ export default function HeroSection() {
             </p>
 
             {/* Service Tags */}
-            <div className="flex flex-wrap gap-2 mb-10 animate-fade-in-up-d2">
+            <div className="flex flex-wrap gap-2 mb-4 animate-fade-in-up-d2">
               {services.map((s) => (
                 <span
                   key={s}
@@ -115,7 +115,7 @@ export default function HeroSection() {
             </div>
 
             {/* Phone CTA strip */}
-            <div className="flex items-center gap-3 mt-8 animate-fade-in-up-d3">
+            <div className="flex items-center gap-3 mt-3 animate-fade-in-up-d3">
               <div className="w-10 h-10 rounded-full bg-[#4CAF50]/20 border border-[#4CAF50]/40 flex items-center justify-center shrink-0">
                 <Phone className="w-4 h-4 text-[#4CAF50]" />
               </div>
@@ -138,14 +138,14 @@ export default function HeroSection() {
             <div className="relative bg-white rounded-3xl shadow-[0_16px_60px_rgba(0,0,0,0.28)] border border-white/10 overflow-hidden">
 
               {/* Card header band */}
-              <div className="bg-[#1E4E8C] px-8 py-6 border-b border-slate-100">
+              <div className="bg-[#1E4E8C] px-6 py-4 border-b border-slate-100">
                 <h2 className="text-xl font-bold text-white tracking-tight">Get Free Consultation</h2>
                 <p className="text-white/65 text-sm mt-1">
-                  Our CA will call you within <span className="font-semibold text-white">15 minutes</span>
+                  Our professional will call you within <span className="font-semibold text-white">15 minutes</span>
                 </p>
               </div>
 
-              <div className="px-8 py-7">
+              <div className="px-6 py-4">
                 {submitted ? (
                   <div className="py-10 text-center">
                     <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -235,7 +235,7 @@ export default function HeroSection() {
               </div>
 
               {/* Bottom compliance bar */}
-              <div className="px-8 py-4 bg-slate-50 border-t border-slate-100 flex items-center gap-2">
+              <div className="px-6 py-3 bg-slate-50 border-t border-slate-100 flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-[#1E4E8C] shrink-0" />
                 <p className="text-[11px] text-slate-500 font-medium">
                   Data protected under the IT Act, 2000. Your information is never shared.

@@ -25,7 +25,7 @@ export default function ConversationListScreen({ onStartChat, hasConversations, 
           <MessageSquarePlus className="w-4 h-4" /> Start a new chat
         </button>
 
-        <div className="mt-8">
+        <div className="mt-4">
           <h3 className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-4 px-1">Recent</h3>
           
           {hasConversations ? (
@@ -45,7 +45,7 @@ export default function ConversationListScreen({ onStartChat, hasConversations, 
               </div>
             </button>
           ) : (
-            <div className="py-12 text-center flex flex-col items-center">
+            <div className="py-8 text-center flex flex-col items-center">
               <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mb-4 border border-slate-100">
                 <MessageSquarePlus className="w-6 h-6 text-slate-300" />
               </div>

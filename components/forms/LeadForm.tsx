@@ -51,7 +51,7 @@ export default function LeadForm({
         </div>
         <h3 className="text-xl font-bold text-[#1E4E8C] mb-2">Request Received!</h3>
         <p className="text-slate-500 text-sm leading-relaxed">
-          Our expert CA will contact you within 15 minutes to discuss your {serviceName}.
+          Our expert professional will contact you within 15 minutes to discuss your {serviceName}.
         </p>
       </div>
     );
@@ -73,7 +73,7 @@ export default function LeadForm({
           Get Free {serviceName} Consultation
         </h3>
         <p className="text-white/60 text-[13px]">
-          Our CA will call you within <span className="text-white font-semibold">15 minutes</span>
+          Our professional will call you within <span className="text-white font-semibold">15 minutes</span>
         </p>
       </div>
 

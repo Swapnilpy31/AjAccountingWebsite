@@ -24,7 +24,7 @@ const contactDetails = [
     icon: Phone,
     label: 'Call Us Directly',
     value: '01204280165',
-    sub: 'Mon ΓÇô Sat, 10:00 AM ΓÇô 6:00 PM',
+    sub: 'Mon - Sat, 10:00 AM - 6:00 PM',
     href: 'tel:01204280165',
     color: 'text-[#1E4E8C]',
     bg: 'bg-[#1E4E8C]/8',
@@ -50,8 +50,8 @@ const contactDetails = [
   {
     icon: Clock,
     label: 'Office Hours',
-    value: 'Mon ΓÇô Sat',
-    sub: '10:00 AM ΓÇô 6:00 PM IST',
+    value: 'Mon - Sat',
+    sub: '10:00 AM - 6:00 PM IST',
     href: null,
     color: 'text-[#4CAF50]',
     bg: 'bg-[#4CAF50]/8',
@@ -59,8 +59,8 @@ const contactDetails = [
 ];
 
 const trustPoints = [
-  'Response within 24 hours ΓÇö guaranteed',
-  'Dedicated CA & CS assigned to your case',
+  'Response within 24 hours  -  guaranteed',
+  'Dedicated professional assigned to your case',
   'Free initial consultation, no hidden charges',
   'Served 1,000+ businesses across India',
 ];
@@ -84,12 +84,12 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
-          PAGE HEAD ΓÇö SEO meta is handled in layout
-      ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */}
+      {/* ---------------------------------------------
+          PAGE HEAD  -  SEO meta is handled in layout
+      --------------------------------------------- */}
 
-      {/* ΓöÇΓöÇ 1. Hero Banner ΓöÇΓöÇ */}
-      <section className="relative bg-[#1E4E8C] pt-28 pb-20 overflow-hidden">
+      {/* -- 1. Hero Banner -- */}
+      <section className="relative bg-[#1E4E8C] pt-28 pb-10 overflow-hidden">
         {/* Grid overlay */}
         <div
           className="absolute inset-0 opacity-[0.04]"
@@ -117,9 +117,9 @@ export default function ContactPage() {
             <br className="hidden sm:block" /> in India
           </h1>
 
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-4">
             Reach our team of qualified CAs and CSs for company registration, GST filing,
-            ROC compliance, and all corporate legal services ΓÇö pan-India.
+            ROC compliance, and all corporate legal services  -  pan-India.
           </p>
 
           {/* Quick trust badges */}
@@ -142,12 +142,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ΓöÇΓöÇ 2. Main Content: Form + Side Info ΓöÇΓöÇ */}
-      <section className="bg-slate-50 py-20 border-b border-slate-200">
+      {/* -- 2. Main Content: Form + Side Info -- */}
+      <section className="bg-slate-50 py-8 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_460px] gap-10 lg:gap-14 items-start">
 
-            {/* ΓöÇΓöÇ LEFT: Contact Form ΓöÇΓöÇ */}
+            {/* -- LEFT: Contact Form -- */}
             <div className="bg-white rounded-3xl shadow-[0_4px_30px_rgba(0,0,0,0.07)] border border-slate-100 overflow-hidden">
 
               {/* Form header */}
@@ -167,13 +167,13 @@ export default function ContactPage() {
 
               <div className="px-8 py-8">
                 {submitted ? (
-                  /* ΓöÇΓöÇ Success State ΓöÇΓöÇ */
+                  /* -- Success State -- */
                   <div className="py-14 text-center">
                     <div className="w-20 h-20 bg-[#4CAF50]/10 border border-[#4CAF50]/20 rounded-full flex items-center justify-center mx-auto mb-5">
                       <CheckCircle2 className="w-9 h-9 text-[#4CAF50]" />
                     </div>
                     <h3 className="text-2xl font-bold text-[#1E4E8C] mb-2">Request Received!</h3>
-                    <p className="text-slate-500 text-[15px] max-w-sm mx-auto mb-8">
+                    <p className="text-slate-500 text-[15px] max-w-sm mx-auto mb-4">
                       Thank you! Our compliance expert will contact you within 24 hours.
                     </p>
                     <button
@@ -290,8 +290,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* ΓöÇΓöÇ RIGHT: Contact Info + Trust + Map ΓöÇΓöÇ */}
-            <div className="space-y-6">
+            {/* -- RIGHT: Contact Info + Trust + Map -- */}
+            <div className="space-y-3">
 
               {/* Contact Details Cards */}
               {contactDetails.map((c) => (
@@ -361,11 +361,11 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ΓöÇΓöÇ 3. Alternative Contact Methods ΓöÇΓöÇ */}
-      <section className="bg-white py-16 border-b border-slate-100">
+      {/* -- 3. Alternative Contact Methods -- */}
+      <section className="bg-white py-8 border-b border-slate-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-3">Prefer a different way?</p>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E4E8C] mb-8">Reach Us Any Way You Like</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1E4E8C] mb-4">Reach Us Any Way You Like</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
               {
@@ -432,8 +432,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ΓöÇΓöÇ 4. SEO Schema-friendly bottom block ΓöÇΓöÇ */}
-      <section className="bg-slate-50 py-12">
+      {/* -- 4. SEO Schema-friendly bottom block -- */}
+      <section className="bg-slate-50 py-8">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-slate-500 text-[13px] leading-relaxed">
             AJ Accounting Group provides corporate compliance services across India including company registration,

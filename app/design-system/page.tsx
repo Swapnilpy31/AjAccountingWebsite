@@ -16,7 +16,7 @@ export default function DesignSystemPage() {
       
       {/* Sidebar Navigation */}
       <aside className="w-full md:w-64 bg-white border-r border-gray-200 p-6 sticky top-0 md:h-screen overflow-y-auto z-10 hidden lg:block shadow-sm">
-        <h2 className="text-xl font-bold mb-8 text-primary-900 flex items-center gap-2">
+        <h2 className="text-xl font-bold mb-4 text-primary-900 flex items-center gap-2">
           <Layers className="text-primary-500" /> Design System
         </h2>
         <nav className="space-y-1">
@@ -40,7 +40,7 @@ export default function DesignSystemPage() {
       <main className="flex-1 p-6 md:p-12 lg:p-20 overflow-y-auto bg-[#f8fafc]">
         <div className="max-w-5xl mx-auto space-y-24">
           
-          <header className="mb-12">
+          <header className="mb-5">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">AJ Legal Consultant <span className="text-primary-600">UI System</span></h1>
             <p className="text-lg text-gray-500 max-w-2xl leading-relaxed">
               A comprehensive guide to the visual identity, UI components, and design rules used to build our trustworthy, premium corporate platform.
@@ -48,8 +48,8 @@ export default function DesignSystemPage() {
           </header>
 
           {/* Section 1: Brand Overview */}
-          <section id="section-1" className="scroll-mt-12">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-1" className="scroll-mt-5">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">1</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Brand Overview</h2>
             </div>
@@ -60,7 +60,7 @@ export default function DesignSystemPage() {
                    {/* Logo Placeholder - assuming /LOGO.png exists */}
                    <Image src="/LOGO.png" alt="AJ Legal Consultant Logo" width={300} height={100} className="object-contain" />
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-3">
                   <div>
                     <h3 className="text-sm font-bold text-primary-600 uppercase tracking-wider mb-2">Short Intro</h3>
                     <p className="text-gray-700 leading-relaxed">
@@ -85,8 +85,8 @@ export default function DesignSystemPage() {
           </section>
 
           {/* Section 2: Color Palette */}
-          <section id="section-2" className="scroll-mt-12">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-2" className="scroll-mt-5">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">2</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Color Palette</h2>
             </div>
@@ -136,8 +136,8 @@ export default function DesignSystemPage() {
           </section>
 
           {/* Section 3: Typography */}
-          <section id="section-3" className="scroll-mt-12">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-3" className="scroll-mt-5">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">3</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Typography</h2>
             </div>
@@ -188,8 +188,8 @@ export default function DesignSystemPage() {
           </section>
 
           {/* Section 4: Buttons */}
-          <section id="section-4" className="scroll-mt-12">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-4" className="scroll-mt-5">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">4</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Buttons</h2>
             </div>
@@ -230,13 +230,13 @@ export default function DesignSystemPage() {
           </section>
 
           {/* Section 5: Card Design */}
-          <section id="section-5" className="scroll-mt-12">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-5" className="scroll-mt-5">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">5</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Card Design</h2>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {/* Service Card */}
               <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-primary-500/5 transition-all duration-300 group flex flex-col h-full cursor-pointer relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-primary-50 rounded-bl-full -mr-4 -mt-4 transition-transform duration-500 group-hover:scale-110"></div>
@@ -258,7 +258,7 @@ export default function DesignSystemPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Premium Setup</h3>
                 <p className="text-gray-400 text-sm mb-6">End-to-end legal compliance for funded startups.</p>
-                <div className="space-y-3 flex-grow mb-8">
+                <div className="space-y-3 flex-grow mb-4">
                   {["Incorporation Certificate", "Director PIN", "GST Registration", "TDS Filing Setup"].map(ft => (
                     <div key={ft} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
@@ -295,14 +295,14 @@ export default function DesignSystemPage() {
           </section>
 
           {/* Section 6: Form Elements */}
-          <section id="section-6" className="scroll-mt-12">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-6" className="scroll-mt-5">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">6</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Form Elements</h2>
             </div>
             
             <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm max-w-3xl">
-              <form className="space-y-6" onSubmit={e => e.preventDefault()}>
+              <form className="space-y-3" onSubmit={e => e.preventDefault()}>
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Default Input */}
                   <div className="space-y-2">
@@ -404,13 +404,13 @@ export default function DesignSystemPage() {
           </section>
 
           {/* Section 7: Iconography */}
-          <section id="section-7" className="scroll-mt-12">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-7" className="scroll-mt-5">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">7</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Iconography</h2>
             </div>
             
-            <div className="grid sm:grid-cols-2 gap-8">
+            <div className="grid sm:grid-cols-2 gap-5">
               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
                 <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2"><LayoutGrid className="text-primary" /> Core UI Icons (Line)</h3>
                 <div className="flex flex-wrap gap-4">
@@ -436,13 +436,13 @@ export default function DesignSystemPage() {
           </section>
 
           {/* Section 8: Section Style Blocks */}
-          <section id="section-8" className="scroll-mt-12">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-8" className="scroll-mt-5">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">8</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Section Style Blocks</h2>
             </div>
             
-            <div className="space-y-8">
+            <div className="space-y-4">
                {/* Hero Preview */}
                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm flex flex-col group relative">
                  <div className="absolute top-4 right-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full z-20">Hero Section</div>
@@ -457,7 +457,7 @@ export default function DesignSystemPage() {
                  </div>
                </div>
 
-               <div className="grid md:grid-cols-2 gap-8">
+               <div className="grid md:grid-cols-2 gap-5">
                  {/* Services Preview */}
                  <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm relative">
                    <div className="absolute top-4 right-4 bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-full shadow-sm">Services Grid</div>
@@ -497,8 +497,8 @@ export default function DesignSystemPage() {
           </section>
 
           {/* Section 9: Spacing & Layout System */}
-          <section id="section-9" className="scroll-mt-12">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-9" className="scroll-mt-5">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">9</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Spacing & Layout System</h2>
             </div>
@@ -546,8 +546,8 @@ export default function DesignSystemPage() {
                     <h3 className="text-lg font-bold text-gray-900 mb-4 border-b pb-2">Layout Guide</h3>
                     <ul className="text-sm text-gray-600 space-y-2">
                        <li>• <strong>Max Container:</strong> <code>max-w-7xl</code> (1280px) for desktop pages.</li>
-                       <li>• <strong>Section Padding:</strong> <code>py-16 md:py-24</code></li>
-                       <li>• <strong>Card Grids:</strong> CSS Grid <code>gap-6</code> or <code>gap-8</code></li>
+                       <li>• <strong>Section Padding:</strong> <code>py-8 md:py-10</code></li>
+                       <li>• <strong>Card Grids:</strong> CSS Grid <code>gap-6</code> or <code>gap-5</code></li>
                     </ul>
                   </div>
                 </div>
@@ -557,8 +557,8 @@ export default function DesignSystemPage() {
           </section>
 
           {/* Section 10: Effects & UI Rules */}
-          <section id="section-10" className="scroll-mt-12 pb-24">
-            <div className="flex items-center gap-3 mb-8">
+          <section id="section-10" className="scroll-mt-5 pb-10">
+            <div className="flex items-center gap-3 mb-4">
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary-100 text-primary-700 font-bold text-sm">10</span>
               <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Effects & UI Rules</h2>
             </div>

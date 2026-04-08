@@ -3,7 +3,7 @@ import { Badge } from './Badge';
 
 export function SectionHeader({ title, subtitle, badge }: { title: string; subtitle?: string; badge?: string }) {
   return (
-    <div className="text-center max-w-2xl mx-auto mb-16">
+    <div className="text-center max-w-2xl mx-auto mb-6">
       {badge && (
         <div className="mb-6">
           <Badge variant="primary">{badge}</Badge>
