@@ -1,9 +1,7 @@
 import React from 'react';
 import {
   Building2, Receipt, FileText, Scale, Award,
-  Users, Clock, Star, TrendingUp, ShieldCheck,
-  Briefcase, Globe, Landmark, Cpu, Database, Layers,
-  Leaf, Zap, Package, HeartHandshake
+  Users, Clock, Star, ShieldCheck, Globe,
 } from 'lucide-react';
 
 /* ── Stats shown above the logo grid ── */
