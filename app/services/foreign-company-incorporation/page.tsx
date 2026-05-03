@@ -246,19 +246,19 @@ export default function ForeignCompanyIncorporation() {
                         <h3 className="text-[15px] font-bold mb-6 uppercase tracking-widest text-primary-400">Direct Contact</h3>
                         <ul className="space-y-5 relative z-10">
                           <li>
-                            <a href="tel:01204280165" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
+                            <a href="tel:9643862867" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
                                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-primary-600 transition-colors border border-white/5 shadow-sm">
                                  <Phone className="w-4 h-4" />
                                </div>
-                               <span className="font-semibold text-[15px] tracking-wide">01204280165</span>
+                               <span className="font-semibold text-[15px] tracking-wide">9643862867</span>
                             </a>
                           </li>
                           <li>
-                            <a href="mailto:info@ajaccountinggroup.com" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
+                            <a href="mailto:info@ajlegalconsultant.com" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
                                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-primary-600 transition-colors border border-white/5 shadow-sm">
                                  <Mail className="w-4 h-4" />
                                </div>
-                               <span className="font-semibold text-sm tracking-wide">info@ajaccountinggroup.com</span>
+                               <span className="font-semibold text-sm tracking-wide">info@ajlegalconsultant.com</span>
                             </a>
                           </li>
                           <li>
@@ -280,3 +280,4 @@ export default function ForeignCompanyIncorporation() {
       </div>
   );
 }
+

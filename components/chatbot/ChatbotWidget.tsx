@@ -44,7 +44,7 @@ export default function ChatbotWidget() {
         {
           id: '1',
           role: 'bot',
-          content: 'Hi there! 👋 Welcome to AJ Legal Consultant. How can I help you today?',
+          content: 'Hi there! 👋 Welcome to Aj Legal Consultant. How can I help you today?',
           timestamp: new Date()
         }
       ]);

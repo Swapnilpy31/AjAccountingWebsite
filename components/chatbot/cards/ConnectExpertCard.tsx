@@ -17,7 +17,7 @@ export default function ConnectExpertCard() {
           <MessageCircle className="w-3.5 h-3.5" /> WhatsApp Us
         </a>
         <a 
-          href="tel:01204280165" 
+          href="tel:9643862867" 
           className="w-full text-center text-xs font-semibold bg-white hover:bg-slate-50 text-primary-700 border border-primary-200 rounded-lg py-2.5 transition-colors flex items-center justify-center gap-1.5 shadow-sm"
         >
           <PhoneCall className="w-3.5 h-3.5" /> Call Now
@@ -26,3 +26,4 @@ export default function ConnectExpertCard() {
     </div>
   );
 }
+

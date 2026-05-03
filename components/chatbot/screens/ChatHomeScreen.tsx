@@ -23,7 +23,7 @@ export default function ChatHomeScreen({ onStartChat, onClose }: ChatHomeScreenP
         <div className="flex flex-row items-start justify-between">
           <div>
             <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center mb-3 shadow-sm border border-white/20 overflow-hidden relative">
-              <Image src="/logo.png" alt="AJ Logo" fill className="object-contain p-1" />
+              <Image src="/logo.png" alt="Aj Legal Consultant Logo" fill className="object-contain p-1" />
             </div>
 
             <p className="text-primary-100 text-sm italic">We are here to help you</p>

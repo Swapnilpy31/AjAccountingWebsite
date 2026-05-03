@@ -426,9 +426,9 @@ const serviceData: Record<string, ServiceData> = {
     title: 'RA License Renewal',
     tagline: 'Renew your BCAS Regulated Agent licence before it expires',
     description: 'RA Licenses must be renewed before expiry. Operating with an expired RA license is illegal and leads to immediate suspension of air cargo operations. Start renewal process 90 days before expiry.',
-    highlights: ['Timely Renewal Processing', 'Document Update', 'BCAS Re-Inspection Support', 'Staff Background Verification Renewal', 'Security Programme Update', 'Continuity of Operations'],
+    highlights: [],
     documents: ['Existing RA License Copy', 'Updated company documents', 'Renewed staff KYC and background checks', 'Updated Security Programme', 'Premises proof (if changed)'],
-    timeline: '15–30 working days',
+    timeline: '',
     faqs: [
       { question: 'When should I start the renewal?', answer: 'We recommend starting 90 days before expiry to allow time for document preparation, BCAS processing, and any re-inspection.' },
       { question: 'What happens if RA license expires?', answer: 'Operations must immediately cease. Airlines and cargo terminals will reject cargo from entities with expired RA status.' },

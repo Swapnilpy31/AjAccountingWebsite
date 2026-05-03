@@ -47,7 +47,7 @@ export default async function ServicePage({ params }: { params: { slug: string }
     { question: `What are the penalties for not completing ${serviceName} on time?`, answer: `Delaying or missing ${serviceName.toLowerCase()} compliance can result in MCA penalties of ₹100–₹500 per day, GST late fees of ₹50/day per return, director disqualification, and in severe cases, company strike-off under Section 248 of the Companies Act.` },
     { question: `Can I do ${serviceName} myself without a professional?`, answer: `While technically possible, ${serviceName.toLowerCase()} involves government portals, specific forms, and legal nuances that are easy to get wrong. Errors cause rejection delays and refiling fees. A qualified professional ensures accurate, penalty-free filing the first time.` },
     { question: `Is ${serviceName} mandatory for all businesses in India?`, answer: `Applicability depends on your business type and turnover. Please consult our experts for specific applicability advice.` },
-    { question: `What compliance is required after ${serviceName} is complete?`, answer: `After ${serviceName.toLowerCase()}, ongoing compliance includes annual ROC filings, GST return filing, income tax return, and director KYC. AJ Accounting offers annual compliance packages to cover all these obligations.` },
+    { question: `What compliance is required after ${serviceName} is complete?`, answer: `After ${serviceName.toLowerCase()}, ongoing compliance includes annual ROC filings, GST return filing, income tax return, and director KYC. Aj Legal Consultant offers annual compliance packages to cover all these obligations.` },
   ];
 
   return (
@@ -176,10 +176,10 @@ export default async function ServicePage({ params }: { params: { slug: string }
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
                 <a
-                  href="tel:01204280165"
+                  href="tel:9643862867"
                   className="flex items-center justify-center gap-2 w-full border-2 border-[#1E4E8C] text-[#1E4E8C] hover:bg-[#1E4E8C] hover:text-white font-bold py-3 rounded-xl transition-all text-sm"
                 >
-                  Call: 01204280165
+                  Call: 9643862867
                 </a>
                 <p className="text-center text-[11px] text-slate-400">
                   <ShieldCheck className="inline w-3 h-3 mr-1 relative -top-px" />

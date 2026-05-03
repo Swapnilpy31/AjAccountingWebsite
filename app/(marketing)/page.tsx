@@ -5,12 +5,14 @@ import ProcessSection from '@/components/sections/ProcessSection';
 import ServiceSection from '@/components/sections/ServiceSection';
 import FAQSection from '@/components/sections/FAQSection';
 import ServicesCarouselSection from '@/components/sections/ServicesCarouselSection';
+import HighlightBox from '@/components/sections/HighlightBox';
 
 export default function Home() {
   return (
     <div className="bg-white">
       <ServicesCarouselSection />
       <HeroSection />
+      <HighlightBox />
       <ClientsAndPartnersSection />
       <ProcessSection />
       <ServiceSection />

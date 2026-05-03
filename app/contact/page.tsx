@@ -23,18 +23,18 @@ const contactDetails = [
   {
     icon: Phone,
     label: 'Call Us Directly',
-    value: '01204280165',
+    value: '9643862867',
     sub: 'Mon - Sat, 10:00 AM - 6:00 PM',
-    href: 'tel:01204280165',
+    href: 'tel:9643862867',
     color: 'text-[#1E4E8C]',
     bg: 'bg-[#1E4E8C]/8',
   },
   {
     icon: Mail,
     label: 'Email Support',
-    value: 'info@ajaccountinggroup.com',
+    value: 'info@ajlegalconsultant.com',
     sub: 'We reply within 24 hours',
-    href: 'mailto:info@ajaccountinggroup.com',
+    href: 'mailto:info@ajlegalconsultant.com',
     color: 'text-[#4CAF50]',
     bg: 'bg-[#4CAF50]/8',
   },
@@ -240,7 +240,7 @@ export default function ContactPage() {
                         onChange={set('service')}
                         className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all appearance-none"
                       >
-                        <option value="">Select a serviceΓÇª</option>
+                        <option value="">Select a service...</option>
                         {services.map((s) => (
                           <option key={s} value={s}>{s}</option>
                         ))}
@@ -254,7 +254,7 @@ export default function ContactPage() {
                       </label>
                       <textarea
                         rows={4}
-                        placeholder="Tell us briefly about your requirementΓÇª"
+                        placeholder="Tell us briefly about your requirement..."
                         value={form.message}
                         onChange={set('message')}
                         className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all resize-none"
@@ -270,7 +270,7 @@ export default function ContactPage() {
                       {loading ? (
                         <>
                           <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
-                          SubmittingΓÇª
+                          Submitting...
                         </>
                       ) : (
                         <>
@@ -340,7 +340,7 @@ export default function ContactPage() {
               {/* Embedded Google Map */}
               <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
                 <iframe
-                  title="AJ Accounting Group Office Location"
+                  title="Aj Legal Consultant Office Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.8!2d77.35!3d28.57!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzEyLjAiTiA3N8KwMjEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                   width="100%"
                   height="220"
@@ -370,10 +370,10 @@ export default function ContactPage() {
             {[
               {
                 label: 'Call Now',
-                value: '01204280165',
+                value: '9643862867',
                 desc: 'Speak directly with a compliance expert',
                 icon: Phone,
-                href: 'tel:01204280165',
+                href: 'tel:9643862867',
                 cta: 'Call Now',
                 primary: false,
               },
@@ -388,10 +388,10 @@ export default function ContactPage() {
               },
               {
                 label: 'Email',
-                value: 'info@ajaccountinggroup.com',
+                value: 'info@ajlegalconsultant.com',
                 desc: 'Email us your documents or queries',
                 icon: Mail,
-                href: 'mailto:info@ajaccountinggroup.com',
+                href: 'mailto:info@ajlegalconsultant.com',
                 cta: 'Send Email',
                 primary: false,
               },
@@ -436,7 +436,7 @@ export default function ContactPage() {
       <section className="bg-slate-50 py-8">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <p className="text-slate-500 text-[13px] leading-relaxed">
-            AJ Accounting Group provides corporate compliance services across India including company registration,
+            Aj Legal Consultant (I) Private Limited provides corporate consultancy services across India including company registration,
             GST filing, ROC / MCA annual compliance, income tax returns, trademark registration,
             and legal secretarial services. Our offices are located in Noida, serving clients pan-India
             including Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Pune, Kolkata, and all major cities.
@@ -447,3 +447,4 @@ export default function ContactPage() {
     </>
   );
 }
+

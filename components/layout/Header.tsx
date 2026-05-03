@@ -681,7 +681,7 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
               <div className="relative w-40 h-10 sm:w-48 sm:h-12">
                 <Image
                   src="/biglogo.png"
-                  alt="Aj Accounting Group Logo"
+                  alt="Aj Legal Consultant Logo"
                   fill
                   className="object-contain object-left"
                   priority
@@ -712,6 +712,12 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
                 </div>
               );
             })}
+            <Link 
+              href="/founder" 
+              className={`${headerFont.className} flex items-center px-3 py-2 rounded-lg text-[15px] font-bold whitespace-nowrap transition-colors text-[#1E4E8C] hover:text-[#4CAF50] hover:bg-slate-50`}
+            >
+              Meet Our Founder
+            </Link>
           </nav>
 
           {/* Render active Mega Menu globally relative to the max-w-[1400px] header wrapper */}
@@ -749,6 +755,7 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
           <div className="px-4 py-2 flex flex-col">
             <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border-b border-gray-50 text-sm font-semibold text-[#1E4E8C]">Home</Link>
             <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border-b border-gray-50 text-sm font-semibold text-[#1E4E8C]">About</Link>
+            <Link href="/founder" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border-b border-gray-50 text-sm font-semibold text-[#1E4E8C]">Meet Our Founder</Link>
 
             {megaMenuData.map((menu) => (
               <div key={menu.name} className="border-b border-gray-50">

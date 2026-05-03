@@ -82,7 +82,7 @@ export default function HeroSection() {
 
             {/* SEO keyword paragraph (hidden visually but crawlable) */}
             <p className="text-sm text-white/55 leading-relaxed max-w-lg mb-3 animate-fade-in-up-d2">
-              AJ Accounting Group offers comprehensive corporate compliance services across India including
+              Aj Legal Consultant (I) Private Limited offers comprehensive corporate consultancy services across India including
               Private Limited company registration, LLP formation, GST filing, ROC annual compliance,
               trademark registration, FSSAI license, income tax return filing, and MCA secretarial services
               for startups, SMEs, and large enterprises nationwide.
@@ -121,8 +121,8 @@ export default function HeroSection() {
               </div>
               <div>
                 <p className="text-[11px] text-white/50 uppercase tracking-widest font-semibold">Call us directly</p>
-                <a href="tel:01204280165" className="text-white font-bold text-[15px] hover:text-[#4CAF50] transition-colors">
-                  01204280165
+                <a href="tel:9643862867" className="text-white font-bold text-[15px] hover:text-[#4CAF50] transition-colors">
+                  9643862867
                 </a>
               </div>
             </div>
@@ -249,3 +249,4 @@ export default function HeroSection() {
     </section>
   );
 }
+

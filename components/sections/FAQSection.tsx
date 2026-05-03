@@ -57,7 +57,7 @@ const faqs: FAQEntry[] = [
     id: 'faq-8',
     question: 'How much do corporate compliance services cost in India?',
     answer:
-      'Corporate compliance service costs vary by type. Basic annual ROC compliance starts from ₹4,999, GST return filing from ₹999/month, and company registration from ₹6,999 all-inclusive. AJ Accounting Group offers transparent, fixed-fee packages with no hidden charges — contact us for a free consultation and custom quote.',
+      'Corporate compliance service costs vary by type. Basic annual ROC compliance starts from ₹4,999, GST return filing from ₹999/month, and company registration from ₹6,999 all-inclusive. Aj Legal Consultant (I) Private Limited offers transparent, fixed-fee packages with no hidden charges — contact us for a free consultation and custom quote.',
     tags: ['Compliance Cost', 'Pricing', 'ROC Fees'],
   },
 ];
