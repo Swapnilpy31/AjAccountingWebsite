@@ -57,10 +57,10 @@ export default function Footer() {
             <div>
               <h4 className="text-[13px] font-bold mb-4 text-white tracking-widest uppercase">Resources</h4>
               <ul className="space-y-4">
-                {['About Us', 'Meet Our Founder', 'Blog', 'Contact Us', 'FAQ', 'Disclaimer', 'Privacy Policy', 'Terms & Conditions'].map((item) => (
+                {['About Us', 'Meet Our Founder', 'Contact Us', 'Disclaimer', 'Privacy Policy'].map((item) => (
                   <li key={item}>
                     <Link 
-                      href={item === 'About Us' ? '/about' : item === 'Meet Our Founder' ? '/founder' : `/${item.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-')}`} 
+                      href={item === 'About Us' ? '/about' : item === 'Meet Our Founder' ? '/founder' : item === 'Contact Us' ? '/contact' : `/${item.toLowerCase().replace(/ /g, '-')}`} 
                       className="text-white/60 hover:text-[#4CAF50] text-[15px] transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRight className="w-3.5 h-3.5 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all text-[#4CAF50] shrink-0" />
@@ -161,8 +161,6 @@ export default function Footer() {
             <div className="flex items-center gap-6">
               <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
               <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-              <Link href="/sitemap" className="hover:text-white transition-colors">Sitemap</Link>
             </div>
           </div>
 

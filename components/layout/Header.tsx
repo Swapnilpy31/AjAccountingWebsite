@@ -51,14 +51,6 @@ const megaMenuData = [
           { title: "Udyam (MSME) Registration", url: "/services/udyam-msme" },
         ],
       },
-      // {
-      //   title: "Trade & Shop",
-      //   icon: <FileText className="w-4 h-4" />,
-      //   links: [
-      //     { title: "Trade License", url: "/services/trade-license" },
-      //     { title: "Shop & Establishment", url: "/services/shop-act" },
-      //   ],
-      // },
     ],
     popular: ["Private Limited Company", "LLP Registration", "Udyam (MSME) Registration"],
   },
@@ -85,81 +77,9 @@ const megaMenuData = [
           { title: "Capacity Enhancement", url: "/services/capacity-enhancement" },
         ],
       },
-      // {
-      //   title: "Aviation Security",
-      //   icon: <ShieldCheck className="w-4 h-4" />,
-      //   links: [
-      //     { title: "Aviation Security Training", url: "/services/aviation-security-training" },
-      //     { title: "RA Training (Category 1-12)", url: "/services/ra-training" },
-      //     { title: "Security Program Approval", url: "/services/security-program" },
-      //   ],
-      // },
-      // {
-      //   title: "Compliance & Audit",
-      //   icon: <FileText className="w-4 h-4" />,
-      //   links: [
-      //     { title: "RA Annual Compliance", url: "/services/ra-annual-compliance" },
-      //     // { title: "RA Internal Audit", url: "/services/ra-audit" },
-      //     { title: "RA Site Verification", url: "/services/ra-site-verification" },
-      //   ],
-      // },
-      // {
-      //   title: "Popular Services",
-      //   icon: <Star className="w-4 h-4" />,
-      //   links: [
-      //     { title: "RA License Registration", url: "/services/ra-license" },
-      //     { title: "Aviation Security Training", url: "/services/aviation-security-training" },
-      //     { title: "IATA Registration", url: "/services/iata" },
-      //   ],
-      // },
     ],
     popular: ["RA License", "Security Training", "IATA"],
   },
-  // {
-  //   name: "Trademark & IP",
-  //   columns: [
-  //     {
-  //       title: "Trademark",
-  //       icon: <ShieldCheck className="w-4 h-4" />,
-  //       links: [
-  //         { title: "Trademark Registration", url: "/services/trademark-registration" },
-  //         { title: "Trademark Objection Reply", url: "/services/trademark-objection" },
-  //         { title: "Trademark Opposition", url: "/services/trademark-opposition" },
-  //         { title: "Trademark Renewal", url: "/services/trademark-renewal" },
-  //         { title: "Trademark Transfer", url: "/services/trademark-transfer" },
-  //         { title: "Trademark Rectification", url: "/services/trademark-rectification" },
-  //         { title: "Trademark Hearing", url: "/services/trademark-hearing" },
-  //       ],
-  //     },
-  //     {
-  //       title: "Copyright & Patent",
-  //       icon: <FileText className="w-4 h-4" />,
-  //       links: [
-  //         { title: "Copyright Registration", url: "/services/copyright-registration" },
-  //         { title: "Copyright Objection", url: "/services/copyright-objection" },
-  //         { title: "Patent Registration", url: "/services/patent" },
-  //         { title: "Design Registration", url: "/services/design-registration" },
-  //       ],
-  //     },
-  //     {
-  //       title: "Brand & International",
-  //       icon: <Globe className="w-4 h-4" />,
-  //       links: [
-  //         { title: "Logo Design", url: "/services/logo-design" },
-  //         { title: "International Trademark", url: "/services/international-trademark" },
-  //       ],
-  //     },
-  //     // {
-  //     //   title: "Popular",
-  //     //   icon: <Star className="w-4 h-4" />,
-  //     //   links: [
-  //     //     { title: "Trademark Registration", url: "/services/trademark-registration" },
-  //     //     { title: "Copyright Registration", url: "/services/copyright-registration" },
-  //     //   ],
-  //     // },
-  //   ],
-  //   popular: ["Trademark Registration", "Patent Registration"],
-  // },
   {
     name: "Licenses",
     columns: [
@@ -238,7 +158,6 @@ const megaMenuData = [
           { title: "GST E-Way Bill", url: "/services/gst-eway" },
         ],
       },
-
     ],
     popular: ["GST Registration", "GST Return Filing"],
   },
@@ -274,14 +193,6 @@ const megaMenuData = [
           { title: "Income Tax Notice Handling", url: "/services/it-notice" },
         ],
       },
-      // {
-      //   title: "Popular",
-      //   icon: <Star className="w-4 h-4" />,
-      //   links: [
-      //     { title: "ITR Filing", url: "/services/itr-filing" },
-      //     { title: "TDS Return", url: "/services/tds-return" },
-      //   ],
-      // },
     ],
     popular: ["Income Tax Return Filing", "TDS Return Filing"],
   },
@@ -357,14 +268,6 @@ const megaMenuData = [
           { title: "Professional Tax Registration", url: "/services/professional-tax" },
         ],
       },
-      // {
-      //   title: "Popular",
-      //   icon: <Star className="w-4 h-4" />,
-      //   links: [
-      //     { title: "PF Registration", url: "/services/pf-registration" },
-      //     { title: "Payroll Management", url: "/services/payroll" },
-      //   ],
-      // },
       {
         title: "Quick Links",
         icon: <Zap className="w-4 h-4" />,
@@ -376,45 +279,6 @@ const megaMenuData = [
     ],
     popular: ["PF Registration", "ESIC Registration"],
   },
-  // {
-  //   name: "ISO & Certs",
-  //   columns: [
-  //     {
-  //       title: "Quality & Environment",
-  //       icon: <Award className="w-4 h-4" />,
-  //       links: [
-  //         { title: "ISO 9001 - Quality Management", url: "/services/iso-9001" },
-  //         { title: "ISO 14001 - Environment", url: "/services/iso-14001" },
-  //         { title: "ISO 45001 - Safety", url: "/services/iso-45001" },
-  //       ],
-  //     },
-  //     {
-  //       title: "Food Safety",
-  //       icon: <ShieldCheck className="w-4 h-4" />,
-  //       links: [
-  //         { title: "ISO 22000 - Food Safety", url: "/services/iso-22000" },
-  //         { title: "HACCP Certification", url: "/services/haccp" },
-  //         { title: "FSSC 22000", url: "/services/fssc-22000" },
-  //       ],
-  //     },
-  //     {
-  //       title: "Information Security",
-  //       icon: <ShieldCheck className="w-4 h-4" />,
-  //       links: [
-  //         { title: "ISO 27001 - InfoSec", url: "/services/iso-27001" },
-  //       ],
-  //     },
-  //     {
-  //       title: "Popular",
-  //       icon: <Star className="w-4 h-4" />,
-  //       links: [
-  //         { title: "ISO 9001 Certification", url: "/services/iso-9001" },
-  //         { title: "ISO 22000 Certification", url: "/services/iso-22000" },
-  //       ],
-  //     },
-  //   ],
-  //   popular: ["ISO 9001", "ISO 22000", "HACCP"],
-  // },
   {
     name: "Consulting",
     columns: [
@@ -447,14 +311,6 @@ const megaMenuData = [
           { title: "EHS Audit", url: "/services/ehs-audit" },
         ],
       },
-      // {
-      //   title: "Popular",
-      //   icon: <Star className="w-4 h-4" />,
-      //   links: [
-      //     { title: "Accounting Services", url: "/services/accounting" },
-      //     { title: "Tax Planning", url: "/services/tax-planning" },
-      //   ],
-      // },
     ],
     popular: ["Accounting Services", "Due Diligence"],
   },
@@ -475,22 +331,6 @@ const megaMenuData = [
           { title: "Pan India Labour Certificate", url: "/services/pan-india-labour-certificate" },
         ],
       },
-      // {
-      //   title: "Structured Finance",
-      //   icon: <Building className="w-4 h-4" />,
-      //   links: [
-      //     { title: "Bank Guarantee", url: "/services/bank-guarantee" },
-      //     { title: "Project Finance", url: "/services/project-finance" },
-      //   ],
-      // },
-      // {
-      //   title: "Popular",
-      //   icon: <Star className="w-4 h-4" />,
-      //   links: [
-      //     { title: "Business Loan", url: "/services/business-loan" },
-      //     { title: "Working Capital Loan", url: "/services/working-capital" },
-      //   ],
-      // },
       {
         title: "Quick Links",
         icon: <Zap className="w-4 h-4" />,
@@ -502,47 +342,6 @@ const megaMenuData = [
     ],
     popular: ["Business Loan", "Working Capital"],
   },
-  // {
-  //   name: "Global Setup",
-  //   columns: [
-  //     {
-  //       title: "Company Formation",
-  //       icon: <Globe className="w-4 h-4" />,
-  //       links: [
-  //         { title: "UAE Company Formation", url: "/services/uae-company" },
-  //         { title: "USA Company Formation", url: "/services/usa-company-registration" },
-  //         { title: "UK Company Formation", url: "/services/uk-company" },
-  //         { title: "Singapore Company Formation", url: "/services/singapore-company" },
-  //       ],
-  //     },
-  //     {
-  //       title: "International IP & License",
-  //       icon: <ShieldCheck className="w-4 h-4" />,
-  //       links: [
-  //         { title: "International Trademark", url: "/services/international-trademark" },
-  //         { title: "UAE eCommerce License", url: "/services/uae-ecommerce" },
-  //         { title: "UAE Embassy Attestation", url: "/services/uae-attestation" },
-  //       ],
-  //     },
-  //     {
-  //       title: "Popular",
-  //       icon: <Star className="w-4 h-4" />,
-  //       links: [
-  //         { title: "USA Company Formation", url: "/services/usa-company-registration" },
-  //         { title: "UAE Company Formation", url: "/services/uae-company" },
-  //       ],
-  //     },
-  //     {
-  //       title: "Quick Links",
-  //       icon: <Zap className="w-4 h-4" />,
-  //       links: [
-  //         { title: "Singapore Company", url: "/services/singapore-company" },
-  //         { title: "International Trademark", url: "/services/international-trademark" },
-  //       ],
-  //     },
-  //   ],
-  //   popular: ["USA Company", "UAE Company"],
-  // },
 ];
 
 /* -----------------------------------------

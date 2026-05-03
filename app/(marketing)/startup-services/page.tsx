@@ -2,8 +2,8 @@ import React from 'react';
 import ServiceCard from '@/components/ui/ServiceCard';
 
 export const metadata = {
-  title: 'Startup Services | LegalServe',
-  description: 'Explore comprehensive legal services for startups including incorporations, trademark, and compliance.',
+  title: 'Startup Services | Aj Legal Consultant (I) Private Limited',
+  description: 'Explore comprehensive consultancy services for startups including incorporations, trademark, and compliance.',
 };
 
 export default function StartupServicesPage() {

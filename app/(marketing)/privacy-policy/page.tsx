@@ -1,8 +1,8 @@
 import React from 'react';
 
 export const metadata = {
-  title: 'Privacy Policy | LegalServe',
-  description: 'Privacy Policy for LegalServe.',
+  title: 'Privacy Policy | Aj Legal Consultant (I) Private Limited',
+  description: 'Privacy Policy for Aj Legal Consultant (I) Private Limited.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
         <h1>Privacy Policy</h1>
         <p>Last updated: October 2023</p>
         <p>
-          At LegalServe, accessible from legalserve.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by LegalServe and how we use it.
+          At Aj Legal Consultant (I) Private Limited, accessible from ajlegalconsultant.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Aj Legal Consultant (I) Private Limited and how we use it.
         </p>
         <h2>Information we collect</h2>
         <p>

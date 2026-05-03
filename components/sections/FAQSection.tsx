@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { HelpCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
 import { FAQItem, type FAQEntry } from './FAQItem';
 
 const faqs: FAQEntry[] = [
@@ -113,34 +112,7 @@ export default function FAQSection() {
           ))}
         </div>
 
-        {/* ── Bottom CTA ── */}
-        <div className="mt-6 bg-[#1E4E8C] rounded-2xl p-8 sm:p-10 text-center relative overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-[0.04]"
-            style={{
-              backgroundImage:
-                'repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%)',
-              backgroundSize: '18px 18px',
-            }}
-          />
-          <div className="relative z-10">
-            <ShieldCheck className="w-8 h-8 text-[#4CAF50] mx-auto mb-3" />
-            <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">
-              Still have questions?
-            </h3>
-            <p className="text-white/65 text-[15px] mb-7 max-w-lg mx-auto leading-relaxed">
-              Our compliance experts are available Mon–Sat, 10 AM–6 PM. Get personalised advice
-              from a qualified professional — free of charge.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-[#4CAF50] hover:bg-[#43A047] text-white font-bold px-9 py-4 rounded-xl shadow-lg shadow-[#4CAF50]/25 hover:shadow-[#4CAF50]/35 transition-all hover:-translate-y-0.5 group/btn"
-            >
-              Get a Free Consultation
-              <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
-            </Link>
-          </div>
-        </div>
+
       </div>
     </section>
   );
