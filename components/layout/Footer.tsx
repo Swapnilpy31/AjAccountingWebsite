@@ -157,7 +157,6 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="mt-2 pt-8 text-[13px] font-medium text-white/40 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/10">
             <p>&copy; {new Date().getFullYear()} Aj Legal Consultant (I) Private Limited. All rights reserved.</p>
-            <p className="flex items-center gap-1.5 opacity-80">Made with <span className="text-red-400 text-base leading-none">❤️</span> in India</p>
             <div className="flex items-center gap-6">
               <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
               <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
