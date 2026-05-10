@@ -210,12 +210,12 @@ export default async function ServicePage({ params }: { params: { slug: string }
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5">
             {whyUs.map((item) => (
-              <div key={item.title} className="group bg-white border border-slate-200 rounded-2xl p-7 shadow-sm hover:shadow-xl hover:shadow-[#1E4E8C]/8 hover:-translate-y-1.5 hover:border-[#1E4E8C]/25 transition-all duration-300">
-                <div className="w-14 h-14 bg-[#1E4E8C]/6 rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#1E4E8C] transition-colors duration-300">
-                  <item.icon className="w-6 h-6 text-[#1E4E8C] group-hover:text-white transition-colors duration-300" />
+              <div key={item.title} className="card-hover group bg-white border border-slate-200 rounded-2xl p-7 shadow-sm transition-all duration-300">
+                <div className="card-icon-wrap w-14 h-14 bg-[#1E4E8C]/6 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300">
+                  <item.icon className="card-icon w-6 h-6 text-[#1E4E8C] transition-colors duration-300" />
                 </div>
-                <h3 className="text-[17px] font-extrabold text-[#1E4E8C] mb-2 tracking-tight group-hover:text-[#163665] transition-colors">{item.title}</h3>
-                <p className="text-slate-500 text-[13.5px] leading-relaxed">{item.desc}</p>
+                <h3 className="card-title text-[17px] font-extrabold text-[#1E4E8C] mb-2 tracking-tight">{item.title}</h3>
+                <p className="card-desc text-slate-500 text-[13.5px] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

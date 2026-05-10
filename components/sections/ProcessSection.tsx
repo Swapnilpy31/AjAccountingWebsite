@@ -85,7 +85,7 @@ export default function ProcessSection() {
             return (
               <article
                 key={step.number}
-                className={`relative bg-white rounded-2xl p-7 border transition-all duration-300 group hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[#1E4E8C]/8 ${
+                className={`card-hover relative bg-white rounded-2xl p-7 border transition-all duration-300 group ${
                   isLast
                     ? 'border-[#4CAF50] shadow-[0_2px_20px_rgba(76,175,80,0.10)]'
                     : 'border-slate-200 shadow-sm hover:border-[#1E4E8C]/25'
@@ -98,14 +98,14 @@ export default function ProcessSection() {
 
                 {/* Number + Icon row */}
                 <div className="flex items-center gap-4 mb-5">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center border transition-all duration-300 shadow-sm group-hover:shadow ${
+                  <div className={`card-icon-wrap w-14 h-14 rounded-2xl flex items-center justify-center border transition-all duration-300 shadow-sm group-hover:shadow ${
                     isLast
-                      ? 'bg-[#4CAF50]/10 border-[#4CAF50]/20 text-[#4CAF50] group-hover:bg-[#4CAF50] group-hover:text-white group-hover:border-[#4CAF50]'
-                      : 'bg-[#1E4E8C]/6 border-[#1E4E8C]/10 text-[#1E4E8C] group-hover:bg-[#1E4E8C] group-hover:text-white group-hover:border-[#1E4E8C]'
+                      ? 'bg-[#4CAF50]/10 border-[#4CAF50]/20 text-[#4CAF50]'
+                      : 'bg-[#1E4E8C]/6 border-[#1E4E8C]/10 text-[#1E4E8C]'
                   }`}>
-                    <step.icon className="w-6 h-6" />
+                    <step.icon className="card-icon w-6 h-6" />
                   </div>
-                  <span className={`text-4xl font-black leading-none tracking-tighter select-none ${
+                  <span className={`card-number text-4xl font-black leading-none tracking-tighter select-none transition-colors duration-300 ${
                     isLast ? 'text-[#4CAF50]/20' : 'text-[#1E4E8C]/12'
                   }`} style={{ color: isLast ? 'rgba(76,175,80,0.18)' : 'rgba(30,78,140,0.12)' }}>
                     {step.number}
@@ -118,14 +118,14 @@ export default function ProcessSection() {
                 </p>
 
                 {/* Step title */}
-                <h3 className={`font-extrabold text-[17px] mb-3 tracking-tight leading-snug transition-colors group-hover:text-[#163665] ${
+                <h3 className={`card-title font-extrabold text-[17px] mb-3 tracking-tight leading-snug transition-colors ${
                   isLast ? 'text-[#2e7d32]' : 'text-[#1E4E8C]'
                 }`}>
                   {step.title}
                 </h3>
 
                 {/* SEO description */}
-                <p className="text-slate-500 text-[13.5px] leading-relaxed mb-5">
+                <p className="card-desc text-slate-500 text-[13.5px] leading-relaxed mb-5">
                   {step.desc}
                 </p>
 

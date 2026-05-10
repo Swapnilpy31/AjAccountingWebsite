@@ -158,7 +158,7 @@ export default function ServiceSection() {
 function ServiceCard({ svc }: { svc: typeof services[0] }) {
   return (
     <article
-      className={`group relative bg-white rounded-2xl p-7 flex flex-col border transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[#1E4E8C]/8 ${svc.featured
+      className={`card-hover group relative bg-white rounded-2xl p-7 flex flex-col border transition-all duration-300 ${svc.featured
           ? 'border-[#4CAF50] shadow-[0_2px_20px_rgba(76,175,80,0.12)]'
           : 'border-slate-200 shadow-sm hover:border-[#1E4E8C]/30'
         }`}
@@ -182,26 +182,26 @@ function ServiceCard({ svc }: { svc: typeof services[0] }) {
 
       {/* Icon */}
       <div
-        className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300 ${svc.featured
-            ? 'bg-[#4CAF50]/10 text-[#4CAF50] group-hover:bg-[#4CAF50] group-hover:text-white'
-            : 'bg-[#1E4E8C]/6 text-[#1E4E8C] group-hover:bg-[#1E4E8C] group-hover:text-white'
+        className={`card-icon-wrap w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300 ${svc.featured
+            ? 'bg-[#4CAF50]/10 text-[#4CAF50]'
+            : 'bg-[#1E4E8C]/6 text-[#1E4E8C]'
           }`}
       >
-        <svc.icon className="w-7 h-7" />
+        <svc.icon className="card-icon w-7 h-7" />
       </div>
 
       {/* SEO Keyword Title */}
-      <h2 className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">
+      <h2 className="card-tag text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">
         {svc.keyword}
       </h2>
 
       {/* Display Title */}
-      <h3 className="text-[19px] font-extrabold text-[#1E4E8C] mb-3 tracking-tight pr-10 group-hover:text-[#163665] transition-colors">
+      <h3 className="card-title text-[19px] font-extrabold text-[#1E4E8C] mb-3 tracking-tight pr-10 transition-colors">
         {svc.title}
       </h3>
 
       {/* SEO Description */}
-      <p className="text-slate-500 text-[13.5px] leading-relaxed mb-5 flex-grow">
+      <p className="card-desc text-slate-500 text-[13.5px] leading-relaxed mb-5 flex-grow">
         {svc.seoDesc}
       </p>
 

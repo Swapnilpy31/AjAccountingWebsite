@@ -36,7 +36,7 @@ export default function AnnouncementBar() {
       aria-label="Promotional announcement"
     >
       {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-400" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1E4E8C] via-[#2560aa] to-[#163665]" />
 
       {/* Shimmer sweep */}
       <div

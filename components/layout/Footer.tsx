@@ -30,7 +30,7 @@ export default function Footer() {
                   <CheckCircle2 className="w-4 h-4 text-[#4CAF50]" /> 5+ Years Experience
                 </span>
                 <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-xs font-semibold text-white/80 w-fit tracking-wide">
-                  <CheckCircle2 className="w-4 h-4 text-[#4CAF50]" /> 500+ Trusted Clients
+                  <CheckCircle2 className="w-4 h-4 text-[#4CAF50]" /> 10,000+ Trusted Clients Pan India
                 </span>
                 <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-xs font-semibold text-white/80 w-fit tracking-wide">
                   <CheckCircle2 className="w-4 h-4 text-[#4CAF50]" /> ISO 9001:2015 Certified
@@ -98,8 +98,8 @@ export default function Footer() {
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
                     <Mail className="w-4 h-4 text-white" />
                   </div>
-                  <a href="mailto:info@ajlegalconsultant.com" className="hover:text-[#4CAF50] transition-colors">
-                    info@ajlegalconsultant.com
+                  <a href="mailto:info@ajlegalconsultant.in" className="hover:text-[#4CAF50] transition-colors">
+                    info@ajlegalconsultant.in
                   </a>
                 </li>
               </ul>
@@ -130,7 +130,7 @@ export default function Footer() {
                     <Star key={i} className="w-4 h-4 fill-[#4CAF50] text-[#4CAF50]" />
                   ))}
                 </div>
-                <p className="text-sm text-white/60"><span className="text-white font-bold tracking-tight">4.9/5 Average Rating</span> &nbsp;|&nbsp; 500+ professionals</p>
+                <p className="text-sm text-white/60"><span className="text-white font-bold tracking-tight">4.9/5 Average Rating</span> &nbsp;|&nbsp; 1000+ professionals</p>
               </div>
             </div>
 
@@ -142,7 +142,7 @@ export default function Footer() {
               <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] border border-white/15 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" aria-label="Facebook" className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] border border-white/15 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm">
+              <a href="https://www.facebook.com/Accountingworksave/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] border border-white/15 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm">
                 <Facebook className="w-5 h-5" />
               </a>
               <a href="https://www.whatsapp.com/channel/0029VaEiRvAHFxP4QWzlK03m" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel" className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] border border-white/15 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm">

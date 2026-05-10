@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import ChatbotWidget from "@/components/chatbot/ChatbotWidget";
 import GlobalConsultationModal from "@/components/modals/GlobalConsultationModal";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
+import CookieConsent from "@/components/layout/CookieConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
         <GlobalConsultationModal />
         <MobileStickyCTA />
         <ChatbotWidget />
+        <CookieConsent />
       </body>
     </html>
   );

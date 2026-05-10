@@ -196,7 +196,7 @@ function ServiceCard({ card }: { card: typeof cards[number] }) {
   const { Icon, accent } = card;
   return (
     <article
-      className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0d1f3c] to-[#071020] h-full flex flex-col transition-all duration-300 hover:-translate-y-2"
+      className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0d1f3c] to-[#071020] h-full flex flex-col transition-all duration-300 hover:-translate-y-2 hover:from-[#162d55] hover:to-[#0d1e3a]"
       style={{
         border: `1px solid rgba(255,255,255,0.08)`,
         boxShadow: '0 4px 24px rgba(0,0,0,0.4)',

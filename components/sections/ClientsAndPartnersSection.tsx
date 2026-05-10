@@ -6,7 +6,7 @@ import {
 
 /* ── Stats shown above the logo grid ── */
 const stats = [
-  { value: '1,000+', label: 'Businesses Served', icon: Users },
+  { value: '10,000+', label: 'Trusted Clients Pan India', icon: Users },
   { value: '5+ Yrs', label: 'Industry Experience', icon: Clock },
   { value: '4.9 / 5', label: 'Average Rating', icon: Star },
   { value: 'Pan-India', label: 'Nationwide Service', icon: Globe },
@@ -72,8 +72,8 @@ export default function ClientsAndPartnersSection() {
           {/* SEO H2 */}
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#1E4E8C] tracking-tight leading-[1.15] mb-4">
             Trusted by{' '}
-            <span className="text-[#4CAF50]">1,000+ Businesses</span>
-            <br className="hidden sm:block" /> Across India
+            <span className="text-[#4CAF50]">10,000+ Clients</span>
+            <br className="hidden sm:block" /> Pan India
           </h2>
           {/* Keyword-rich subheading */}
           <p className="text-slate-500 text-[16px] leading-relaxed max-w-2xl mx-auto">

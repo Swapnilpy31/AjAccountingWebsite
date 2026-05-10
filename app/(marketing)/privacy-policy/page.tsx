@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
         <h1>Privacy Policy</h1>
         <p>Last updated: October 2023</p>
         <p>
-          At Aj Legal Consultant (I) Private Limited, accessible from ajlegalconsultant.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Aj Legal Consultant (I) Private Limited and how we use it.
+          At Aj Legal Consultant (I) Private Limited, accessible from ajlegalconsultant.in, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Aj Legal Consultant (I) Private Limited and how we use it.
         </p>
         <h2>Information we collect</h2>
         <p>

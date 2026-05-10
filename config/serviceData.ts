@@ -407,7 +407,7 @@ const serviceData: Record<string, ServiceData> = {
     title: 'RA License Registration',
     tagline: 'BCAS-approved Regulated Agent licence for air cargo security',
     description: 'A Regulated Agent (RA) licence issued by BCAS (Bureau of Civil Aviation Security) is mandatory for entities handling, screening, or transporting air cargo in India. Our experts guide you through the entire BCAS application and inspection process.',
-    highlights: ['BCAS Approved Process', 'Document Preparation', 'Inspection Support', 'Security Training Coordination', 'Fast 30-Day Processing', '500+ RA Clients Served'],
+    highlights: ['BCAS Approved Process', 'Document Preparation', 'Inspection Support', 'Security Training Coordination', 'Fast 30-Day Processing', '1000+ RA Clients Served'],
     documents: ['Company Incorporation Certificate', 'PAN & GST of Company', 'Director/Owner KYC', 'Office Premises Proof', 'Security Plan / Programme', 'Background Verification Reports of Staff'],
     timeline: '25–45 working days',
     faqs: [

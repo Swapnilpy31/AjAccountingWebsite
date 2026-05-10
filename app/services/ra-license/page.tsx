@@ -275,12 +275,12 @@ export default function RALicencePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {raSteps.map((step, idx) => (
-              <div key={idx} className="relative bg-slate-50 border border-slate-100 p-6 rounded-2xl hover:shadow-xl transition-all group">
-                <div className="text-4xl font-black text-[#1E4E8C]/10 mb-4 group-hover:text-[#4CAF50]/20 transition-colors">
+              <div key={idx} className="card-hover relative bg-slate-50 border border-slate-100 p-6 rounded-2xl transition-all">
+                <div className="card-tag text-4xl font-black text-[#1E4E8C]/10 mb-4">
                   {String(idx + 1).padStart(2, '0')}
                 </div>
-                <h4 className="text-[15px] font-bold text-[#1E4E8C] mb-2 leading-snug">{step.title}</h4>
-                <p className="text-[13px] text-slate-500 leading-relaxed">{step.desc}</p>
+                <h4 className="card-title text-[15px] font-bold text-[#1E4E8C] mb-2 leading-snug">{step.title}</h4>
+                <p className="card-desc text-[13px] text-slate-500 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -305,16 +305,16 @@ export default function RALicencePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {docCategories.map((cat, idx) => (
-              <div key={idx} className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                <div className="w-12 h-12 bg-primary-50 rounded-2xl flex items-center justify-center mb-6">
-                  <cat.icon className="w-6 h-6 text-primary-600" />
+              <div key={idx} className="card-hover bg-white rounded-3xl p-8 border border-slate-200 shadow-sm transition-all">
+                <div className="card-icon-wrap w-12 h-12 bg-primary-50 rounded-2xl flex items-center justify-center mb-6">
+                  <cat.icon className="card-icon w-6 h-6 text-primary-600" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-6">{cat.title}</h3>
+                <h3 className="card-title text-xl font-bold text-slate-900 mb-6">{cat.title}</h3>
                 <ul className="space-y-4">
                   {cat.docs.map((doc, dIdx) => (
                     <li key={dIdx} className="flex items-start gap-3 text-sm text-slate-600">
                       <CheckCircle2 className="w-4 h-4 text-[#4CAF50] shrink-0 mt-0.5" />
-                      <span className="leading-snug">{doc}</span>
+                      <span className="card-desc leading-snug">{doc}</span>
                     </li>
                   ))}
                 </ul>
@@ -455,13 +455,13 @@ export default function RALicencePage() {
             {whyUs.map(item => (
               <div
                 key={item.title}
-                className="group bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+                className="card-hover bg-white border border-slate-200 rounded-3xl p-8 shadow-sm transition-all duration-300"
               >
-                <div className="w-14 h-14 bg-primary-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
-                  <item.icon className="w-6 h-6 text-primary-600 group-hover:text-white transition-colors duration-300" />
+                <div className="card-icon-wrap w-14 h-14 bg-primary-50 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300">
+                  <item.icon className="card-icon w-6 h-6 text-primary-600 transition-colors duration-300" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">{item.title}</h3>
-                <p className="text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
+                <h3 className="card-title text-xl font-bold text-slate-900 mb-3 tracking-tight">{item.title}</h3>
+                <p className="card-desc text-slate-500 text-[14px] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

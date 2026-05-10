@@ -43,7 +43,7 @@ export default function ForeignCompanyIncorporation() {
                           <Star className="w-4 h-4 fill-[#4CAF50] text-[#4CAF50]" /> 4.9 Rating
                         </div>
                         <div className="flex items-center gap-2 text-[13px] font-semibold text-slate-700">
-                          <Building className="w-4 h-4 text-primary-600" /> 500+ Companies Registered
+                          <Building className="w-4 h-4 text-primary-600" /> 1000+ Companies Registered
                         </div>
                         <div className="flex items-center gap-2 text-[13px] font-semibold text-slate-700">
                           <Clock className="w-4 h-4 text-accent-600" /> Fast Processing
@@ -254,11 +254,11 @@ export default function ForeignCompanyIncorporation() {
                             </a>
                           </li>
                           <li>
-                            <a href="mailto:info@ajlegalconsultant.com" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
+                            <a href="mailto:info@ajlegalconsultant.in" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
                                <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-primary-600 transition-colors border border-white/5 shadow-sm">
                                  <Mail className="w-4 h-4" />
                                </div>
-                               <span className="font-semibold text-sm tracking-wide">info@ajlegalconsultant.com</span>
+                               <span className="font-semibold text-sm tracking-wide">info@ajlegalconsultant.in</span>
                             </a>
                           </li>
                           <li>

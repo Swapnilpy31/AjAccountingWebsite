@@ -12,14 +12,14 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, slug, description, features = [] }: ServiceCardProps) {
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg hover:border-primary-100 transition-all duration-300 p-6 flex flex-col h-full group">
+    <div className="service-card-hover bg-white rounded-2xl shadow-sm border border-gray-100 hover:border-primary-100 transition-all duration-300 p-6 flex flex-col h-full group">
       <div className="flex-1">
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-500 transition-colors">
+        <h3 className="card-title text-xl font-bold text-gray-900 mb-3 transition-colors">
           <Link href={`/services/${slug}`}>
             {title}
           </Link>
         </h3>
-        <p className="text-gray-600 mb-6 text-sm line-clamp-3">
+        <p className="card-desc text-gray-600 mb-6 text-sm line-clamp-3">
           {description}
         </p>
         
