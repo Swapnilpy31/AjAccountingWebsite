@@ -64,8 +64,8 @@ export default function ClientsAndPartnersSection() {
         {/* ── Section Header ── */}
         <div className="text-center max-w-3xl mx-auto mb-6">
           <div className="inline-flex items-center gap-2 bg-[#1E4E8C]/6 border border-[#1E4E8C]/15 rounded-full px-4 py-1.5 mb-5">
-            <Users className="w-3.5 h-3.5 text-[#1E4E8C]" />
-            <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-widest">
+            <Users className="w-4 h-4 text-[#1E4E8C]" />
+            <span className="text-[14px] font-extrabold text-[#1E4E8C] uppercase tracking-widest">
               Our Clients
             </span>
           </div>

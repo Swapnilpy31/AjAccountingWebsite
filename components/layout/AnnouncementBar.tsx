@@ -1,30 +1,31 @@
 "use client";
 
-import { FaFire, FaStar } from "react-icons/fa";
+
 
 const Content = () => (
   <span className="inline-flex items-center gap-0 whitespace-nowrap">
-    <span className="text-white/40">&bull;</span>
-
+    <span className="text-white/40"></span>
+    <span className="text-white/40"></span>
     <span className="inline-flex items-center gap-2 px-6">
-      <FaFire className="text-red-200" />
-      <span>RA Licence </span>
+      {/* <FaFire className="text-red-200" /> */}
+      <span>Special discount on RA Registration </span>
     </span>
-    <span className="text-white/40">&bull;</span>
-
+    <span className="text-white/40"></span>
+    <span className="text-white/40"></span>
     <span className="inline-flex items-center gap-2 px-6">
-      <FaFire className="text-red-200" />
-      <span>Contact </span>
-    </span>
-
-    <span className="text-white/40">&bull;</span>
-
-    <span className="inline-flex items-center gap-2 px-6">
-      <FaStar className="text-orange-100" />
-      <span>Premium Accounting Services</span>
+      {/* <FaFire className="text-red-200" /> */}
+      <span> Premium Accounting Services</span>
     </span>
 
-    <span className="text-white/40 px-6">&bull;</span>
+    <span className="text-white/40"></span>
+    <span className="text-white/40"></span>
+    <span className="inline-flex items-center gap-2 px-6">
+      {/* <FaStar className="text-orange-100" /> */}
+      <span>Contact us @ 9643862867 </span>
+    </span>
+    <span className="text-white/40"></span>
+    <span className="text-white/40 px-6"></span>
+    <span>RA Licence</span>
   </span>
 );
 
@@ -58,11 +59,10 @@ export default function AnnouncementBar() {
           style={{
             display: "inline-flex",
             whiteSpace: "nowrap",
-            animation: "marquee-track 25s linear infinite",
+            animation: "marquee-full-screen 15s linear infinite",
           }}
         >
-          {/* Two identical copies for seamless looping */}
-          <Content />
+          {/* Single copy that sweeps across the entire screen */}
           <Content />
         </div>
       </div>

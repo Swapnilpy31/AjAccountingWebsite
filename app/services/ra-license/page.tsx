@@ -182,19 +182,19 @@ const timelineStages = [
 
 function Scale({ className }: { className?: string }) {
   return (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="24" 
-      height="24" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className={className}
     >
-      <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+      <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
     </svg>
   );
 }
@@ -229,7 +229,7 @@ export default function RALicencePage() {
                 <span className="text-[#4CAF50]">License Registration</span>
               </h1>
               <p className="text-white/75 text-lg leading-relaxed max-w-xl mb-6">
-                Complete consultancy support for obtaining your <strong className="text-white text-xl uppercase tracking-wider">Overseas Recruitment License</strong> from the Ministry of External Affairs. 
+                Complete consultancy support for obtaining your <strong className="text-white text-xl uppercase tracking-wider">Overseas Recruitment License</strong> from the Ministry of External Affairs.
                 Fast-track documentation and 100% compliance guaranteed.
               </p>
               <div className="flex flex-wrap gap-3 mb-8">
@@ -243,7 +243,7 @@ export default function RALicencePage() {
                   </span>
                 ))}
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="#process" className="bg-[#4CAF50] hover:bg-[#43A047] text-white font-bold px-8 py-3.5 rounded-xl transition-all text-center">View Step-by-Step Process</Link>
                 <Link href="#docs" className="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-3.5 rounded-xl border border-white/20 transition-all text-center">Required Documents</Link>
@@ -331,7 +331,7 @@ export default function RALicencePage() {
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-white opacity-[0.03] rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-[#4CAF50] opacity-[0.05] rounded-full translate-y-1/2 -translate-x-1/2"></div>
-            
+
             <div className="relative z-10">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
                 <div className="text-center md:text-left">
@@ -339,8 +339,8 @@ export default function RALicencePage() {
                   <p className="text-white/60 text-sm">Realistic professional expectations for the RA License process.</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-5 text-center">
-                   <p className="text-white/60 text-[11px] font-bold uppercase tracking-wider mb-1">Total Estimated Time</p>
-                   <p className="text-white text-3xl font-black">90-180 Days</p>
+                  <p className="text-white/60 text-[11px] font-bold uppercase tracking-wider mb-1">Total Estimated Time</p>
+                  <p className="text-white text-3xl font-black">90-180 Days</p>
                 </div>
               </div>
 
@@ -365,20 +365,20 @@ export default function RALicencePage() {
 
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="bg-white/10 rounded-2xl p-6 border border-white/10">
-                   <h4 className="text-white font-bold text-sm flex items-center gap-2 mb-2">
-                     <Timer className="w-4 h-4 text-[#4CAF50]" /> Fast-Track Target
-                   </h4>
-                   <p className="text-white/60 text-xs leading-relaxed">
-                     45-90 working days (Available only if all documents, office, and BG are ready without objection).
-                   </p>
+                  <h4 className="text-white font-bold text-sm flex items-center gap-2 mb-2">
+                    <Timer className="w-4 h-4 text-[#4CAF50]" /> Fast-Track Target
+                  </h4>
+                  <p className="text-white/60 text-xs leading-relaxed">
+                    45-90 working days (Available only if all documents, office, and BG are ready without objection).
+                  </p>
                 </div>
                 <div className="bg-white/10 rounded-2xl p-6 border border-white/10">
-                   <h4 className="text-white font-bold text-sm flex items-center gap-2 mb-2">
-                     <ShieldCheck className="w-4 h-4 text-[#4CAF50]" /> Safe Commitment
-                   </h4>
-                   <p className="text-white/60 text-xs leading-relaxed">
-                     90-180 days. This is the standard professional commitment for a smooth, rejection-free process.
-                   </p>
+                  <h4 className="text-white font-bold text-sm flex items-center gap-2 mb-2">
+                    <ShieldCheck className="w-4 h-4 text-[#4CAF50]" /> Safe Commitment
+                  </h4>
+                  <p className="text-white/60 text-xs leading-relaxed">
+                    90-180 days. This is the standard professional commitment for a smooth, rejection-free process.
+                  </p>
                 </div>
               </div>
             </div>
@@ -391,11 +391,11 @@ export default function RALicencePage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-12">
             <div className="bg-white rounded-3xl p-10 border border-slate-100 shadow-sm">
-              <h2 className="text-2xl font-bold text-[#1E4E8C] mb-6 font-serif">What We Do (Aj Legal Consultant)</h2>
+              <h2 className="text-2xl font-bold text-[#1E4E8C] mb-6 font-serif">What We Do Aj Legal Consultant</h2>
               <div className="prose max-w-none text-slate-600 text-[16px] leading-relaxed">
                 <p>
-                  Aj Legal Consultant provides <strong>&quot;One Window Total Compliance&quot;</strong>. 
-                  We have successfully helped more than 200+ startups obtain the Overseas Recruitment (RA) License step-by-step from scratch. 
+                  Aj Legal Consultant provides <strong>&quot;One Window Total Compliance&quot;</strong>.
+                  We have successfully helped more than 200+ startups obtain the Overseas Recruitment (RA) License step-by-step from scratch.
                   We manage everything:
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mt-8">
@@ -423,8 +423,8 @@ export default function RALicencePage() {
             <div className="sticky top-24">
               <div className="bg-white rounded-3xl border border-slate-200 shadow-lg overflow-hidden">
                 <div className="bg-primary-600 p-6 text-white text-center">
-                   <h3 className="text-xl font-bold">Apply Now</h3>
-                   <p className="text-primary-100 text-sm">Expert support for your RA License</p>
+                  <h3 className="text-xl font-bold">Apply Now</h3>
+                  <p className="text-primary-100 text-sm">Expert support for your RA License</p>
                 </div>
                 <div className="p-2">
                   <LeadForm serviceSlug="ra-license" serviceName="RA License Registration" />

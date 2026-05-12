@@ -6,6 +6,7 @@ import ServiceSection from '@/components/sections/ServiceSection';
 import FAQSection from '@/components/sections/FAQSection';
 import ServicesCarouselSection from '@/components/sections/ServicesCarouselSection';
 import HighlightBox from '@/components/sections/HighlightBox';
+import WhyUsSection from '@/components/sections/WhyUsSection';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroSection />
       <HighlightBox />
       <ClientsAndPartnersSection />
+      <WhyUsSection />
       <ProcessSection />
       <ServiceSection />
       <FAQSection />

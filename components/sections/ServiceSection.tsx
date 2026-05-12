@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import {
   Building2, FileText, Receipt, BookOpen, Scale,
-  ArrowRight, CheckCircle2, ChevronRight, TrendingUp
+  ArrowRight, CheckCircle2, TrendingUp
 } from 'lucide-react';
 
 const services = [
@@ -103,35 +103,6 @@ export default function ServiceSection() {
             {services.slice(3).map((svc) => (
               <ServiceCard key={svc.id} svc={svc} />
             ))}
-
-            {/* View All CTA Card */}
-            <div className="relative bg-[#1E4E8C] rounded-2xl p-8 flex flex-col justify-between overflow-hidden border border-[#1a4279]">
-              {/* Subtle pattern */}
-              <div
-                className="absolute inset-0 opacity-[0.05]"
-                style={{
-                  backgroundImage:
-                    'repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%)',
-                  backgroundSize: '18px 18px',
-                }}
-              />
-              <div className="relative z-10">
-                <div className="w-12 h-12 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center mb-5">
-                  <CheckCircle2 className="w-6 h-6 text-[#4CAF50]" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2 tracking-tight">100+ Services Available</h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-6">
-                  Trademark, FSSAI, ISO, IEC, PF, ESIC, payroll, and more — all under one roof.
-                </p>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 bg-white text-[#1E4E8C] font-bold text-sm px-5 py-3 rounded-xl hover:bg-slate-100 transition-all group/link"
-                >
-                  Browse All Services
-                  <ChevronRight className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" />
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
 

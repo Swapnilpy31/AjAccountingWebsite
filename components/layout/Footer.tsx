@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { Mail, MapPin, Phone, Star, Linkedin, Instagram, Facebook, MessageCircle, Youtube, CheckCircle2, ChevronRight } from 'lucide-react';
+import { 
+  Phone, Mail, MapPin, ChevronRight, 
+  Facebook, Youtube, MessageCircle, Star, CheckCircle2
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -22,13 +25,13 @@ export default function Footer() {
                 </div> */}
                 {/* <span className="text-2xl font-bold text-white tracking-tight">AJ Accounting</span> */}
               </Link>
-              <p className="text-white/60 text-sm leading-relaxed mb-4 pr-4">
+              {/* <p className="text-white/60 text-sm leading-relaxed mb-4 pr-4">
                 Independent consultancy service provider offering professional assistance and documentation support for corporate compliance, licenses, and legal documentation.
-              </p>
+              </p> */}
               <div className="flex flex-col gap-2.5">
-                <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-xs font-semibold text-white/80 w-fit tracking-wide">
+                {/* <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-xs font-semibold text-white/80 w-fit tracking-wide">
                   <CheckCircle2 className="w-4 h-4 text-[#4CAF50]" /> 5+ Years Experience
-                </span>
+                </span> */}
                 <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-xs font-semibold text-white/80 w-fit tracking-wide">
                   <CheckCircle2 className="w-4 h-4 text-[#4CAF50]" /> 10,000+ Trusted Clients Pan India
                 </span>
@@ -42,11 +45,23 @@ export default function Footer() {
             <div>
               <h4 className="text-[13px] font-bold mb-4 text-white tracking-widest uppercase">Popular Services</h4>
               <ul className="space-y-4">
-                {['Company Registration', 'GST Services', 'Trademark Filing', 'FSSAI License', 'Income Tax Filing'].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-white/60 hover:text-[#4CAF50] text-[15px] transition-colors flex items-center gap-2 group">
+                {[
+                  { name: 'Company Registration', url: '#' },
+                  { name: 'GST Services', url: '#' },
+                  { name: 'Trademark Filing', url: '#' },
+                  { name: 'FSSAI License', url: '#' },
+                  { name: 'Income Tax Filing', url: '#' },
+                  { name: 'Startup India Registration', url: 'https://www.startupindia.gov.in/content/sih/en/startupgov/validate-startup-recognition.html#' }
+                ].map((item) => (
+                  <li key={item.name}>
+                    <Link 
+                      href={item.url} 
+                      target={item.url.startsWith('http') ? '_blank' : undefined}
+                      rel={item.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="text-white/60 hover:text-[#4CAF50] text-[15px] transition-colors flex items-center gap-2 group"
+                    >
                       <ChevronRight className="w-3.5 h-3.5 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all text-[#4CAF50] shrink-0" />
-                      {item}
+                      {item.name}
                     </Link>
                   </li>
                 ))}
@@ -57,10 +72,10 @@ export default function Footer() {
             <div>
               <h4 className="text-[13px] font-bold mb-4 text-white tracking-widest uppercase">Resources</h4>
               <ul className="space-y-4">
-                {['About Us', 'Meet Our Founder', 'Contact Us', 'Disclaimer', 'Privacy Policy'].map((item) => (
+                {['About Us', 'Meet Our Founder', 'Blog', 'Contact Us', 'Privacy Policy'].map((item) => (
                   <li key={item}>
-                    <Link 
-                      href={item === 'About Us' ? '/about' : item === 'Meet Our Founder' ? '/founder' : item === 'Contact Us' ? '/contact' : `/${item.toLowerCase().replace(/ /g, '-')}`} 
+                    <Link
+                      href={item === 'About Us' ? '/about' : item === 'Meet Our Founder' ? '/founder' : item === 'Contact Us' ? '/contact' : `/${item.toLowerCase().replace(/ /g, '-')}`}
                       className="text-white/60 hover:text-[#4CAF50] text-[15px] transition-colors flex items-center gap-2 group"
                     >
                       <ChevronRight className="w-3.5 h-3.5 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all text-[#4CAF50] shrink-0" />
@@ -111,6 +126,14 @@ export default function Footer() {
             </div>
 
           </div>
+          {/* Disclaimer Section */}
+          <div className="pt-8 mt-4 border-t border-white/15">
+            <h3 className="text-white/90 text-[18px] font-extrabold mb-3 tracking-wide">Disclaimer</h3>
+            <p className="text-white/50 text-[14px] leading-relaxed text-justify">
+              This platform is a privately owned enterprise and holds no affiliation, endorsement, or connection with any government department or agency. The forms provided here are not for official government registrations; they are used solely to gather client details so we can effectively assess your business requirements. By accessing and using this site, you acknowledge that we operate as a private consultancy. The assistance we offer is based on customer requests, and the payments collected are processed as platform service fees. We retain the right to outsource matters to third-party professionals when deemed appropriate. Please note that our brand is currently undergoing a name change, so stay tuned for upcoming announcements. Furthermore, this platform does not provide legal advice, representation, or substitute for formal legal services. If you require legal counsel, we strongly advise consulting with a qualified lawyer or registered law firm.
+            </p>
+          </div>
+
 
           {/* Social Proof & Social Media Row */}
           <div className="flex flex-col lg:flex-row items-center justify-between py-10 border-t border-white/15 gap-5">
@@ -136,12 +159,12 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="flex items-center gap-3">
-              <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] border border-white/15 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm">
+              {/* <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] border border-white/15 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] border border-white/15 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm">
                 <Instagram className="w-5 h-5" />
-              </a>
+              </a> */}
               <a href="https://www.facebook.com/Accountingworksave/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-12 h-12 rounded-full bg-white/10 hover:bg-[#4CAF50] border border-white/15 flex items-center justify-center text-white/70 hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm">
                 <Facebook className="w-5 h-5" />
               </a>
@@ -155,10 +178,9 @@ export default function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-2 pt-8 text-[13px] font-medium text-white/40 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/10">
+          <div className="mt-6 pt-6 text-[13px] font-medium text-white/40 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/10">
             <p>&copy; {new Date().getFullYear()} Aj Legal Consultant (I) Private Limited. All rights reserved.</p>
             <div className="flex items-center gap-6">
-              <Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link>
               <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             </div>
           </div>
