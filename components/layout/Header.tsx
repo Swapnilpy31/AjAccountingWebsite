@@ -47,7 +47,7 @@ const megaMenuData = [
         title: "Government Schemes",
         icon: <ShieldCheck className="w-4 h-4" />,
         links: [
-          { title: "Startup India Registration", url: "https://www.startupindia.gov.in/content/sih/en/startupgov/validate-startup-recognition.html#" },
+          { title: "Startup India Registration", url: "/services/startup-india" },
           { title: "Udyam (MSME) Registration", url: "/services/udyam-msme" },
         ],
       },
@@ -399,9 +399,9 @@ function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; c
               href={matchingLink?.url || '#'}
               key={i}
               onClick={() => { if (matchingLink) handleLinkClick(matchingLink.title); }}
-              className="menu-item-hover text-[11px] font-bold bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full cursor-pointer transition-colors shadow-sm"
+              className="text-[11px] font-bold bg-white border border-slate-200 text-slate-600 px-3 py-1 rounded-full hover:bg-slate-100 cursor-pointer transition-colors shadow-sm"
             >
-              <span className="relative z-10">{p}</span>
+              {p}
             </Link>
           );
         })}
@@ -423,10 +423,10 @@ function MegaMenuDropdown({ menu, closeMenu }: { menu: typeof megaMenuData[0]; c
                   <Link
                     href={link.url}
                     onClick={() => handleLinkClick(link.title)}
-                    className="menu-item-hover block px-3 py-2 rounded-lg text-[13px] font-medium text-slate-600 transition-all flex items-center justify-between group border border-transparent"
+                    className="block px-3 py-2 rounded-lg text-[13px] font-medium text-slate-600 hover:text-[#4CAF50] hover:bg-green-50/60 transition-all flex items-center justify-between group"
                   >
-                    <span className="relative z-10">{link.title}</span>
-                    <ChevronRight className="w-3.5 h-3.5 opacity-0 -mr-2 group-hover:opacity-100 group-hover:mr-0 transition-all text-[#4CAF50] relative z-10" />
+                    <span>{link.title}</span>
+                    <ChevronRight className="w-3.5 h-3.5 opacity-0 -mr-2 group-hover:opacity-100 group-hover:mr-0 transition-all text-[#4CAF50]" />
                   </Link>
                 </li>
               ))}
@@ -500,9 +500,9 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button className={`${headerFont.className} flex items-center gap-0.5 px-3 py-2 rounded-lg text-[15px] font-bold whitespace-nowrap transition-colors ${activeMenu === menu.name ? "text-[#1E4E8C] bg-blue-50" : "text-[#1E4E8C] hover:text-[#4CAF50] hover:bg-slate-50"}`}>
-                {menu.name}
-                <ChevronDown className={`w-3.5 h-3.5 mt-0.5 transition-transform duration-200 ${activeMenu === menu.name ? "rotate-180" : ""}`} />
-              </button>
+                    {menu.name}
+                    <ChevronDown className={`w-3.5 h-3.5 mt-0.5 transition-transform duration-200 ${activeMenu === menu.name ? "rotate-180" : ""}`} />
+                  </button>
 
                   {/* Active indicator bar */}
                   {activeMenu === menu.name && (
@@ -511,8 +511,8 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
                 </div>
               );
             })}
-            <Link 
-              href="/founder" 
+            <Link
+              href="/founder"
               className={`${headerFont.className} flex items-center px-3 py-2 rounded-lg text-[15px] font-bold whitespace-nowrap transition-colors text-[#1E4E8C] hover:text-[#4CAF50] hover:bg-slate-50`}
             >
               Meet Our Founder
@@ -537,7 +537,7 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
           {/* Mobile: hamburger */}
           <div className="xl:hidden flex items-center gap-2">
             <button
-              onClick={() => 
+              onClick={() =>
                 setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
             >
@@ -576,9 +576,9 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
                           <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-wider">{col.title}</span>
                         </div>
                         {col.links.map((link, lidx) => (
-                          <Link key={lidx} href={link.url} onClick={() => setMobileMenuOpen(false)} className="menu-item-hover block px-4 py-2 mx-2 mb-1 text-[13px] font-medium text-slate-600 rounded-lg transition-all flex items-center justify-between group border border-transparent">
-                            <span className="relative z-10">{link.title}</span>
-                            <ChevronRight className="w-3.5 h-3.5 opacity-0 -mr-2 group-hover:opacity-100 group-hover:mr-0 transition-all text-[#4CAF50] relative z-10" />
+                          <Link key={lidx} href={link.url} onClick={() => setMobileMenuOpen(false)} className="block px-4 py-2 mx-2 mb-1 text-[13px] font-medium text-slate-600 hover:text-[#4CAF50] hover:bg-green-50/60 rounded-lg transition-all flex items-center justify-between group">
+                            <span>{link.title}</span>
+                            <ChevronRight className="w-3.5 h-3.5 opacity-0 -mr-2 group-hover:opacity-100 group-hover:mr-0 transition-all text-[#4CAF50]" />
                           </Link>
                         ))}
                       </div>
