@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-import { 
-  Phone, Mail, MapPin, ChevronRight, 
+import {
+  Phone, Mail, MapPin, ChevronRight,
   Facebook, Youtube, MessageCircle, Star, CheckCircle2
 } from "lucide-react";
 
@@ -29,9 +29,9 @@ export default function Footer() {
                 Independent consultancy service provider offering professional assistance and documentation support for corporate compliance, licenses, and legal documentation.
               </p> */}
               <div className="flex flex-col gap-2.5">
-                {/* <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-xs font-semibold text-white/80 w-fit tracking-wide">
-                  <CheckCircle2 className="w-4 h-4 text-[#4CAF50]" /> 5+ Years Experience
-                </span> */}
+                {<span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-xs font-semibold text-white/80 w-fit tracking-wide">
+                  <CheckCircle2 className="w-4 h-4 text-[#4CAF50]" /> 16+ Years Experience
+                </span>}
                 <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white/10 border border-white/15 text-xs font-semibold text-white/80 w-fit tracking-wide">
                   <CheckCircle2 className="w-4 h-4 text-[#4CAF50]" /> 10,000+ Trusted Clients Pan India
                 </span>
@@ -54,8 +54,8 @@ export default function Footer() {
                   { name: 'Startup India Registration', url: 'https://www.startupindia.gov.in/content/sih/en/startupgov/validate-startup-recognition.html#' }
                 ].map((item) => (
                   <li key={item.name}>
-                    <Link 
-                      href={item.url} 
+                    <Link
+                      href={item.url}
                       target={item.url.startsWith('http') ? '_blank' : undefined}
                       rel={item.url.startsWith('http') ? 'noopener noreferrer' : undefined}
                       className="text-white/60 hover:text-[#4CAF50] text-[15px] transition-colors flex items-center gap-2 group"

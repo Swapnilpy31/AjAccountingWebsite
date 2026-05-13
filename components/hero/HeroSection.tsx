@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { ArrowRight, ShieldCheck, Clock, Users, CheckCircle2, Lock, Phone, Star } from 'lucide-react';
 
 const trustBadges = [
-  { icon: Users, value: '1,000+', label: 'Companies Served' },
+  { icon: Users, value: '10,000+', label: 'Companies Served' },
   { icon: ShieldCheck, value: 'Expert', label: 'Professional Support' },
   { icon: Clock, value: '15 Min', label: 'Response Time' },
   { icon: Star, value: '4.9/5', label: 'Client Rating' },

@@ -109,7 +109,7 @@ export default function ServiceSection() {
         {/* ── Bottom Trust Strip ── */}
         <div className="mt-6 pt-10 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           {[
-            { value: '1,000+', label: 'Companies Registered' },
+            { value: '10,000+', label: 'Companies Registered' },
             { value: 'Expert CAs', label: 'Dedicated Professionals' },
             { value: 'Pan-India', label: 'Nationwide Service' },
             { value: 'ISO Certified', label: 'ISO 9001:2015 Quality' },
@@ -130,8 +130,8 @@ function ServiceCard({ svc }: { svc: typeof services[0] }) {
   return (
     <article
       className={`card-hover group relative bg-white rounded-2xl p-7 flex flex-col border transition-all duration-300 ${svc.featured
-          ? 'border-[#4CAF50] shadow-[0_2px_20px_rgba(76,175,80,0.12)]'
-          : 'border-slate-200 shadow-sm hover:border-[#1E4E8C]/30'
+        ? 'border-[#4CAF50] shadow-[0_2px_20px_rgba(76,175,80,0.12)]'
+        : 'border-slate-200 shadow-sm hover:border-[#1E4E8C]/30'
         }`}
     >
       {/* Green top accent bar on featured */}
@@ -143,8 +143,8 @@ function ServiceCard({ svc }: { svc: typeof services[0] }) {
       {svc.badge && (
         <div
           className={`absolute top-5 right-5 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${svc.featured
-              ? 'bg-[#4CAF50]/10 text-[#4CAF50] border border-[#4CAF50]/30'
-              : 'bg-[#1E4E8C]/8 text-[#1E4E8C] border border-[#1E4E8C]/15'
+            ? 'bg-[#4CAF50]/10 text-[#4CAF50] border border-[#4CAF50]/30'
+            : 'bg-[#1E4E8C]/8 text-[#1E4E8C] border border-[#1E4E8C]/15'
             }`}
         >
           {svc.badge}
@@ -154,8 +154,8 @@ function ServiceCard({ svc }: { svc: typeof services[0] }) {
       {/* Icon */}
       <div
         className={`card-icon-wrap w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300 ${svc.featured
-            ? 'bg-[#4CAF50]/10 text-[#4CAF50]'
-            : 'bg-[#1E4E8C]/6 text-[#1E4E8C]'
+          ? 'bg-[#4CAF50]/10 text-[#4CAF50]'
+          : 'bg-[#1E4E8C]/6 text-[#1E4E8C]'
           }`}
       >
         <svc.icon className="card-icon w-7 h-7" />
@@ -190,8 +190,8 @@ function ServiceCard({ svc }: { svc: typeof services[0] }) {
       <Link
         href={svc.href}
         className={`mt-auto inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-sm transition-all duration-300 group/cta ${svc.featured
-            ? 'bg-[#4CAF50] hover:bg-[#43A047] text-white shadow-[0_4px_14px_rgba(76,175,80,0.25)] hover:shadow-[0_6px_18px_rgba(76,175,80,0.35)] hover:-translate-y-0.5'
-            : 'border border-[#1E4E8C]/25 text-[#1E4E8C] hover:bg-[#1E4E8C] hover:text-white hover:border-[#1E4E8C]'
+          ? 'bg-[#4CAF50] hover:bg-[#43A047] text-white shadow-[0_4px_14px_rgba(76,175,80,0.25)] hover:shadow-[0_6px_18px_rgba(76,175,80,0.35)] hover:-translate-y-0.5'
+          : 'border border-[#1E4E8C]/25 text-[#1E4E8C] hover:bg-[#1E4E8C] hover:text-white hover:border-[#1E4E8C]'
           }`}
       >
         Get Started

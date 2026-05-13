@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const whyUs = [
-  { icon: ShieldCheck, title: 'Expert Professional Team', desc: 'Our qualified Chartered Accountants and Company Secretaries have 5+ years of experience handling complex compliance and registration cases across India.' },
+  { icon: ShieldCheck, title: 'Expert Professional Team', desc: 'Our qualified Chartered Accountants and Company Secretaries have 16+ years of experience handling complex compliance and registration cases across India.' },
   { icon: Clock, title: 'Fast Turnaround', desc: 'We process registrations and filings in the shortest possible time — keeping you informed at every step with real-time status updates.' },
   { icon: FileText, title: 'End-to-End Documentation', desc: 'We handle all paperwork, government forms, DSC, DIN, and MCA filings — so you just share the documents and we take care of the rest.' },
   { icon: TrendingUp, title: 'Transparent Pricing', desc: 'Fixed, all-inclusive pricing with no hidden fees. Government charges are passed at actuals. You always know exactly what you\'re paying for.' },

@@ -7,10 +7,12 @@ import FAQSection from '@/components/sections/FAQSection';
 import ServicesCarouselSection from '@/components/sections/ServicesCarouselSection';
 import HighlightBox from '@/components/sections/HighlightBox';
 import WhyUsSection from '@/components/sections/WhyUsSection';
+import RALicensingPopup from '@/components/modals/RALicensingPopup';
 
 export default function Home() {
   return (
     <div className="bg-white">
+      <RALicensingPopup />
       <ServicesCarouselSection />
       <HeroSection />
       <HighlightBox />

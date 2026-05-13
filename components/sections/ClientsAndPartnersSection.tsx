@@ -7,7 +7,7 @@ import {
 /* ── Stats shown above the logo grid ── */
 const stats = [
   { value: '10,000+', label: 'Trusted Clients Pan India', icon: Users },
-  { value: '5+ Yrs', label: 'Industry Experience', icon: Clock },
+  { value: '16+ Yrs', label: 'Industry Experience', icon: Clock },
   { value: '4.9 / 5', label: 'Average Rating', icon: Star },
   { value: 'Pan-India', label: 'Nationwide Service', icon: Globe },
   { value: 'ISO 9001', label: '2015 Certified', icon: ShieldCheck },

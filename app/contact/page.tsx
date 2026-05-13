@@ -62,7 +62,7 @@ const trustPoints = [
   'Response within 24 hours  -  guaranteed',
   'Dedicated professional assigned to your case',
   'Free initial consultation, no hidden charges',
-  'Served 1,000+ businesses across India',
+  'Served 10,000+ businesses across India',
 ];
 
 export default function ContactPage() {
@@ -127,7 +127,7 @@ export default function ContactPage() {
             {[
               { icon: Zap, text: 'Response within 24 hours' },
               { icon: Shield, text: '100% Confidential' },
-              { icon: Users, text: '1,000+ Businesses Helped' },
+              { icon: Users, text: '10,000+ Businesses Helped' },
               { icon: Star, text: '4.9 / 5 Rating' },
             ].map(({ icon: Icon, text }) => (
               <span
