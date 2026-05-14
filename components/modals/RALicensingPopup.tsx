@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { X, ShieldCheck, Globe, FileText, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 // const KEY_FACTS = [
 //   { icon: <Globe className="w-4 h-4" />, label: 'Validity', value: '5 Years', color: 'text-green-700 bg-green-50 border-green-100' },
