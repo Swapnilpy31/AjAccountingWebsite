@@ -110,7 +110,7 @@ export default function ServiceSection() {
         <div className="mt-6 pt-10 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           {[
             { value: '10,000+', label: 'Companies Registered' },
-            { value: 'Expert CAs', label: 'Dedicated Professionals' },
+            { value: 'Expert CA/CS', label: 'Dedicated Professionals' },
             { value: 'Pan-India', label: 'Nationwide Service' },
             { value: 'ISO Certified', label: 'ISO 9001:2015 Quality' },
           ].map((stat) => (

@@ -203,7 +203,7 @@ const megaMenuData = [
         title: "Director Changes",
         icon: <Users className="w-4 h-4" />,
         links: [
-          { title: "Director DIN eKYC", url: "/services/din-ekyc" },
+          { title: "Director DIN e KYC Update", url: "/services/din-ekyc" },
           { title: "Director Change", url: "/services/director-change" },
           { title: "Remove Director", url: "/services/remove-director" },
           { title: "Appointment of Director", url: "/services/appoint-director" },
@@ -215,9 +215,11 @@ const megaMenuData = [
         links: [
           { title: "Registered Office Change", url: "/services/office-change" },
           { title: "Company Name Change", url: "/services/name-change" },
-          { title: "MOA Amendment", url: "/services/moa-amendment" },
+          { title: "MOA Amendment of Pvt. Ltd.", url: "/services/moa-amendment" },
+          { title: "MOA Amendment of Public Limited", url: "/services/moa-amendment-public" },
+          { title: "MOA Amendment of Section 8", url: "/services/moa-amendment-sec8" },
           { title: "AOA Amendment", url: "/services/aoa-amendment" },
-          { title: "Authorized Capital Increase", url: "/services/capital-increase" },
+          { title: "Increase Authorized Capital", url: "/services/capital-increase" },
           { title: "Share Transfer", url: "/services/share-transfer" },
         ],
       },
@@ -242,8 +244,43 @@ const megaMenuData = [
           { title: "Statutory Audit", url: "/services/statutory-audit" },
         ],
       },
+      {
+        title: "Conversions & Winding Up",
+        icon: <TrendingUp className="w-4 h-4" />,
+        links: [
+          { title: "OPC to PVT. Conversion", url: "/services/opc-to-pvt-conversion" },
+          { title: "PVT. to Public Ltd Conversion", url: "/services/pvt-to-public-conversion" },
+          { title: "Pvt. Ltd. Winding up", url: "/services/pvt-ltd-winding-up" },
+          { title: "LLP Winding Up", url: "/services/llp-winding-up" },
+          { title: "Sec-8 Winding Up", url: "/services/sec-8-winding-up" },
+          { title: "Nidhi Winding Up", url: "/services/nidhi-winding-up" },
+          { title: "Indian Subsidiary Windup", url: "/services/indian-subsidiary-windup" },
+        ],
+      },
+      {
+        title: "Finance & Registration",
+        icon: <Banknote className="w-4 h-4" />,
+        links: [
+          { title: "JanSamarth Registration", url: "/services/jansamarth-registration" },
+          { title: "Credit Management Analysis", url: "/services/credit-management-analysis" },
+        ],
+      },
+      {
+        title: "Company Registration",
+        icon: <Landmark className="w-4 h-4" />,
+        links: [
+          { title: "Private Limited Company", url: "/services/private-limited-company" },
+          { title: "LLP Registration", url: "/services/llp-registration" },
+          { title: "One Person Company", url: "/services/one-person-company" },
+          { title: "Public Limited Company", url: "/services/public-limited-company" },
+          { title: "Section 8 Company", url: "/services/section-8-company" },
+          { title: "Business Registration License", url: "/services/business-registration-license" },
+          { title: "Nidhi Company Registration", url: "/services/nidhi-company" },
+          { title: "Indian Subsidiary Registration", url: "/services/indian-subsidiary" },
+        ],
+      },
     ],
-    popular: ["Company Annual Compliance", "Director DIN eKYC"],
+    popular: ["Company Annual Compliance", "Director DIN e KYC Update"],
   },
   {
     name: "HR & Payroll",
@@ -445,6 +482,7 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState<string | null>(null);
+  const [mobileColumnOpen, setMobileColumnOpen] = useState<string | null>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = (name: string) => {
@@ -548,7 +586,7 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — two-level accordion */}
       {mobileMenuOpen && (
         <div className="xl:hidden bg-white border-t border-gray-100 absolute left-0 w-full h-[100dvh] pb-32 overflow-y-auto z-40 shadow-xl">
           <div className="px-4 py-2 flex flex-col">
@@ -556,40 +594,67 @@ export default function Header({ isCompact = false }: { isCompact?: boolean }) {
             <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border-b border-gray-50 text-sm font-semibold text-[#1E4E8C]">About</Link>
             <Link href="/founder" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-3 border-b border-gray-50 text-sm font-semibold text-[#1E4E8C]">Meet Our Founder</Link>
 
+            {/* Level-1: menu categories */}
             {megaMenuData.map((menu) => (
               <div key={menu.name} className="border-b border-gray-50">
                 <button
-                  onClick={() => setMobileCategoryOpen(mobileCategoryOpen === menu.name ? null : menu.name)}
+                  onClick={() => {
+                    const next = mobileCategoryOpen === menu.name ? null : menu.name;
+                    setMobileCategoryOpen(next);
+                    setMobileColumnOpen(null); // reset sub-accordion when switching category
+                  }}
                   className="w-full flex items-center justify-between px-3 py-3 text-sm font-semibold text-[#1E4E8C]"
                 >
-                  {menu.name}
-                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileCategoryOpen === menu.name ? "rotate-180 text-[#4CAF50]" : "text-slate-400"}`} />
+                  <span>{menu.name}</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileCategoryOpen === menu.name ? "rotate-180 text-[#4CAF50]" : "text-slate-400"}`} />
                 </button>
+
                 {mobileCategoryOpen === menu.name && (
-                  <div className="pl-2 pb-3">
-                    {menu.columns.map((col, idx) => (
-                      <div key={idx} className="mb-4">
-                        <div className="flex items-center gap-2 px-3 mb-2 mt-2">
-                          <div className="w-7 h-7 rounded bg-blue-50 text-[#1E4E8C] flex items-center justify-center shadow-sm border border-blue-100/50 shrink-0">
-                            {React.cloneElement(col.icon as React.ReactElement, { className: 'w-3.5 h-3.5' })}
-                          </div>
-                          <span className="text-[11px] font-bold text-[#1E4E8C] uppercase tracking-wider">{col.title}</span>
+                  <div className="pb-2">
+                    {/* Level-2: columns as sub-accordions */}
+                    {menu.columns.map((col, idx) => {
+                      const colKey = `${menu.name}__${idx}`;
+                      const isColOpen = mobileColumnOpen === colKey;
+                      return (
+                        <div key={idx} className="mx-2 mb-1 rounded-xl overflow-hidden border border-slate-100">
+                          <button
+                            onClick={() => setMobileColumnOpen(isColOpen ? null : colKey)}
+                            className="w-full flex items-center justify-between px-3 py-2.5 bg-slate-50 hover:bg-blue-50/60 transition-colors"
+                          >
+                            <div className="flex items-center gap-2">
+                              <div className="w-6 h-6 rounded bg-white text-[#1E4E8C] flex items-center justify-center shadow-sm border border-blue-100/60 shrink-0">
+                                {React.cloneElement(col.icon as React.ReactElement, { className: 'w-3 h-3' })}
+                              </div>
+                              <span className="text-[11.5px] font-bold text-[#1E4E8C] uppercase tracking-wide">{col.title}</span>
+                            </div>
+                            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isColOpen ? "rotate-180 text-[#4CAF50]" : "text-slate-400"}`} />
+                          </button>
+
+                          {isColOpen && (
+                            <div className="bg-white px-1 py-1">
+                              {col.links.map((link, lidx) => (
+                                <Link
+                                  key={lidx}
+                                  href={link.url}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                  className="flex items-center justify-between px-3 py-2 mx-1 mb-0.5 text-[13px] font-medium text-slate-600 rounded-lg hover:bg-blue-50 hover:text-[#1E4E8C] transition-colors group"
+                                >
+                                  <span>{link.title}</span>
+                                  <ChevronRight className="w-3 h-3 text-[#4CAF50] opacity-0 group-hover:opacity-100 transition-opacity" />
+                                </Link>
+                              ))}
+                            </div>
+                          )}
                         </div>
-                        {col.links.map((link, lidx) => (
-                          <Link key={lidx} href={link.url} onClick={() => setMobileMenuOpen(false)} className="menu-item-hover block px-4 py-2 mx-2 mb-1 text-[13px] font-medium text-slate-600 rounded-lg transition-all flex items-center justify-between group border border-transparent">
-                            <span className="relative z-10">{link.title}</span>
-                            <ChevronRight className="w-3.5 h-3.5 opacity-0 -mr-2 group-hover:opacity-100 group-hover:mr-0 transition-all text-[#4CAF50] relative z-10" />
-                          </Link>
-                        ))}
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 )}
               </div>
             ))}
 
-            <div className="p-4">
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center bg-[#4CAF50] hover:bg-[#43A047] text-white py-3 rounded-lg font-semibold text-sm transition-all duration-300">
+            <div className="p-4 mt-2">
+              <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="flex items-center justify-center bg-[#4CAF50] hover:bg-[#43A047] text-white py-3 rounded-xl font-semibold text-sm transition-all duration-300 shadow-md">
                 Free Consultation
               </Link>
             </div>

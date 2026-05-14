@@ -4,11 +4,11 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { X, ShieldCheck, Globe, FileText, CheckCircle2 } from 'lucide-react';
 
-const KEY_FACTS = [
-  { icon: <Globe className="w-4 h-4" />, label: 'Validity', value: '5 Years', color: 'text-green-700 bg-green-50 border-green-100' },
-  { icon: <ShieldCheck className="w-4 h-4" />, label: 'Issuing Authority', value: 'MEA / PGE', color: 'text-blue-700 bg-blue-50 border-blue-100' },
-  { icon: <FileText className="w-4 h-4" />, label: 'Portal', value: 'eMigrate', color: 'text-purple-700 bg-purple-50 border-purple-100' },
-];
+// const KEY_FACTS = [
+//   { icon: <Globe className="w-4 h-4" />, label: 'Validity', value: '5 Years', color: 'text-green-700 bg-green-50 border-green-100' },
+//   { icon: <ShieldCheck className="w-4 h-4" />, label: 'Issuing Authority', value: 'MEA / PGE', color: 'text-blue-700 bg-blue-50 border-blue-100' },
+//   { icon: <FileText className="w-4 h-4" />, label: 'Portal', value: 'eMigrate', color: 'text-purple-700 bg-purple-50 border-purple-100' },
+// ];
 
 const COMPLIANCE_POINTS = [
   'Mandatory under Emigration Act, 1983 (Section 10)',
@@ -32,6 +32,16 @@ export default function RALicensingPopup() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Lock body scroll while popup is visible
+  useEffect(() => {
+    if (isVisible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isVisible]);
+
   const close = () => {
     setAnimatingIn(false);
     setTimeout(() => setIsVisible(false), 350);
@@ -42,27 +52,17 @@ export default function RALicensingPopup() {
   return (
     /* Backdrop overlay */
     <div
-      className={`fixed inset-0 z-[200] flex items-center justify-center p-3 sm:p-5 transition-all duration-300 ${
-        animatingIn ? 'bg-slate-900/70 backdrop-blur-sm' : 'bg-transparent backdrop-blur-none pointer-events-none'
-      }`}
+      className={`fixed inset-0 z-[200] flex items-center justify-center p-3 sm:p-5 transition-all duration-300 ${animatingIn ? 'bg-slate-900/70 backdrop-blur-sm' : 'bg-transparent backdrop-blur-none pointer-events-none'
+        }`}
       onClick={close}
     >
       {/* Modal card */}
       <div
-        className={`relative w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 transform ${
-          animatingIn ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-5'
-        }`}
+        className={`relative w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 transform ${animatingIn ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-5'
+          }`}
         onClick={(e) => e.stopPropagation()}
         style={{ maxHeight: '92vh', overflowY: 'auto' }}
       >
-        {/* Close button */}
-        <button
-          onClick={close}
-          aria-label="Close popup"
-          className="absolute top-3 right-3 z-50 w-8 h-8 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-slate-900 hover:bg-white transition-all shadow-md border border-slate-200"
-        >
-          <X className="w-4 h-4" />
-        </button>
 
         {/* ── IMAGE BANNER — fills width, fixed height ── */}
         <div className="relative w-full h-44 sm:h-52 overflow-hidden shrink-0">
@@ -107,7 +107,7 @@ export default function RALicensingPopup() {
           </p>
 
           {/* Key facts grid */}
-          <div className="grid grid-cols-3 gap-2 mb-4">
+          {/* <div className="grid grid-cols-3 gap-2 mb-4">
             {KEY_FACTS.map((fact, i) => (
               <div
                 key={`fact-${i}`}
@@ -118,7 +118,7 @@ export default function RALicensingPopup() {
                 <p className="text-[13px] font-extrabold leading-tight">{fact.value}</p>
               </div>
             ))}
-          </div>
+          </div> */}
 
 
           {/* Compliance checklist */}
