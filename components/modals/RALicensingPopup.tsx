@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { ShieldCheck, CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
+import { ShieldCheck, CheckCircle2, X } from 'lucide-react';
 
 // const KEY_FACTS = [
 //   { icon: <Globe className="w-4 h-4" />, label: 'Validity', value: '5 Years', color: 'text-green-700 bg-green-50 border-green-100' },
@@ -63,6 +64,14 @@ export default function RALicensingPopup() {
         onClick={(e) => e.stopPropagation()}
         style={{ maxHeight: '92vh', overflowY: 'auto' }}
       >
+        {/* ── TOP-RIGHT CLOSE BUTTON ── */}
+        <button
+          onClick={close}
+          aria-label="Close popup"
+          className="absolute top-3 right-3 z-10 flex items-center justify-center w-8 h-8 rounded-full bg-white/90 hover:bg-white shadow-md text-slate-600 hover:text-slate-900 transition-all hover:scale-110"
+        >
+          <X className="w-4 h-4" />
+        </button>
 
         {/* ── IMAGE BANNER — fills width, fixed height ── */}
         <div className="relative w-full h-44 sm:h-52 overflow-hidden shrink-0">
@@ -134,13 +143,20 @@ export default function RALicensingPopup() {
             </ul>
           </div>
 
-          {/* Close button */}
-          <div className="flex justify-center">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-2.5">
+            <Link
+              href="/contact"
+              onClick={close}
+              className="flex-1 text-center py-3 px-6 bg-[#1e4e8c] hover:bg-[#163665] text-white text-[13.5px] font-bold rounded-xl shadow-lg shadow-[#1e4e8c]/20 transition-all hover:-translate-y-0.5"
+            >
+              Apply Now →
+            </Link>
             <button
               onClick={close}
-              className="w-full py-3 px-8 bg-[#1e4e8c] hover:bg-[#163665] text-white text-[13.5px] font-bold rounded-xl shadow-lg shadow-[#1e4e8c]/20 transition-all hover:-translate-y-0.5"
+              className="flex-1 py-3 px-6 border border-slate-200 hover:border-slate-300 bg-slate-50 hover:bg-slate-100 text-slate-600 text-[13.5px] font-semibold rounded-xl transition-all hover:-translate-y-0.5"
             >
-              Got It — Close
+              Close
             </button>
           </div>
 
