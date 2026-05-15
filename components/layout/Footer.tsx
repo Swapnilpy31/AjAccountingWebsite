@@ -113,8 +113,8 @@ export default function Footer() {
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20">
                     <Mail className="w-4 h-4 text-white" />
                   </div>
-                  <a href="mailto:info@ajlegalconsultant.in" className="hover:text-[#4CAF50] transition-colors">
-                    info@ajlegalconsultant.in
+                  <a href="mailto:info@ajlegalconsultant.com" className="hover:text-[#4CAF50] transition-colors">
+                    info@ajlegalconsultant.com
                   </a>
                 </li>
               </ul>

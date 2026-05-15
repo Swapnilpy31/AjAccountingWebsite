@@ -254,11 +254,11 @@ export default function ForeignCompanyIncorporation() {
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:info@ajlegalconsultant.in" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
+                    <a href="mailto:info@ajlegalconsultant.com" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
                       <div className="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-primary-600 transition-colors border border-white/5 shadow-sm">
                         <Mail className="w-4 h-4" />
                       </div>
-                      <span className="font-semibold text-sm tracking-wide">info@ajlegalconsultant.in</span>
+                      <span className="font-semibold text-sm tracking-wide">info@ajlegalconsultant.com</span>
                     </a>
                   </li>
                   <li>
