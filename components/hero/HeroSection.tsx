@@ -23,11 +23,36 @@ const services = [
 export default function HeroSection() {
   const [formData, setFormData] = useState({ name: '', phone: '', service: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [phoneError, setPhoneError] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    const phoneDigits = formData.phone.replace(/\D/g, '');
+    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
+      setPhoneError('Please enter a valid phone number.');
+      return;
+    }
+    setPhoneError('');
+    setIsSubmitting(true);
+    try {
+      await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          service: formData.service || 'RA License Registration',
+        }),
+      });
+      setFormData({ name: '', phone: '', service: '' });
+    } catch (err) {
+      console.error('[HeroSection] Lead submission failed:', err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 4000);
+    }
   };
 
   return (
@@ -181,9 +206,15 @@ export default function HeroSection() {
                         required
                         placeholder="+91 98765 43210"
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/30 focus:border-[#4CAF50] transition-all"
+                        maxLength={17}
+                        onChange={(e) => {
+                          const val = e.target.value.replace(/[^0-9+\-\s()]/g, '');
+                          setFormData({ ...formData, phone: val });
+                          setPhoneError('');
+                        }}
+                        className={`w-full px-4 py-3.5 bg-slate-50 border rounded-xl text-slate-800 placeholder-slate-400 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/30 focus:border-[#4CAF50] transition-all ${phoneError ? 'border-red-400' : 'border-slate-200'}`}
                       />
+                      {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}
                     </div>
 
                     {/* Service */}
@@ -210,10 +241,14 @@ export default function HeroSection() {
                     {/* CTA */}
                     <button
                       type="submit"
-                      className="w-full mt-2 bg-[#4CAF50] hover:bg-[#43A047] text-white font-bold text-[15px] py-4 rounded-xl flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(76,175,80,0.35)] hover:shadow-[0_6px_24px_rgba(76,175,80,0.45)] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 group/btn"
+                      disabled={isSubmitting}
+                      className="w-full mt-2 bg-[#4CAF50] hover:bg-[#43A047] disabled:opacity-70 text-white font-bold text-[15px] py-4 rounded-xl flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(76,175,80,0.35)] hover:shadow-[0_6px_24px_rgba(76,175,80,0.45)] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 group/btn"
                     >
-                      Get Free Consultation
-                      <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                      {isSubmitting ? (
+                        <><span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" /> Submitting…</>
+                      ) : (
+                        <>Get Free Consultation <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" /></>
+                      )}
                     </button>
 
                     {/* Micro-trust row */}

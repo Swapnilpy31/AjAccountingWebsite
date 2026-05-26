@@ -18,24 +18,43 @@ export default function LeadForm({
 }) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [phoneError, setPhoneError] = useState('');
+  const [emailError, setEmailError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
     const formData = new FormData(e.currentTarget);
+    const phoneVal = formData.get('phone') as string;
+    const emailVal = formData.get('email') as string;
+    const phoneDigits = phoneVal.replace(/\D/g, '');
+    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
+      setPhoneError('Please enter a valid phone number (7–15 digits).');
+      return;
+    }
+    if (emailVal && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+      setEmailError('Please enter a valid email address.');
+      return;
+    }
+    setPhoneError('');
+    setEmailError('');
+    setLoading(true);
     const data = {
       name: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
+      email: emailVal,
+      phone: phoneVal,
       serviceSlug,
     };
+    const formElement = e.currentTarget;
     try {
       const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      if (res.ok) setSuccess(true);
+      if (res.ok) {
+        setSuccess(true);
+        formElement.reset();
+      }
     } catch (err) {
       console.error(err);
     } finally {
@@ -112,8 +131,14 @@ export default function LeadForm({
               id="phone"
               name="phone"
               placeholder="+91 98765 43210"
-              className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all"
+              maxLength={17}
+              onChange={(e) => {
+                e.target.value = e.target.value.replace(/[^0-9+\-\s()]/g, '');
+                setPhoneError('');
+              }}
+              className={`w-full px-4 py-3.5 bg-slate-50 border rounded-xl text-slate-800 placeholder-slate-400 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all ${phoneError ? 'border-red-400' : 'border-slate-200'}`}
             />
+            {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}
           </div>
 
           {/* Email */}
@@ -129,8 +154,11 @@ export default function LeadForm({
               id="email"
               name="email"
               placeholder="rajesh@example.com"
-              className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all"
+              pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+              onChange={() => setEmailError('')}
+              className={`w-full px-4 py-3.5 bg-slate-50 border rounded-xl text-slate-800 placeholder-slate-400 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all ${emailError ? 'border-red-400' : 'border-slate-200'}`}
             />
+            {emailError && <p className="text-red-500 text-xs mt-1">{emailError}</p>}
           </div>
 
           {/* Submit CTA */}

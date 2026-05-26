@@ -17,14 +17,28 @@ export default function CookieConsent() {
     }
   }, []);
 
+  const saveConsent = async (action: 'accepted' | 'declined') => {
+    try {
+      await fetch('/api/cookie-consent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action })
+      });
+    } catch (err) {
+      console.error('Failed to save cookie consent', err);
+    }
+  };
+
   const accept = () => {
     localStorage.setItem(COOKIE_KEY, 'accepted');
     setVisible(false);
+    saveConsent('accepted');
   };
 
   const decline = () => {
     localStorage.setItem(COOKIE_KEY, 'declined');
     setVisible(false);
+    saveConsent('declined');
   };
 
   if (!visible) return null;

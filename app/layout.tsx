@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import SiteHeader from "@/components/layout/SiteHeader";
 import Footer from "@/components/layout/Footer";
-import ChatbotWidget from "@/components/chatbot/ChatbotWidget";
-import GlobalConsultationModal from "@/components/modals/GlobalConsultationModal";
-import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
-import CookieConsent from "@/components/layout/CookieConsent";
-
-const inter = Inter({ subsets: ["latin"] });
-
 import { constructMetadata } from "@/lib/seo";
+
+// Non-critical interactive components — lazy loaded after initial paint
+const GlobalConsultationModal = dynamic(() => import("@/components/modals/GlobalConsultationModal"), { ssr: false });
+const ChatbotWidget           = dynamic(() => import("@/components/chatbot/ChatbotWidget"),          { ssr: false });
+const MobileStickyCTA         = dynamic(() => import("@/components/layout/MobileStickyCTA"),         { ssr: false });
+const CookieConsent           = dynamic(() => import("@/components/layout/CookieConsent"),           { ssr: false });
+
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = constructMetadata();
 

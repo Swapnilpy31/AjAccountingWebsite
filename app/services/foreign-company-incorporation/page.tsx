@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import {
   CheckCircle2,
   FileCheck,
@@ -15,6 +17,52 @@ import {
 } from 'lucide-react';
 
 export default function ForeignCompanyIncorporation() {
+  const [form, setForm] = useState({ name: '', phone: '', email: '', service: 'Foreign Company Incorporation', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!form.name || !form.phone || !form.email || !form.service) {
+      alert("Please fill all the details properly.");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(form.phone)) {
+      alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        setForm({ name: '', phone: '', email: '', service: 'Foreign Company Incorporation', message: '' });
+      } else {
+        alert('Failed to send request. Please try again or call us directly.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('An error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
+    setForm((f) => ({ ...f, [k]: e.target.value }));
   return (
     <div className="bg-slate-50 min-h-screen pt-32 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -212,32 +260,48 @@ export default function ForeignCompanyIncorporation() {
                 <h3 className="text-xl font-bold text-slate-900 mb-1 tracking-tight">Start Your Registration</h3>
                 <p className="text-sm text-slate-500 mb-4">Fill the form below and our expert will call you shortly.</p>
 
-                <form className="space-y-4">
-                  <div>
-                    <label className="block text-[13px] font-bold text-slate-700 mb-2 uppercase tracking-wide">Full Name</label>
-                    <input type="text" placeholder="John Doe" className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm" />
+                {submitted ? (
+                  <div className="py-8 text-center border border-slate-100 rounded-2xl bg-slate-50 mt-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <CheckCircle2 className="w-6 h-6 text-green-600" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 mb-1">Request Received!</h3>
+                    <p className="text-slate-500 text-[13px] mb-4">Our expert will call you shortly.</p>
+                    <button onClick={() => { setSubmitted(false); setForm({ name: '', phone: '', email: '', service: 'Foreign Company Incorporation', message: '' }); }} className="text-primary-600 text-[13px] font-bold hover:underline">Submit another query</button>
                   </div>
-                  <div>
-                    <label className="block text-[13px] font-bold text-slate-700 mb-2 uppercase tracking-wide">Phone Number</label>
-                    <input type="tel" placeholder="+91 98765 43210" className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm" />
-                  </div>
-                  <div>
-                    <label className="block text-[13px] font-bold text-slate-700 mb-2 uppercase tracking-wide">Email Address</label>
-                    <input type="email" placeholder="john@example.com" className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm" />
-                  </div>
-                  <div>
-                    <label className="block text-[13px] font-bold text-slate-700 mb-2 uppercase tracking-wide">Select Service</label>
-                    <select className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm text-slate-700">
-                      <option>Foreign Company Incorporation</option>
-                      <option>Private Limited Company</option>
-                      <option>GST Registration</option>
-                      <option>Other Services</option>
-                    </select>
-                  </div>
-                  <button type="button" className="w-full mt-4 py-4 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold shadow-lg shadow-primary-600/20 transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2">
-                    Get Callback <ArrowRight className="w-4 h-4" />
-                  </button>
-                </form>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-[13px] font-bold text-slate-700 mb-2 uppercase tracking-wide">Full Name</label>
+                      <input required value={form.name} onChange={set('name')} type="text" placeholder="John Doe" className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm" />
+                    </div>
+                    <div>
+                      <label className="block text-[13px] font-bold text-slate-700 mb-2 uppercase tracking-wide">Phone Number</label>
+                      <input required value={form.phone} onChange={(e) => {
+                        const val = e.target.value.replace(/\D/g, '');
+                        if (val.length <= 10) {
+                          setForm(f => ({ ...f, phone: val }));
+                        }
+                      }} type="tel" maxLength={10} placeholder="9876543210" className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm" />
+                    </div>
+                    <div>
+                      <label className="block text-[13px] font-bold text-slate-700 mb-2 uppercase tracking-wide">Email Address</label>
+                      <input required value={form.email} onChange={set('email')} type="email" placeholder="john@example.com" className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm" />
+                    </div>
+                    <div>
+                      <label className="block text-[13px] font-bold text-slate-700 mb-2 uppercase tracking-wide">Select Service</label>
+                      <select required value={form.service} onChange={set('service')} className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm text-slate-700">
+                        <option value="Foreign Company Incorporation">Foreign Company Incorporation</option>
+                        <option value="Private Limited Company">Private Limited Company</option>
+                        <option value="GST Registration">GST Registration</option>
+                        <option value="Other Services">Other Services</option>
+                      </select>
+                    </div>
+                    <button disabled={loading} type="submit" className="w-full mt-4 py-4 bg-primary-600 hover:bg-primary-700 disabled:opacity-70 text-white rounded-xl font-bold shadow-lg shadow-primary-600/20 transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                      {loading ? 'Submitting...' : 'Get Callback'} {!loading && <ArrowRight className="w-4 h-4" />}
+                    </button>
+                  </form>
+                )}
               </div>
 
               {/* Contact Info Snippet */}

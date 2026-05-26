@@ -6,7 +6,7 @@ import Image from "next/image";
 import {
   ChevronDown, Menu, X, Building2, Landmark,
   FileText, Receipt, Users, Award, Briefcase, Banknote,
-  Star, ShieldCheck, Zap, TrendingUp, ChevronRight
+  Star, ShieldCheck, Zap, TrendingUp, ChevronRight, Globe
 } from "lucide-react";
 import { Outfit } from "next/font/google";
 
@@ -51,6 +51,15 @@ const megaMenuData = [
           { title: "Udyam (MSME) Registration", url: "/services/udyam-msme" },
         ],
       },
+      {
+        title: "Brand & Digital",
+        icon: <Globe className="w-4 h-4" />,
+        links: [
+          { title: "Logo Design", url: "/services/logo-design" },
+          { title: "Website Development", url: "/services/business-website" },
+          { title: "Digital Marketing", url: "/services/digital-marketing" },
+        ],
+      },
     ],
     popular: ["Private Limited Company", "LLP Registration", "Udyam (MSME) Registration"],
   },
@@ -75,6 +84,15 @@ const megaMenuData = [
           { title: "Director Removal From RC", url: "/services/director-removal" },
           { title: "Update contact details in RC", url: "/services/contact-update" },
           { title: "Capacity Enhancement", url: "/services/capacity-enhancement" },
+        ],
+      },
+      {
+        title: "Brand & Digital",
+        icon: <Globe className="w-4 h-4" />,
+        links: [
+          { title: "Logo Design", url: "/services/logo-design" },
+          { title: "Website Development", url: "/services/business-website" },
+          { title: "Digital Marketing", url: "/services/digital-marketing" },
         ],
       },
     ],

@@ -5,25 +5,54 @@ import React, { useState } from 'react';
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [phoneError, setPhoneError] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setError(null);
 
     const formData = new FormData(e.currentTarget);
-    const _data = {
-      name: formData.get('name'),
-      phone: formData.get('phone'),
-      service: formData.get('service'),
-      message: formData.get('message'),
-    };
-    void _data; // ready for API integration
-
-    // Simulate API call
-    setTimeout(() => {
+    const phoneVal = formData.get('phone') as string;
+    const phoneDigits = phoneVal.replace(/\D/g, '');
+    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
+      setPhoneError('Please enter a valid phone number (7–15 digits).');
       setLoading(false);
+      return;
+    }
+    setPhoneError('');
+
+    const payload = {
+      name: formData.get('name') as string,
+      phone: phoneVal,
+      service: formData.get('service') as string,
+      message: formData.get('message') as string,
+    };
+
+    const formElement = e.currentTarget;
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        setError(data.error ?? 'Something went wrong. Please try again.');
+        setLoading(false);
+        return;
+      }
+
       setSuccess(true);
-    }, 1500);
+      formElement.reset();
+    } catch {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (success) {
@@ -66,10 +95,16 @@ export default function ContactForm() {
              required 
              type="tel" 
              id="phone" 
-             name="phone" 
-             className="w-full px-4 py-3 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-secondary-500 focus:border-transparent outline-none transition-all duration-200" 
+             name="phone"
+             maxLength={17}
+             onChange={(e) => {
+               e.target.value = e.target.value.replace(/[^0-9+\-\s()]/g, '');
+               setPhoneError('');
+             }}
+             className={`w-full px-4 py-3 bg-gray-50 rounded-xl border focus:bg-white focus:ring-2 focus:ring-secondary-500 focus:border-transparent outline-none transition-all duration-200 ${phoneError ? 'border-red-400' : 'border-gray-200'}`}
              placeholder="+91 98765 43210" 
            />
+           {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}
         </div>
 
         <div>
@@ -80,10 +115,10 @@ export default function ContactForm() {
             required
             className="w-full px-4 py-3 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:ring-2 focus:ring-secondary-500 focus:border-transparent outline-none transition-all duration-200 appearance-none"
           >
-            <option value="" disabled selected>Choose a service...</option>
+            <option value="" disabled>Choose a service...</option>
             <option value="Company Registration">Company Registration</option>
-            <option value="Trademark & IP">Trademark & IP</option>
-            <option value="Tax & Compliance">Tax & Compliance</option>
+            <option value="Trademark &amp; IP">Trademark &amp; IP</option>
+            <option value="Tax &amp; Compliance">Tax &amp; Compliance</option>
             <option value="Legal Drafting">Legal Drafting</option>
             <option value="Other">Other Query</option>
           </select>
@@ -101,6 +136,16 @@ export default function ContactForm() {
           />
         </div>
 
+        {/* Error message */}
+        {error && (
+          <div className="flex items-start gap-2.5 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+            <svg className="w-5 h-5 text-red-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p className="text-sm text-red-700 font-medium">{error}</p>
+          </div>
+        )}
+
         <button 
           disabled={loading}
           type="submit" 
@@ -112,7 +157,7 @@ export default function ContactForm() {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-              Processing...
+              Submitting...
             </>
           ) : (
             'Request Free Consultation'

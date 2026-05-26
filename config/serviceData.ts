@@ -491,6 +491,50 @@ const serviceData: Record<string, ServiceData> = {
       { title: 'Business + Personal', desc: 'Integrated planning for proprietors covering both business and personal taxes.' },
     ],
   },
+
+  /* ── BRAND & DIGITAL ── */
+  'logo-design': {
+    title: 'Professional Logo Design',
+    tagline: 'Create a unique identity for your brand',
+    description: 'Our professional logo design service helps you create a memorable brand identity that resonates with your target audience.',
+    highlights: ['Custom Design', 'Multiple Revisions', 'High-Resolution Files', 'Source Files Included', 'Brand Guidelines', 'Fast Delivery'],
+    documents: ['Company Name', 'Tagline (if any)', 'Preferred Colors', 'Business Description'],
+    timeline: '3–5 working days',
+    faqs: [
+      { question: 'Will I get the source files?', answer: 'Yes, we provide all high-resolution and vector source files.' },
+    ],
+    benefits: [
+      { title: 'Brand Identity', desc: 'Stand out from competitors with a professional and unique logo.' },
+    ],
+  },
+  'business-website': {
+    title: 'Business Website Development',
+    tagline: 'Get a professional, responsive website for your business',
+    description: 'We build fast, secure, and SEO-optimized business websites that help you attract more customers and grow your online presence.',
+    highlights: ['Custom Design', 'Mobile Responsive', 'SEO Optimized', 'Fast Loading', 'Secure (SSL)', 'CMS Integration'],
+    documents: ['Company Profile', 'Logo', 'Content / Text', 'Images'],
+    timeline: '10–15 working days',
+    faqs: [
+      { question: 'Will the website be mobile friendly?', answer: 'Yes, all our websites are fully responsive and work perfectly on all devices.' },
+    ],
+    benefits: [
+      { title: 'Online Presence', desc: 'Establish a credible online presence to reach more customers.' },
+    ],
+  },
+  'digital-marketing': {
+    title: 'Digital Marketing Services',
+    tagline: 'Grow your business with data-driven digital marketing',
+    description: 'Our comprehensive digital marketing services include SEO, social media management, and paid advertising to boost your online visibility and sales.',
+    highlights: ['SEO Optimization', 'Social Media Management', 'Google Ads', 'Facebook Ads', 'Content Marketing', 'Analytics & Reporting'],
+    documents: ['Website URL', 'Target Audience Details', 'Marketing Budget', 'Competitor Details'],
+    timeline: 'Monthly retainer',
+    faqs: [
+      { question: 'How soon can I see results?', answer: 'While paid ads can generate immediate traffic, SEO usually takes 3-6 months to show significant results.' },
+    ],
+    benefits: [
+      { title: 'More Leads', desc: 'Attract targeted traffic and generate high-quality leads for your business.' },
+    ],
+  },
 };
 
 export default serviceData;

@@ -49,6 +49,10 @@ export default function GlobalConsultationModal() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [animatingIn, setAnimatingIn] = useState(false);
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+  const [emailError, setEmailError] = useState('');
 
   useEffect(() => {
     // Global generic click interceptor
@@ -115,14 +119,45 @@ export default function GlobalConsultationModal() {
     }, 300); // 300ms coincides with transition duration map
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // Phone validation
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
+      setPhoneError('Please enter a valid phone number (7–15 digits).');
+      return;
+    }
+    // Email validation (optional field)
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailError('Please enter a valid email address.');
+      return;
+    }
+    setPhoneError('');
+    setEmailError('');
+
+    // Get name from the form
+    const form = e.currentTarget;
+    const nameInput = form.querySelector<HTMLInputElement>('input[type="text"]:not([readonly])');
+    const name = nameInput?.value?.trim() || 'Not provided';
+
     setIsSubmitting(true);
-    // Simulate backend submission logic
-    setTimeout(() => {
+    try {
+      await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, phone, email, service }),
+      });
+      setPhone('');
+      setEmail('');
+      if (nameInput) nameInput.value = '';
+      const textarea = form.querySelector('textarea');
+      if (textarea) textarea.value = '';
+    } catch (err) {
+      console.error('[ConsultationModal] Lead submission failed:', err);
+    } finally {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 1500);
+    }
   };
 
   if (!isOpen) return null;
@@ -245,13 +280,34 @@ export default function GlobalConsultationModal() {
                       </div>
                       <div>
                         <label className="block text-[12px] font-bold text-slate-700 mb-1.5 uppercase tracking-wider">Phone <span className="text-red-500">*</span></label>
-                        <input required type="tel" placeholder="+91 98765 43210" className="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm" />
+                        <input
+                          required
+                          type="tel"
+                          placeholder="+91 98765 43210"
+                          value={phone}
+                          onChange={(e) => {
+                            const val = e.target.value.replace(/[^0-9+\-\s()]/g, '');
+                            setPhone(val);
+                            setPhoneError('');
+                          }}
+                          maxLength={17}
+                          className={`w-full px-4 py-3.5 bg-white border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm ${phoneError ? 'border-red-400' : 'border-slate-200'}`}
+                        />
+                        {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}
                       </div>
                     </div>
 
                     <div>
                       <label className="block text-[12px] font-bold text-slate-700 mb-1.5 uppercase tracking-wider">Email Address <span className="text-slate-400 font-normal normal-case">(Optional)</span></label>
-                      <input type="email" placeholder="john@example.com" className="w-full px-4 py-3.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm" />
+                      <input
+                        type="email"
+                        placeholder="john@example.com"
+                        value={email}
+                        onChange={(e) => { setEmail(e.target.value); setEmailError(''); }}
+                        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                        className={`w-full px-4 py-3.5 bg-white border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm ${emailError ? 'border-red-400' : 'border-slate-200'}`}
+                      />
+                      {emailError && <p className="text-red-500 text-xs mt-1">{emailError}</p>}
                     </div>
 
                     <div>

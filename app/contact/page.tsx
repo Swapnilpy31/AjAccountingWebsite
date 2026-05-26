@@ -70,13 +70,44 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!form.name || !form.phone || !form.email || !form.service) {
+      alert("Please fill all the details properly.");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(form.phone)) {
+      alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
     setLoading(true);
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        setForm({ name: '', phone: '', email: '', service: '', message: '' });
+      } else {
+        alert('Failed to send request. Please try again or call us directly.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('An error occurred. Please try again.');
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 1400);
+    }
   };
 
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
@@ -207,9 +238,15 @@ export default function ContactPage() {
                         <input
                           type="tel"
                           required
-                          placeholder="+91 98765 43210"
+                          maxLength={10}
+                          placeholder="9876543210"
                           value={form.phone}
-                          onChange={set('phone')}
+                          onChange={(e) => {
+                            const val = e.target.value.replace(/\D/g, '');
+                            if (val.length <= 10) {
+                              setForm(f => ({ ...f, phone: val }));
+                            }
+                          }}
                           className="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all"
                         />
                       </div>
@@ -218,10 +255,11 @@ export default function ContactPage() {
                     {/* Email */}
                     <div>
                       <label className="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">
-                        Email Address
+                        Email Address <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="email"
+                        required
                         placeholder="rajesh@example.com"
                         value={form.email}
                         onChange={set('email')}

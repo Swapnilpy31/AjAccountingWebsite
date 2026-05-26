@@ -9,10 +9,15 @@ import type { Metadata } from 'next';
 import { constructMetadata } from '@/lib/seo';
 import { getServiceData } from '@/config/serviceData';
 
-
-export const dynamic = 'force-dynamic';
+import serviceData from '@/config/serviceData';
 
 type Props = { params: { slug: string } };
+
+export async function generateStaticParams() {
+  return Object.keys(serviceData).map((slug) => ({
+    slug: slug,
+  }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = getServiceData(params.slug);

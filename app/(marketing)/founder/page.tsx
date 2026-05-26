@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Outfit } from 'next/font/google';
+import { Linkedin } from 'lucide-react';
 
 const headerFont = Outfit({ subsets: ['latin'] });
 
@@ -105,10 +106,19 @@ export default function FounderPage() {
                   </div>
                 </div>
 
-                <div className="mt-12 pt-8 flex items-center gap-4">
-                   <p className="text-slate-500 text-sm italic">
+                <div className="mt-12 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-slate-100">
+                   <p className="text-slate-500 text-sm italic max-w-md">
                      &ldquo;Our mission is to make compliance simple, transparent, and accessible for businesses across India.&rdquo;
                    </p>
+                   <a 
+                     href="https://www.linkedin.com/in/ajay-pandey-242355a5?utm_source=share_via&utm_content=profile&utm_medium=member_ios" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="flex items-center gap-2 bg-slate-50 hover:bg-[#0A66C2] hover:text-white text-slate-700 px-5 py-2.5 rounded-xl text-sm font-bold transition-all border border-slate-200 hover:border-transparent shadow-sm"
+                   >
+                     <Linkedin className="w-5 h-5" />
+                     <span>Connect on LinkedIn</span>
+                   </a>
                 </div>
               </div>
             </div>

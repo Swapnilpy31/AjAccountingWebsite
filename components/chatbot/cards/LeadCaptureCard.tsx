@@ -4,9 +4,19 @@ import { ArrowRight, Phone } from 'lucide-react';
 export default function LeadCaptureCard({ onSubmit }: { onSubmit: () => void }) {
   const [phone, setPhone] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (phone.length >= 10) {
+    const digits = phone.replace(/\D/g, '');
+    if (digits.length >= 10) {
+      try {
+        await fetch('/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone, service: 'Callback Request (Chatbot)' }),
+        });
+      } catch (err) {
+        console.error('[LeadCaptureCard] Submission failed:', err);
+      }
       onSubmit();
     }
   };
@@ -23,7 +33,8 @@ export default function LeadCaptureCard({ onSubmit }: { onSubmit: () => void }) 
         <input 
           type="tel"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          onChange={(e) => setPhone(e.target.value.replace(/[^0-9+\-\s()]/g, ''))}
+          maxLength={17}
           placeholder="+91 Mobile Number"
           className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 mb-3"
         />
