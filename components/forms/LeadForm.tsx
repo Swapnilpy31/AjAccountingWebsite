@@ -27,8 +27,8 @@ export default function LeadForm({
     const phoneVal = formData.get('phone') as string;
     const emailVal = formData.get('email') as string;
     const phoneDigits = phoneVal.replace(/\D/g, '');
-    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
-      setPhoneError('Please enter a valid phone number (7–15 digits).');
+    if (phoneDigits.length !== 10) {
+      setPhoneError('Please enter a valid 10-digit mobile number.');
       return;
     }
     if (emailVal && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
@@ -130,10 +130,10 @@ export default function LeadForm({
               type="tel"
               id="phone"
               name="phone"
-              placeholder="+91 98765 43210"
-              maxLength={17}
+              placeholder="9876543210"
+              maxLength={10}
               onChange={(e) => {
-                e.target.value = e.target.value.replace(/[^0-9+\-\s()]/g, '');
+                e.target.value = e.target.value.replace(/\D/g, '');
                 setPhoneError('');
               }}
               className={`w-full px-4 py-3.5 bg-slate-50 border rounded-xl text-slate-800 placeholder-slate-400 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#4CAF50]/25 focus:border-[#4CAF50] transition-all ${phoneError ? 'border-red-400' : 'border-slate-200'}`}

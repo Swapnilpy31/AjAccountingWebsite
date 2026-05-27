@@ -38,8 +38,9 @@ function validateBody(body: ContactBody): string | null {
   if (typeof name !== "string" || name.trim().length < 2) {
     return "Please enter a valid full name (at least 2 characters).";
   }
-  if (typeof phone !== "string" || !/^[\d\s\+\-\(\)]{7,20}$/.test(phone.trim())) {
-    return "Please enter a valid phone number.";
+  const phoneDigits = (phone as string).replace(/\D/g, "");
+  if (phoneDigits.length !== 10) {
+    return "Please enter a valid 10-digit mobile number.";
   }
   if (typeof service !== "string" || service.trim().length === 0) {
     return "Please select a service.";

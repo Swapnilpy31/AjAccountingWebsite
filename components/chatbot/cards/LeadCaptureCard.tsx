@@ -7,7 +7,7 @@ export default function LeadCaptureCard({ onSubmit }: { onSubmit: () => void }) 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const digits = phone.replace(/\D/g, '');
-    if (digits.length >= 10) {
+    if (digits.length === 10) {
       try {
         await fetch('/api/leads', {
           method: 'POST',
@@ -33,14 +33,14 @@ export default function LeadCaptureCard({ onSubmit }: { onSubmit: () => void }) 
         <input 
           type="tel"
           value={phone}
-          onChange={(e) => setPhone(e.target.value.replace(/[^0-9+\-\s()]/g, ''))}
-          maxLength={17}
-          placeholder="+91 Mobile Number"
+          onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
+          maxLength={10}
+          placeholder="9876543210"
           className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 mb-3"
         />
         <button 
           type="submit"
-          disabled={phone.length < 10}
+          disabled={phone.length !== 10}
           className="w-full text-center text-xs font-semibold bg-primary-600 hover:bg-primary-700 disabled:opacity-50 text-white rounded-lg py-2.5 transition-colors flex items-center justify-center gap-1.5"
         >
           Request Call <ArrowRight className="w-3.5 h-3.5" />

@@ -16,8 +16,8 @@ export default function ContactForm() {
     const formData = new FormData(e.currentTarget);
     const phoneVal = formData.get('phone') as string;
     const phoneDigits = phoneVal.replace(/\D/g, '');
-    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
-      setPhoneError('Please enter a valid phone number (7–15 digits).');
+    if (phoneDigits.length !== 10) {
+      setPhoneError('Please enter a valid 10-digit mobile number.');
       setLoading(false);
       return;
     }
@@ -96,13 +96,13 @@ export default function ContactForm() {
              type="tel" 
              id="phone" 
              name="phone"
-             maxLength={17}
+             maxLength={10}
              onChange={(e) => {
-               e.target.value = e.target.value.replace(/[^0-9+\-\s()]/g, '');
+               e.target.value = e.target.value.replace(/\D/g, '');
                setPhoneError('');
              }}
              className={`w-full px-4 py-3 bg-gray-50 rounded-xl border focus:bg-white focus:ring-2 focus:ring-secondary-500 focus:border-transparent outline-none transition-all duration-200 ${phoneError ? 'border-red-400' : 'border-gray-200'}`}
-             placeholder="+91 98765 43210" 
+             placeholder="9876543210" 
            />
            {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}
         </div>

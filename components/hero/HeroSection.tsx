@@ -29,8 +29,8 @@ export default function HeroSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const phoneDigits = formData.phone.replace(/\D/g, '');
-    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
-      setPhoneError('Please enter a valid phone number.');
+    if (phoneDigits.length !== 10) {
+      setPhoneError('Please enter a valid 10-digit mobile number.');
       return;
     }
     setPhoneError('');
@@ -204,11 +204,11 @@ export default function HeroSection() {
                       <input
                         type="tel"
                         required
-                        placeholder="+91 98765 43210"
+                        placeholder="9876543210"
                         value={formData.phone}
-                        maxLength={17}
+                        maxLength={10}
                         onChange={(e) => {
-                          const val = e.target.value.replace(/[^0-9+\-\s()]/g, '');
+                          const val = e.target.value.replace(/\D/g, '');
                           setFormData({ ...formData, phone: val });
                           setPhoneError('');
                         }}

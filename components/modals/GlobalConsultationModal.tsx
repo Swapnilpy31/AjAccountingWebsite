@@ -123,8 +123,8 @@ export default function GlobalConsultationModal() {
     e.preventDefault();
     // Phone validation
     const phoneDigits = phone.replace(/\D/g, '');
-    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
-      setPhoneError('Please enter a valid phone number (7–15 digits).');
+    if (phoneDigits.length !== 10) {
+      setPhoneError('Please enter a valid 10-digit mobile number.');
       return;
     }
     // Email validation (optional field)
@@ -283,14 +283,14 @@ export default function GlobalConsultationModal() {
                         <input
                           required
                           type="tel"
-                          placeholder="+91 98765 43210"
+                          placeholder="9876543210"
                           value={phone}
                           onChange={(e) => {
-                            const val = e.target.value.replace(/[^0-9+\-\s()]/g, '');
+                            const val = e.target.value.replace(/\D/g, '');
                             setPhone(val);
                             setPhoneError('');
                           }}
-                          maxLength={17}
+                          maxLength={10}
                           className={`w-full px-4 py-3.5 bg-white border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all text-sm ${phoneError ? 'border-red-400' : 'border-slate-200'}`}
                         />
                         {phoneError && <p className="text-red-500 text-xs mt-1">{phoneError}</p>}

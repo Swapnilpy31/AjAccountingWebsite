@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
                   typeof body.serviceSlug === "string" ? body.serviceSlug.trim() : "General Inquiry";
   const message = typeof body.message === "string" ? body.message.trim() : "No message provided";
 
-  // Validate phone number existence and correct format/length (7 to 15 digits)
+  // Validate phone number existence and correct format/length (exactly 10 digits)
   if (!phone) {
     return NextResponse.json(
       { success: false, error: "Phone number is required." },
@@ -42,9 +42,9 @@ export async function POST(req: NextRequest) {
   }
 
   const phoneDigits = phone.replace(/\D/g, "");
-  if (phoneDigits.length < 7 || phoneDigits.length > 15) {
+  if (phoneDigits.length !== 10) {
     return NextResponse.json(
-      { success: false, error: "Please enter a valid phone number (7-15 digits)." },
+      { success: false, error: "Please enter a valid 10-digit mobile number." },
       { status: 400 }
     );
   }
